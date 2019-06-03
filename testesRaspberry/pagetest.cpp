@@ -15,14 +15,11 @@ fd1 = wiringPiI2CSetup(0x5D);
 
 
 cout << "Init Result: " << fd1 << endl;
-for(int i =0; i<20;i++){
+
+cout << "Changing the register page" << endl;
 
 result = wiringPiI2CReadReg16(fd1, addr_zero + i);
 result = invWord(result);
-
-cout << "Valor do registrador " << hex << addr_zero + i <<" : "<< hex << result << " decimal: "<< dec << result << endl;
-
-}
 
 }
 
