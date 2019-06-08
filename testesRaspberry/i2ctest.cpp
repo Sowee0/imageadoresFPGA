@@ -20,7 +20,7 @@ for(int i =0; i<20;i++){
 result = wiringPiI2CReadReg16(fd1, addr_zero + i);
 result = invWord(result);
 
-cout << "Valor do registrador " << hex << addr_zero + i <<" : "<< hex << result << " decimal: "<< dec << result << endl;
+cout << "Valor do registrador " << hex << addr_zero + i <<" : "<< hex << result << " decimal: "<< dec << result << " " << bin << result  << endl;
 
 }
 
