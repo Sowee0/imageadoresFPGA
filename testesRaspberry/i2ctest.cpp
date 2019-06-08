@@ -1,6 +1,7 @@
 #include <iostream>
 #include <wiringPiI2C.h>
 #include <errno.h>
+#include <bitset>
 
 using namespace  std;
 
@@ -20,7 +21,7 @@ for(int i =0; i<20;i++){
 result = wiringPiI2CReadReg16(fd1, addr_zero + i);
 result = invWord(result);
 
-cout << "Valor do registrador " << hex << addr_zero + i <<" : "<< hex << result << " decimal: "<< dec << result << " " << bin << result  << endl;
+cout << "Valor do registrador " << hex << addr_zero + i <<" : "<< hex << result << " decimal: "<< dec << result << " " << bitset<16>(result) << endl;
 
 }
 

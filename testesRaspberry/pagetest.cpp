@@ -8,7 +8,7 @@ short int invWord(short int  word);
 
 int main(){
 int fd1;
-short int result;
+short int result, regPage;
 int pageNumber = 2;
 int addrZero = 0x00;
 int addrPage = 0xF0;
@@ -21,12 +21,14 @@ cout << "Init Result: " << fd1 << endl;
 regPage = wiringPiI2CReadReg16(fd1, addrPage);
 regPage = invWord(regPage);
 
-cout << "Current register page: " dec << regPage << endl;
+cout << "Current register page: " << dec << regPage << endl;
 cout << "Changing to register page " << pageNumber << endl;
 
-int wiringPiI2CWriteReg16 (fd1, addrPage, pageNumber);
+cout << "Reading from page " << dec << pageNumber << " address " << hex << addrZero << " should be 0x00" << endl; 
 
-cout << "Reading from page " << dec << pageNumber << " address " << hex << addrZero << "should be 0x00" << endl; 
+pageNumber = invWord(pageNumber);
+
+wiringPiI2CWriteReg16 (fd1, addrPage, pageNumber);
 
 result = wiringPiI2CReadReg16(fd1, addrZero);
 result = invWord(result);
