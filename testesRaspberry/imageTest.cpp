@@ -6,6 +6,8 @@
 using namespace  std;
 
 short int invWord(short int  word);
+void loop();
+void setup();
 
 #define HSYNC 0
 #define VSYNC 2
@@ -25,6 +27,10 @@ short int invWord(short int  word);
 int main(){
 	
 	setup();
+	loop();
+}
+
+void loop(){
 	
 //Primeiramente escrevendo no I2C na segunda página que o output deve sair em RGB
 
@@ -56,6 +62,7 @@ short int invWord(short int word){
 
 }
 
+
 void setup(){
 	
 	pinMode (HSYNC, INPUT);
@@ -71,4 +78,5 @@ void setup(){
 	pinMode (D6, INPUT);
 	pinMode (D7, INPUT);
 	
+}
 	
