@@ -69,9 +69,7 @@ short int invWord(short int word){
 
 void setup(){
 	
-	pinMode (HSYNC, INPUT);
-	pinMode (VSYNC, INPUT);
-	pinMode (PXCLK, INPUT);
+	//Setando os pinos de transmissão de dados de acordo
 	
 	pinMode (D0, INPUT);
 	pinMode (D1, INPUT);
@@ -81,6 +79,24 @@ void setup(){
 	pinMode (D5, INPUT);
 	pinMode (D6, INPUT);
 	pinMode (D7, INPUT);
+
+	//Setando os pinos de sincronização e definindo as suas interrupções de acordo
+
+	pinMode (HSYNC, INPUT);
+	pinMode (VSYNC, INPUT);
+	pinMode (PXCLK, INPUT);
 	
 }
-	
+
+
+void hsyncInterrupt(){
+
+}
+
+void vsyncInterrupt(){
+
+}
+
+void pxclkInterrupt(){
+
+}
