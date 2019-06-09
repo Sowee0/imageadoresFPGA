@@ -34,12 +34,21 @@ regPage = invWord(regPage);
 cout << "Current register page: " << dec << regPage << endl;
 cout << "Changing to register page " << paginaObjetivo << endl;
 
-//Mudando a página escrevendo no registrador, e lendo seu valor
+//Mudando a página escrevendo no registrador
 
 cout << "Reading from page " << dec << paginaObjetivo << " address " << hex << enderecoObjetivo << " should be 0x01F8" << endl; 
 
 paginaObjetivo = invWord(paginaObjetivo);
 wiringPiI2CWriteReg16 (fd1, enderecoPagina, paginaObjetivo);
+
+//Verificando se a página foi realmente mudada
+
+regPage = wiringPiI2CReadReg16(fd1, enderecoPagina);
+regPage = invWord(regPage);
+cout << "Current register page: " << dec << regPage << endl;
+
+
+//Verificando o valor no registrador 0 
 
 result = wiringPiI2CReadReg16(fd1, enderecoObjetivo);
 result = invWord(result);
