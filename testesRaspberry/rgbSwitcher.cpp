@@ -47,10 +47,27 @@ cout << "Value on address " << hex << enderecoObjetivo << " = " << result << end
 
 //Aplicando a saída RGB 555
 
+int valorFinal = mascaraFormato | mascaraRGB;
+
+valorFinal = invWord(valorFinal);
+wiringPiI2CWriteReg16 (fd1, enderecoObjetivo, valorFinal);
+
 //Checando se a saída foi escrita corretamente
+
+enderecoObjetivo = enderecoControle;
+
+result = wiringPiI2CReadReg16(fd1, enderecoObjetivo);
+result = invWord(result);
+
+cout << "Value on address " << hex << enderecoObjetivo << " = " << result << endl;
+if(result = valorFinal){
+	cout <<  "Success!" << endl;
+}
+
 }
 
 short int invWord(short int word){
+
 	//Operação simples de inversão do byte mais significativo com o menos significativo
 	//A leitura é feita por ODD/EVEN byte 
 	short int hibyte = (word & 0xFF00) >> 8;
