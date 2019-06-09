@@ -1,7 +1,7 @@
 #Esse script inicia o clock no pino designado com a frequência designada
 
-pinoClock = 7
-frequencia = 4000000
+pinoClock=7
+frequencia=4000000
 
 echo "Iniciando o clock"
 gpio mode $pinoClock clock
