@@ -5,10 +5,6 @@
 
 using namespace  std;
 
-short int invWord(short int  word);
-void loop();
-void setup();
-
 #define HSYNC 0
 #define VSYNC 2
 #define PXCLK 3
@@ -21,6 +17,14 @@ void setup();
 #define D5 1
 #define D6 4
 #define D7 5
+
+short int invWord(short int  word);
+void loop();
+void setup();
+
+void hsyncInterrupt();
+void vsyncInterrupt();
+void pxclkInterrupt();
 
 
 
