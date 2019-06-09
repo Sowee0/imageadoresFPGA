@@ -6,7 +6,7 @@ frequencia=4000000
 echo "Iniciando o clock"
 gpio mode $pinoClock clock
 
-echo "Selecionando a frequência de 4000000"
+echo "Selecionando a frequência de $frequencia Hz"
 gpio clock $pinoClock $frequencia
 
 echo "Rodando a ferramenta de I2C para testar"

@@ -8,7 +8,6 @@ using namespace  std;
 const int enderecoCamera	= 0x5D;
 const int enderecoPagina	= 0xF0;
 const int enderecoControle	= 0x97;
-const int paginaObjetivo	= 1;
 const int mascaraRGB		= 0b0000000000010000; //RGB ligado
 const int mascaraFormato	= 0b0000000000100000; //Formato RGB555
 
@@ -20,6 +19,8 @@ int main(){
 //Variáveis úteis
 int fd1;
 int enderecoObjetivo	= 0x00;
+int paginaObjetivo	= 1;
+
 short int result, regPage;
 
 
