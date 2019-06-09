@@ -36,7 +36,7 @@ int main(){
 
 void loop(){
 	
-//Primeiramente escrevendo no I2C na segunda página que o output deve sair em RGB
+
 
 
 //Sincronizar VSYNC, HSYNC e PXLCLK para receber uma imagem inteira
@@ -59,6 +59,11 @@ result = invWord(result);
 }
 
 short int invWord(short int word){
+
+	//Invertendo o byte mais significativo e o byte menos significativo
+	//de maneira a seguir o que é pedido pela comunicação de escrita
+	//e leitura da câmera.
+
 	short int hibyte = (word & 0xFF00) >> 8;
 	short int lobyte = (word & 0xFF);
 
