@@ -24,7 +24,7 @@ short int result, regPage;
 
 
 //Iniciando a câmera no I2C
-fd1 = wiringPiI2CSetup(0x5D);
+fd1 = wiringPiI2CSetup(enderecoCamera);
 cout << "Init Result: " << fd1 << endl;
 
 //Recebendo e imprimindo a página atual
