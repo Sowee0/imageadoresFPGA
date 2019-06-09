@@ -4,14 +4,23 @@
 
 using namespace  std;
 
+#define enderecoZero 	0x00
+#define seletorPagina	0xF0
+#define controleSaida	0x97
+#define paginaCerta		1
+#define mascaraRGB		0b0000000000010000
+#define mascaraFormato	0b0000000000100000
+
+
 short int invWord(short int  word);
 
 int main(){
 int fd1;
 short int result, regPage;
-int pageNumber = 2;
+int pageNumber = 1;
 int addrZero = 0x00;
 int addrPage = 0xF0;
+int 
 
 fd1 = wiringPiI2CSetup(0x5D);
 
