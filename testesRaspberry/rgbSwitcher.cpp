@@ -16,20 +16,20 @@ const int mascaraFormato	= 0b0000000000100000; //Formato RGB555
 short int invWord(short int  word);
 
 int main(){
+
 //Variáveis úteis
 int fd1;
 int enderecoObjetivo	= 0x00;
 short int result, regPage;
 
-fd1 = wiringPiI2CSetup(0x5D);
 
 //Iniciando a câmera no I2C
+fd1 = wiringPiI2CSetup(0x5D);
 cout << "Init Result: " << fd1 << endl;
 
 //Recebendo e imprimindo a página atual
 regPage = wiringPiI2CReadReg16(fd1, enderecoPagina);
 regPage = invWord(regPage);
-
 cout << "Current register page: " << dec << regPage << endl;
 cout << "Changing to register page " << paginaObjetivo << endl;
 
