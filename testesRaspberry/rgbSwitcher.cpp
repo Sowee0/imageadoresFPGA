@@ -4,45 +4,45 @@
 
 using namespace  std;
 
-#define enderecoZero 	0x00
-#define seletorPagina	0xF0
-#define controleSaida	0x97
-#define paginaCerta		1
-#define mascaraRGB		0b0000000000010000
-#define mascaraFormato	0b0000000000100000
+//Variáveis de controle
+const int enderecoCamera	= 0x5D;
+const int enderecoPagina	= 0xF0;
+const int enderecoControle	= 0x97;
+const int paginaObjetivo	= 1;
+const int mascaraRGB		= 0b0000000000010000; //RGB ligado
+const int mascaraFormato	= 0b0000000000100000; //Formato RGB555
 
 
 short int invWord(short int  word);
 
 int main(){
 int fd1;
+int enderecoObjetivo	= 0x00;
 short int result, regPage;
-int pageNumber = 1;
-int addrZero = 0x00;
-int addrPage = 0xF0;
-int 
 
 fd1 = wiringPiI2CSetup(0x5D);
 
 
 cout << "Init Result: " << fd1 << endl;
 
-regPage = wiringPiI2CReadReg16(fd1, addrPage);
+//Recebendo e imprimindo a página atual
+regPage = wiringPiI2CReadReg16(fd1, enderecoPagina);
 regPage = invWord(regPage);
 
 cout << "Current register page: " << dec << regPage << endl;
-cout << "Changing to register page " << pageNumber << endl;
+cout << "Changing to register page " << paginaObjetivo << endl;
 
-cout << "Reading from page " << dec << pageNumber << " address " << hex << addrZero << " should be 0x00" << endl; 
+//Mudando a página escrevendo no registrador, e lendo seu valor
 
-pageNumber = invWord(pageNumber);
+cout << "Reading from page " << dec << paginaObjetivo << " address " << hex << enderecoObjetivo << " should be 0x01F8" << endl; 
 
-wiringPiI2CWriteReg16 (fd1, addrPage, pageNumber);
+paginaObjetivo = invWord(paginaObjetivo);
+wiringPiI2CWriteReg16 (fd1, enderecoPagina, paginaObjetivo);
 
-result = wiringPiI2CReadReg16(fd1, addrZero);
+result = wiringPiI2CReadReg16(fd1, enderecoObjetivo);
 result = invWord(result);
 
-cout << "Value on address " << hex << addrZero << " = " << result << endl;
+cout << "Value on address " << hex << enderecoObjetivo << " = " << result << endl;
 
 
 }
