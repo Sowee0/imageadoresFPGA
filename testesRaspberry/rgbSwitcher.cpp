@@ -12,17 +12,18 @@ const int paginaObjetivo	= 1;
 const int mascaraRGB		= 0b0000000000010000; //RGB ligado
 const int mascaraFormato	= 0b0000000000100000; //Formato RGB555
 
-
+//esboço da função de inversão de bytes
 short int invWord(short int  word);
 
 int main(){
+//Variáveis úteis
 int fd1;
 int enderecoObjetivo	= 0x00;
 short int result, regPage;
 
 fd1 = wiringPiI2CSetup(0x5D);
 
-
+//Iniciando a câmera no I2C
 cout << "Init Result: " << fd1 << endl;
 
 //Recebendo e imprimindo a página atual
@@ -44,10 +45,14 @@ result = invWord(result);
 
 cout << "Value on address " << hex << enderecoObjetivo << " = " << result << endl;
 
+//Aplicando a saída RGB 555
 
+//Checando se a saída foi escrita corretamente
 }
 
 short int invWord(short int word){
+	//Operação simples de inversão do byte mais significativo com o menos significativo
+	//A leitura é feita por ODD/EVEN byte 
 	short int hibyte = (word & 0xFF00) >> 8;
 	short int lobyte = (word & 0xFF);
 
