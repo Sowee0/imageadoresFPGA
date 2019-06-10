@@ -36,8 +36,17 @@ void pxclkInterrupt();
 
 
 
+
+
 int main(){
+
+	int fd1;
+	short int result;
+	int addr_zero = 0x00;
+
+	fd1 = wiringPiI2CSetup(0x5D);
 	
+
 	setup();
 	loop();
 }
@@ -50,19 +59,7 @@ void loop(){
 //Sincronizar VSYNC, HSYNC e PXLCLK para receber uma imagem inteira
 //Lembrar que cada pixel tem DOIS BYTES
 
-int fd1;
-short int result;
-int addr_zero = 0x00;
 
-fd1 = wiringPiI2CSetup(0x5D);
-
-
-cout << "Starting a frame capture:" << endl;
-
-cout << "Changing the register page" << endl;
-
-result = wiringPiI2CReadReg16(fd1, addr_zero + i);
-result = invWord(result);
 
 }
 
