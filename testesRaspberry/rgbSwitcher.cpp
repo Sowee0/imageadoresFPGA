@@ -73,6 +73,7 @@ result = invWord(result);
 
 cout << "Value on address " << hex << enderecoObjetivo << " = " << result << endl;
 if(result == valorFinal){
+	
 	cout <<  "Success!" << endl;
 }
 
