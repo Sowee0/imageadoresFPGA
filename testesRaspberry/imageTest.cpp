@@ -5,18 +5,25 @@
 
 using namespace  std;
 
-#define HSYNC 0
-#define VSYNC 2
-#define PXCLK 3
+const int HSYNC = 0;
+const int VSYNC = 2;
+const int PXCLK = 3;
 
-#define D0 12
-#define D1 13
-#define D2 14
-#define D3 15
-#define D4 16
-#define D5 1
-#define D6 4
-#define D7 5
+const int D0 = 12;
+const int D1 = 13;
+const int D2 = 14;
+const int D3 = 15;
+const int D4 = 16;
+const int D5 = 1;
+const int D6 = 4;
+const int D7 = 5;
+
+char image[1800][1400];
+int line = 0;
+int column = 0;
+
+bool startCapture = false;
+
 
 short int invWord(short int  word);
 void loop();
