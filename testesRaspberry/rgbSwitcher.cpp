@@ -59,6 +59,8 @@ cout << "Value on address " << hex << enderecoObjetivo << " = " << result << end
 
 int valorFinal = mascaraFormato | mascaraRGB;
 
+cout << "Value to be written on the color output control register" << hex << valorFinal << endl;
+
 valorFinal = invWord(valorFinal);
 wiringPiI2CWriteReg16 (fd1, enderecoObjetivo, valorFinal);
 
