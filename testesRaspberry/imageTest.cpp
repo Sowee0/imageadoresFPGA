@@ -104,14 +104,49 @@ void setup(){
 }
 
 
-void hsyncInterrupt(){
+void vsyncInterrupt(){
+
+	if(digitalRead(VSYNC)){
+	cout << "Starting a frame capture:" << endl;
+	startCapture = true;
+	}
+	else{
+		save
+	}
+
 
 }
 
-void vsyncInterrupt(){
+void hsyncInterrupt(){
+	
+	if(startCapture)
+	line++;
 
 }
 
 void pxclkInterrupt(){
+	if(startCapture){
+	if(digitalRead(HSYNC)){
+		image[line][column] = inputToByte();
+		column++;
+	}
+	else{
+		column = 0;
+	}
+}
 
+
+
+	if(digitalRead())
+	
+
+}
+
+char inputToByte(){
+	char byteRead;
+
+	byteRead = 	(digitalRead(D7) << 7) | (digitalRead(D6) << 6) | (digitalRead(D5) << 5) | (digitalRead(D4) << 4) | 
+				(digitalRead(D3) << 3) | (digitalRead(D2) << 2) | (digitalRead(D1) << 1) | (digitalRead(D0) << 0);
+	
+	return byteRead;
 }
