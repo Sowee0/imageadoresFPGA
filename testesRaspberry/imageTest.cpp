@@ -82,7 +82,8 @@ short int invWord(short int word){
 
 void setup(){
 
-	wiringPiSetup (;
+	//Iniciando o wiringPi (obrigatório)
+	wiringPiSetup ();
 	
 	//Setando os pinos de transmissão de dados de acordo
 	
