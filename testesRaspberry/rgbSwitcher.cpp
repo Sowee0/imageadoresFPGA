@@ -18,7 +18,7 @@ int main(){
 
 //Variáveis úteis
 int fd1;
-int enderecoObjetivo	= 0x00;
+int enderecoObjetivo	= 0x08;
 int paginaObjetivo	= 1;
 
 short int result, regPage;
@@ -48,7 +48,7 @@ regPage = invWord(regPage);
 cout << "Current register page: " << dec << regPage << endl;
 
 
-//Verificando o valor no registrador 0 
+//Verificando o valor no registrador 8 
 
 result = wiringPiI2CReadReg16(fd1, enderecoObjetivo);
 result = invWord(result);
