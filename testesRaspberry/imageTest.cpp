@@ -28,6 +28,7 @@ void pxclkInterrupt();
 
 
 
+
 int main(){
 	
 	setup();
@@ -73,6 +74,8 @@ short int invWord(short int word){
 
 
 void setup(){
+
+	wiringPiSetup (;
 	
 	//Setando os pinos de transmissão de dados de acordo
 	

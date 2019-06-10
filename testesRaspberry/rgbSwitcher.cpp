@@ -14,6 +14,8 @@ const int mascaraFormato	= 0b0000000000100000; //Formato RGB555
 //esboço da função de inversão de bytes
 short int invWord(short int  word);
 
+wiringPiSetup ();
+
 int main(){
 
 //Variáveis úteis
@@ -73,7 +75,7 @@ result = invWord(result);
 
 cout << "Value on address " << hex << enderecoObjetivo << " = " << result << endl;
 if(result == valorFinal){
-	
+
 	cout <<  "Success!" << endl;
 }
 
