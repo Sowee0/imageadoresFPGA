@@ -72,7 +72,7 @@ result = wiringPiI2CReadReg16(fd1, enderecoObjetivo);
 result = invWord(result);
 
 cout << "Value on address " << hex << enderecoObjetivo << " = " << result << endl;
-if(result = valorFinal){
+if(result == valorFinal){
 	cout <<  "Success!" << endl;
 }
 
