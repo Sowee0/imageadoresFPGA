@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <wiringPiI2C.h>
+#include <wiringPi.h>
 #include <errno.h>
 
 using namespace  std;
