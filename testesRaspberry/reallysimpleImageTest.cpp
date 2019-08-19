@@ -100,9 +100,9 @@ void setup(){
 
 	//Setando os pinos de sincronização e definindo as suas interrupções de acordo
 
-	wiringPiISR (VSYNC, INT_EDGE_BOTH, 		&vsyncInterrupt;
-	wiringPiISR (HSYNC, INT_EDGE_RISING, 	&hsyncInterrupt;
-	wiringPiISR (PXCLK, INT_EDGE_RISING, 	&pxclkInterrupt;
+	wiringPiISR (VSYNC, INT_EDGE_BOTH, 		&vsyncInterrupt);
+	wiringPiISR (HSYNC, INT_EDGE_RISING, 	&hsyncInterrupt);
+	wiringPiISR (PXCLK, INT_EDGE_RISING, 	&pxclkInterrupt);
 	
 }
 
