@@ -43,6 +43,8 @@ void pxclkInterrupt();
 
 int main(){
 
+	wiringPiSetup ();
+
 	int fd1;
 	short int result;
 	int addr_zero = 0x00;
@@ -83,7 +85,7 @@ short int invWord(short int word){
 void setup(){
 
 	//Iniciando o wiringPi (obrigatório)
-	wiringPiSetup ();
+	
 	
 	//Setando os pinos de transmissão de dados de acordo
 	
@@ -98,9 +100,9 @@ void setup(){
 
 	//Setando os pinos de sincronização e definindo as suas interrupções de acordo
 
-	wiringPiISR (VSYNC, INT_EDGE_BOTH, vsyncInterrupt());
-	wiringPiISR (HSYNC, INT_EDGE_RISING, hsyncInterrupt());
-	wiringPiISR (PXCLK, INT_EDGE_RISING, pxclkInterrupt());
+	wiringPiISR (VSYNC, INT_EDGE_BOTH, 		&vsyncInterrupt;
+	wiringPiISR (HSYNC, INT_EDGE_RISING, 	&hsyncInterrupt;
+	wiringPiISR (PXCLK, INT_EDGE_RISING, 	&pxclkInterrupt;
 	
 }
 
