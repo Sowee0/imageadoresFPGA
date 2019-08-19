@@ -5,9 +5,9 @@
 
 using namespace  std;
 
-const int HSYNC = 0;
-const int VSYNC = 2;
-const int PXCLK = 3;
+const int VSYNC = 0; //raspberry pino 17
+const int HSYNC = 2; //raspberry pino 27
+const int PXCLK = 3; //raspberry pino 22
 
 const int D0 = 12;
 const int D1 = 13;
@@ -23,6 +23,7 @@ char image[1800][1400];
 int frameNumber 	= 0;
 int lineNumber 		= 0;
 int columnNumber 	= 0;
+int pixelCounter	= 0;
 
 bool startCapture = false;
 
@@ -110,30 +111,25 @@ void vsyncInterrupt(){
 		cout << "Starting a frame capture:" << endl;
 		startCapture = true;
 		frameNumber++;
+		pixelCounter = 0;
 	}
 
 	else{
 		startCapture = false;
-		cout << "Frame " << frameNumber <<  " ended" << endl;
+		cout << "Frame " << frameNumber <<  " ended. Total pixels: " << pixelCounter << endl;
 	}
 
 
 }
 
 void hsyncInterrupt(){	
-	if(startCapture)
-	line++;
+	cout << "New line" << endl;
 
 }
 
 void pxclkInterrupt(){
 
-}
-
-
-
-	if(digitalRead())
-	
+	pixelCounter++;
 
 }
 
