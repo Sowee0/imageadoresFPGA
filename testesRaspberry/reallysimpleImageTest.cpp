@@ -59,9 +59,12 @@ int main(){
 
 void loop(){
 	
+while(1){
+delay(400);
 
-
-
+if(frameNumber > 1000)
+break;
+}
 //Sincronizar VSYNC, HSYNC e PXLCLK para receber uma imagem inteira
 //Lembrar que cada pixel tem DOIS BYTES
 
@@ -126,7 +129,7 @@ void vsyncInterrupt(){
 }
 
 void hsyncInterrupt(){	
-	cout << "New line" << endl;
+	//cout << "New line" << endl;
 
 }
 
