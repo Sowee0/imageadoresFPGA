@@ -63,7 +63,7 @@ while(1){
 delay(400);
 
 if(frameNumber > 1000)
-exit();
+exit(0);
 }
 //Sincronizar VSYNC, HSYNC e PXLCLK para receber uma imagem inteira
 //Lembrar que cada pixel tem DOIS BYTES
@@ -123,7 +123,7 @@ void vsyncInterrupt(){
 	else{
 		startCapture = false;
 		cout << "Frame " << frameNumber <<  " ended. Total pixels: " << pixelCounter << endl;
-		exit();
+		exit(0);
 	}
 
 
