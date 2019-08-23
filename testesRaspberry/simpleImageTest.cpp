@@ -36,6 +36,8 @@ void hsyncInterrupt();
 void vsyncInterrupt();
 void pxclkInterrupt();
 
+void dumpFrame();
+
 int main(){
 
 	wiringPiSetup ();
@@ -148,9 +150,9 @@ void dumpFrame(){
 	char fileName[20];
 	sprintf(fileName,"frame%d.csv", currentFrame);
 
-	ofstream imageFile (fileName);
+	ofstream imageFile;
 
-	imageFile.open();
+	imageFile.open(fileName);
 
 	for(int j = 0; j < frameWidth; j++){
 		for (int k = 0; k < frameHeight; k++){
