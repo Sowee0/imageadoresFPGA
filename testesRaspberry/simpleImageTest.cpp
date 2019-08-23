@@ -6,9 +6,9 @@
 
 using namespace  std;
 
-const int HSYNC = 0;
-const int VSYNC = 2;
-const int PXCLK = 3;
+const int VSYNC = 0; //raspberry pino 17
+const int HSYNC = 2; //raspberry pino 27
+const int PXCLK = 3; //raspberry pino 22
 
 const int D0 = 12;
 const int D1 = 13;
@@ -19,14 +19,14 @@ const int D5 = 1;
 const int D6 = 4;
 const int D7 = 5;
 
-char image[1800][1400];
+const int frameWidth = 1800;
+const int frameHeight = 1400;
 
-int frameNumber 	= 0;
-int lineNumber 		= 0;
-int columnNumber 	= 0;
+char image[frameWidth][frameHeight];
 
-bool startCapture = false;
-
+int currentFrame 	= 0;
+int currentLine 	= 0;
+int currentPixel 	= 0;
 
 short int invWord(short int  word);
 void loop();
@@ -36,12 +36,11 @@ void hsyncInterrupt();
 void vsyncInterrupt();
 void pxclkInterrupt();
 
-
-
-
-
-
 int main(){
+
+	wiringPiSetup ();
+
+	ofstream imageFile;
 
 	int fd1;
 	short int result;
@@ -56,9 +55,10 @@ int main(){
 
 void loop(){
 	
-
-
-
+while(1){
+//cout << "esperando" << endl;
+//delay(500);
+}
 //Sincronizar VSYNC, HSYNC e PXLCLK para receber uma imagem inteira
 //Lembrar que cada pixel tem DOIS BYTES
 
@@ -83,7 +83,7 @@ short int invWord(short int word){
 void setup(){
 
 	//Iniciando o wiringPi (obrigatório)
-	wiringPiSetup ();
+	
 	
 	//Setando os pinos de transmissão de dados de acordo
 	
@@ -98,43 +98,39 @@ void setup(){
 
 	//Setando os pinos de sincronização e definindo as suas interrupções de acordo
 
-	wiringPiISR (VSYNC, INT_EDGE_BOTH, vsyncInterrupt());
-	wiringPiISR (HSYNC, INT_EDGE_RISING, hsyncInterrupt());
-	wiringPiISR (PXCLK, INT_EDGE_RISING, pxclkInterrupt());
+	cout << "Starting the interrupts and frame captures" << endl;
+
+	wiringPiISR (VSYNC, INT_EDGE_RISING, 	&vsyncInterrupt);
+	wiringPiISR (HSYNC, INT_EDGE_RISING, 	&hsyncInterrupt);
+	wiringPiISR (PXCLK, INT_EDGE_RISING, 	&pxclkInterrupt);
 	
 }
 
 
 void vsyncInterrupt(){
 
-	if(digitalRead(VSYNC)){
-		cout << "Starting a frame capture:" << endl;
-		startCapture = true;
-		frameNumber++;
-	}
+	dumpFrame();	
+	currentFrame++;
 
-	else{
-		startCapture = false;
-		cout << "Frame " << frameNumber <<  " ended" << endl;
+	if(currentFrame > 10){
+	cout << "read 10 frames" << endl;
+	exit(1);
 	}
 
 
 }
 
 void hsyncInterrupt(){	
-	if(startCapture)
-	line++;
+	
+	currentLine++;
+	currentPixel = 0;
 
 }
 
 void pxclkInterrupt(){
 
-}
-
-
-
-	if(digitalRead())
-	
+	image[currentLine][currentPixel] = 253;
+	currentPixel++;
 
 }
 
@@ -145,4 +141,25 @@ char inputToByte(){
 				(digitalRead(D3) << 3) | (digitalRead(D2) << 2) | (digitalRead(D1) << 1) | (digitalRead(D0) << 0);
 	
 	return byteRead;
+}
+
+void dumpFrame(){
+
+	char fileName[20];
+	sprintf(fileName,"frame%d.csv", currentFrame);
+
+	ofstream imageFile (fileName);
+
+	imageFile.open();
+
+	for(int j = 0; j < frameWidth; j++){
+		for (int k = 0; k < frameHeight; k++){
+			imageFile << image[j][k];
+
+		}
+
+		imageFile << endl;
+	}
+
+	imageFile.close();
 }
