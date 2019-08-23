@@ -156,7 +156,7 @@ void dumpFrame(){
 
 	for(int j = 0; j < frameWidth; j++){
 		for (int k = 0; k < frameHeight; k++){
-			imageFile << image[j][k];
+			imageFile << image[j][k] << ",";
 
 		}
 
