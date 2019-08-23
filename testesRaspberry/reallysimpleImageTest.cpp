@@ -60,10 +60,8 @@ int main(){
 void loop(){
 	
 while(1){
-delay(400);
-
-if(frameNumber > 1000)
-exit(0);
+//cout << "esperando" << endl;
+//delay(500);
 }
 //Sincronizar VSYNC, HSYNC e PXLCLK para receber uma imagem inteira
 //Lembrar que cada pixel tem DOIS BYTES
@@ -104,7 +102,9 @@ void setup(){
 
 	//Setando os pinos de sincronização e definindo as suas interrupções de acordo
 
-	wiringPiISR (VSYNC, INT_EDGE_BOTH, 		&vsyncInterrupt);
+	cout << "Starting the interrupts and frame captures" << endl;
+
+	wiringPiISR (VSYNC, INT_EDGE_RISING, 	&vsyncInterrupt);
 	wiringPiISR (HSYNC, INT_EDGE_RISING, 	&hsyncInterrupt);
 	wiringPiISR (PXCLK, INT_EDGE_RISING, 	&pxclkInterrupt);
 	
@@ -113,17 +113,16 @@ void setup(){
 
 void vsyncInterrupt(){
 
-	if(digitalRead(VSYNC)){
-		cout << "Starting a frame capture:" << endl;
+		//cout << "Starting a frame capture:" << endl;
 		startCapture = true;
 		frameNumber++;
 		pixelCounter = 0;
-	}
 
-	else{
-		startCapture = false;
-		cout << "Frame " << frameNumber <<  " ended. Total pixels: " << pixelCounter << endl;
-		exit(0);
+
+
+	if(frameNumber > 10){
+	cout << "read 10 frames" << endl;
+	exit(1);
 	}
 
 
@@ -136,7 +135,7 @@ void hsyncInterrupt(){
 
 void pxclkInterrupt(){
 
-	pixelCounter++;
+	//pixelCounter++;
 
 }
 
