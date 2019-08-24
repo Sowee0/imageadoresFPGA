@@ -37,6 +37,7 @@ void vsyncInterrupt();
 void pxclkInterrupt();
 
 void dumpFrame();
+char inputToByte();
 
 int main(){
 
