@@ -131,7 +131,7 @@ void hsyncInterrupt(){
 
 void pxclkInterrupt(){
 
-	image[currentLine][currentPixel] = 253;
+	image[currentLine][currentPixel] = inputToByte();
 	currentPixel++;
 
 }
