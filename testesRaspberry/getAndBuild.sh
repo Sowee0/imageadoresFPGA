@@ -7,4 +7,4 @@ echo "Atualizando os arquivos\n"
 git pull
 echo "Compilando o arquivo\n" 
 
-g++ $1 -lwiringPi -o $2
+g++ $1 -lwiringPi -o $2d
