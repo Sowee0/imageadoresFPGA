@@ -112,12 +112,15 @@ void setup(){
 
 void vsyncInterrupt(){
 
+	wiringPiISR (PXCLK, NONE, 	&pxclkInterrupt);
 	dumpFrame();	
 	currentFrame++;
+	wiringPiISR (PXCLK, INT_EDGE_RISING, 	&pxclkInterrupt);
 
 	if(currentFrame > 10){
 	cout << "read 10 frames" << endl;
 	exit(1);
+	wiringPiISR (PXCLK, NONE, 	&pxclkInterrupt);
 	}
 
 
