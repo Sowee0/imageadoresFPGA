@@ -1,3 +1,4 @@
+#!/bin/bash
 #Esse script inicia o clock no pino designado com a frequência designada
 
 pinoClock=7
