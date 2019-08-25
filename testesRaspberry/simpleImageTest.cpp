@@ -28,6 +28,8 @@ int currentFrame 	= 0;
 int currentLine 	= 0;
 int currentPixel 	= 0;
 
+int priority = 99;
+
 short int invWord(short int  word);
 void loop();
 void setup();
@@ -106,6 +108,8 @@ void setup(){
 	wiringPiISR (VSYNC, INT_EDGE_RISING, 	&vsyncInterrupt);
 	wiringPiISR (HSYNC, INT_EDGE_RISING, 	&hsyncInterrupt);
 	wiringPiISR (PXCLK, INT_EDGE_RISING, 	&pxclkInterrupt);
+
+	int piHiPri (priority) ;
 	
 }
 
