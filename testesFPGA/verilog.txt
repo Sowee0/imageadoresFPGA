@@ -1,0 +1,67 @@
+# Estudo sobre VERILOG
+
+## 1. Módulos
+
+### 1.1. Configuração de Portas
+Em verilog usa-se o que chamamos de módulos. Esses são representações de caixas pretas com entradas e saídas onde programa-se essa lógica determinística que reje essas portas.
+
+```verilog 
+    module meu_modulo(
+        input 	a,
+        output	b,
+        inout	c,
+    );
+```
+
+Para um agrupamento de bits, como um endereço, ou um byte pode-se usar a seguinte notação de vetor:
+
+```verilog
+    input variavel[7:0]
+```
+Essa notação implica que a porta "variável" está em little-endian, ou seja o bit menos significativo está localizado ao extremo da direita. Caso usassemos big-endian, a situação se inverteria, tendo como bit mais significativo aquele mais à esquerda.
+
+```verilog
+    input variavel[0:7]
+```
+
+### 1.2. Tipos de dados
+Verilog é uma linguagem descritiva de hardware, então porque falamos de tipos de dados? Hardware tem dois tipos de drivers, que pode ser ele do tipo que guarda valores e do tipo que só faz as conexões. Estes são o **reg** (de registrador) e o **wire** (de fio).
+
+### 1.3. Operadores
+
+Funcionam exatamente como os operadores em C 
+
+### 1.4. Tipos de representações
+
+Pode-se representar os números em verilog de três maneiras: Decimal, Hexadecimal e Binário. Sua notação primeiramente define a quantidade de bits que são usados para representar o tal número e sem seguida o número no formato desejado, logo:
+
+```verilog
+    data = 8d'127;
+    sata = 8h'A1;
+    lata = 1b'1;
+```
+
+### 1.5. Expressões Condicionais
+As expressões aqui de controle 'se' sempre precisam ser seguidas de begin e end de maneira a demarcar suas subrotinas.
+
+```verilog
+		if( enable == 1b'1)
+		begin
+
+		coisas
+
+		end
+		else
+		begin
+
+		coisas
+
+		end
+```
+
+A expressão de controle case precisa termianar com endcase e também ter um catch-all default:
+
+
+
+
+
