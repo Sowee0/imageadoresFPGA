@@ -3,3 +3,10 @@ testesRaspberry/bin/
 
 testesRaspberry/\.vscode/
 .vscode/
+*.bak
+*.db_info
+*.rpt
+db/
+output_files/
+simulation/
+incremental_db/
