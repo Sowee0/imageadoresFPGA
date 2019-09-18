@@ -73,4 +73,41 @@ set_global_assignment -name EDA_TEST_BENCH_NAME grabframe_tb -section_id eda_sim
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id grabframe_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME grabframe_tb -section_id grabframe_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE grabFrame_tb.v.bak -section_id grabframe_tb
+set_global_assignment -name VERILOG_FILE flashMemory.v
+set_location_assignment PIN_AC18 -to mem_addr0
+set_location_assignment PIN_AB18 -to mem_addr1
+set_location_assignment PIN_AE19 -to mem_addr2
+set_location_assignment PIN_AF19 -to mem_addr3
+set_location_assignment PIN_AE18 -to mem_addr4
+set_location_assignment PIN_AF18 -to mem_addr5
+set_location_assignment PIN_Y16 -to mem_addr6
+set_location_assignment PIN_AA16 -to mem_addr7
+set_location_assignment PIN_AD17 -to mem_addr8
+set_location_assignment PIN_AC17 -to mem_addr9
+set_location_assignment PIN_AE17 -to mem_addr10
+set_location_assignment PIN_AF17 -to mem_addr11
+set_location_assignment PIN_W16 -to mem_addr12
+set_location_assignment PIN_W15 -to mem_addr13
+set_location_assignment PIN_AC16 -to mem_addr14
+set_location_assignment PIN_AD16 -to mem_addr15
+set_location_assignment PIN_AE16 -to mem_addr16
+set_location_assignment PIN_AC15 -to mem_addr17
+set_location_assignment PIN_AB15 -to mem_addr18
+set_location_assignment PIN_AA15 -to mem_addr19
+set_location_assignment PIN_Y15 -to mem_addr20
+set_location_assignment PIN_Y14 -to mem_addr21
+set_location_assignment PIN_K26 -to HSYNC
+set_location_assignment PIN_M22 -to VSYNC
+set_location_assignment PIN_M23 -to PXCLK
+set_location_assignment PIN_AD19 -to mem_data0
+set_location_assignment PIN_AC19 -to mem_data1
+set_location_assignment PIN_AF20 -to mem_data2
+set_location_assignment PIN_AE20 -to mem_data3
+set_location_assignment PIN_AB20 -to mem_data4
+set_location_assignment PIN_AC20 -to mem_data5
+set_location_assignment PIN_AF21 -to mem_data6
+set_location_assignment PIN_AE21 -to mem_data7
+set_location_assignment PIN_AA17 -to wr
+set_location_assignment PIN_V17 -to ce
+set_location_assignment PIN_AE22 -to done
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
