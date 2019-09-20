@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <preferences>
  <debug showDebugMenu="0" />
- <systemtable>
+ <systemtable filter="All Interfaces">
   <columns>
-   <connections preferredWidth="47" />
+   <connections preferredWidth="30" />
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
  <clocktable>
   <columns>
-   <clockname preferredWidth="269" />
-   <clocksource preferredWidth="269" />
-   <frequency preferredWidth="250" />
+   <clockname preferredWidth="234" />
+   <clocksource preferredWidth="235" />
+   <frequency preferredWidth="218" />
   </columns>
  </clocktable>
- <window width="1100" height="791" x="454" y="122" />
+ <window width="1100" height="791" x="483" y="93" />
  <library
-   expandedCategories="Library/Memories and Memory Controllers,Library/Memories and Memory Controllers/On-Chip,Library/Memories and Memory Controllers/External Memory Interfaces,Library,Library/Memories and Memory Controllers/External Memory Interfaces/SDRAM Interfaces,Project" />
+   expandedCategories="Library/Qsys Interconnect/Memory-Mapped,Project,Library,Library/Memories and Memory Controllers/External Memory Interfaces/Pattern Generators,Library/Interface Protocols,Library/Memories and Memory Controllers,Library/Interface Protocols/PCI,Library/Memories and Memory Controllers/External Memory Interfaces,Library/Qsys Interconnect" />
+ <hdlexample language="VERILOG" />
+ <generation simulation="VERILOG" testbench_system="STANDARD" />
 </preferences>
