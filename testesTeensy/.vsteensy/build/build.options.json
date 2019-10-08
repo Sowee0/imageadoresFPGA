@@ -1,0 +1,11 @@
+{
+  "additionalFiles": "\\lib\\Wire\\Wire.cpp,\\lib\\Wire\\Wire.h,\\lib\\Wire\\WireIMXRT.cpp,\\lib\\Wire\\WireIMXRT.h,\\lib\\Wire\\WireKinetis.cpp,\\lib\\Wire\\WireKinetis.h,\\lib\\Wire\\utility\\twi.c,\\lib\\Wire\\utility\\twi.h",
+  "builtInLibrariesFolders": "",
+  "customBuildProperties": "",
+  "fqbn": "teensy:avr:teensyLC:usb=serial,speed=48,opt=o3std,keys=en-us",
+  "hardwareFolders": "C:\\Program Files (x86)\\Arduino\\hardware",
+  "otherLibrariesFolders": "C:\\Users\\sowee\\Documents\\Arduino\\libraries,C:\\Program Files (x86)\\Arduino\\hardware\\teensy\\avr\\libraries,C:\\Program Files (x86)\\Arduino\\libraries",
+  "runtime.ide.version": "10600",
+  "sketchLocation": "C:\\Users\\sowee\\Documents\\git\\imageadoresFPGA\\testesTeensy\\testesTeensy.ino",
+  "toolsFolders": "C:\\Program Files (x86)\\Arduino\\tools-builder"
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "Sourcefile": "",
+    "Include": "",
+    "Includepath": "C:\\Program Files (x86)\\Arduino\\hardware\\teensy\\avr\\cores\\teensy3"
+  },
+  {
+    "Sourcefile": "C:\\Users\\sowee\\Documents\\git\\imageadoresFPGA\\testesTeensy\\.vsTeensy\\build\\sketch\\testesTeensy.ino.cpp",
+    "Include": "Wire.h",
+    "Includepath": "C:\\Program Files (x86)\\Arduino\\hardware\\teensy\\avr\\libraries\\Wire"
+  },
+  {
+    "Sourcefile": "C:\\Users\\sowee\\Documents\\git\\imageadoresFPGA\\testesTeensy\\.vsTeensy\\build\\sketch\\testesTeensy.ino.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "C:\\Program Files (x86)\\Arduino\\hardware\\teensy\\avr\\libraries\\Wire\\Wire.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "C:\\Program Files (x86)\\Arduino\\hardware\\teensy\\avr\\libraries\\Wire\\WireIMXRT.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "C:\\Program Files (x86)\\Arduino\\hardware\\teensy\\avr\\libraries\\Wire\\WireKinetis.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "C:\\Program Files (x86)\\Arduino\\hardware\\teensy\\avr\\libraries\\Wire\\utility\\twi.c",
+    "Include": "",
+    "Includepath": ""
+  }
+]
