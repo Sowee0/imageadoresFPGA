@@ -9,12 +9,12 @@
  </systemtable>
  <clocktable>
   <columns>
-   <clockname preferredWidth="234" />
-   <clocksource preferredWidth="235" />
-   <frequency preferredWidth="218" />
+   <clockname preferredWidth="546" />
+   <clocksource preferredWidth="547" />
+   <frequency preferredWidth="531" />
   </columns>
  </clocktable>
- <window width="1100" height="791" x="483" y="93" />
+ <window width="1938" height="1048" x="-9" y="-9" />
  <library
    expandedCategories="Library/Qsys Interconnect/Memory-Mapped,Project,Library,Library/Memories and Memory Controllers/External Memory Interfaces/Pattern Generators,Library/Interface Protocols,Library/Memories and Memory Controllers,Library/Interface Protocols/PCI,Library/Memories and Memory Controllers/External Memory Interfaces,Library/Qsys Interconnect" />
  <hdlexample language="VERILOG" />

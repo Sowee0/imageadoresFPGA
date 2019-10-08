@@ -5,7 +5,7 @@ module clockDivider(
 	output	clk_out
 );
 
-parameter maxCount = 4'd5;
+parameter maxCount = 4'd4;
 
 reg [3:0] counter = 4'd0;
 
@@ -14,7 +14,7 @@ reg q = 1'b0;
 
 always @(posedge clk) begin
 	
-	if(counter < 4'd5)
+	if(counter < 4'd3)
 		counter <= counter + 4'd1;
 		
 	else begin
