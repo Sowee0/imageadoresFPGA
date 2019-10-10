@@ -1,10 +1,12 @@
 close all
+tic
 
-referenciaPupila    = imread('pesquisa_olho.png');
-frameBase           = imread('base_olho.png');
+referenciaPupila    = imread('pesquisa_olho2.png');
+frameBase           = imread('base_olho3.png');
 matrizNotas         = zeros(480,640);
-threshold = 50;
+threshold = int64(50);
 nota = int64(0);
+valorFrame = int64(0);
 
 maiorNota = int64(0);
 maiorX = 0;
@@ -34,10 +36,10 @@ for a = 1:altura - alturaReferencia;
             
             for lR = 1:larguraReferencia
                 
-                valorFrame = abs(frameCinza(a + aR, l + lR) - referenciaCinza(aR, lR));
+                valorFrame = int64(abs(frameCinza(a + aR, l + lR) - referenciaCinza(aR, lR)));
                 if( valorFrame < threshold)
                    
-                    nota = nota + 1;
+                    nota = nota + threshold - valorFrame;
                     
                 end
                 
@@ -45,7 +47,7 @@ for a = 1:altura - alturaReferencia;
             
         end
         
-         matrizNotas(a,l) = nota;
+         %matrizNotas(a,l) = nota;
          if(nota > maiorNota)
              
              maiorNota = nota;
@@ -60,24 +62,23 @@ for a = 1:altura - alturaReferencia;
     
 end
 
-[max_num, max_idx]=max(matrizNotas(:));
-[X,Y]=ind2sub(size(matrizNotas),max_idx);
+%[max_num, max_idx]=max(matrizNotas(:));
+%[X,Y]=ind2sub(size(matrizNotas),max_idx);
 
-y2 = Y + 120;
-x2 = X + 90;
+%y2 = Y + 120;
+%x2 = X + 90;
 
 maiorXaj =  maiorX + 90;
 maiorYaj =  maiorY + 120;
 
 hold on
 
-plot(y2, x2, 'ro');
+%plot(y2, x2, 'ro');
 
 subplot(1,2,1);
 hold on
 plot(maiorYaj, maiorXaj, 'go');
 
-
-
-
 M = max(matrizNotas);
+
+toc
