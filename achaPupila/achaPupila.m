@@ -1,14 +1,14 @@
 close all
 tic
 
-referenciaPupila    = imread('pesquisa_olho2.png');
-frameBase           = imread('base_olho3.png');
+referenciaPupila    = imread('pesquisa_olho.png');
+frameBase           = imread('base_olhotst.png');
 matrizNotas         = zeros(480,640);
-threshold = int64(50);
-nota = int64(0);
-valorFrame = int64(0);
+threshold = int32(50);
+nota = int32(0);
+valorFrame = int32(0);
 
-maiorNota = int64(0);
+maiorNota = int32(0);
 maiorX = 0;
 maiorY = 0;
 
@@ -36,7 +36,7 @@ for a = 1:altura - alturaReferencia;
             
             for lR = 1:larguraReferencia
                 
-                valorFrame = int64(abs(frameCinza(a + aR, l + lR) - referenciaCinza(aR, lR)));
+                valorFrame = int32(abs(frameCinza(a + aR, l + lR) - referenciaCinza(aR, lR)));
                 if( valorFrame < threshold)
                    
                     nota = nota + threshold - valorFrame;
@@ -46,8 +46,7 @@ for a = 1:altura - alturaReferencia;
             end
             
         end
-        
-         %matrizNotas(a,l) = nota;
+         matrizNotas(a,l) = nota;
          if(nota > maiorNota)
              
              maiorNota = nota;
