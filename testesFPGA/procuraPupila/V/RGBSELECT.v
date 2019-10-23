@@ -3,6 +3,8 @@ module RGBSELECT(
         oDATA_R,
 		  oDATA_G,
 		  oDATA_B,
+		  iH_Cont,
+		  iV_Cont,
 		  iSW4,
 		  iSW5,
         iRed,
@@ -11,10 +13,15 @@ module RGBSELECT(
         iCLK,
         iRST,
         iDVAL,
+		  
 		);
 input			iDVAL;
 input			iCLK;
 input			iRST;
+
+input		[12:0]	iH_Cont;
+input		[12:0]	iV_Cont;
+
 output reg[9:0]	oDATA_R;
 output reg[9:0]	oDATA_G;
 output reg[9:0]	oDATA_B;
@@ -39,13 +46,28 @@ begin
 	  oDATA_B   <= 10'b0;
     end
   else
-    begin
-	  oDVAL   <= iDVAL;
-	  
-	  grayscale <= ((iRed[9:0] * 30) /100) + ((iGreen[9:1] * 59)/100) + ((iBlue[9:0] * 11)/100);
-	  oDATA_R   <= grayscale[9:0];
-	  oDATA_G   <= grayscale[9:0];
-	  oDATA_B   <= grayscale[9:0];
-    end
+	  begin
+  
+  
+			if(iH_Cont > 500 && iH_Cont < 540 && iV_Cont > 400 && iV_Cont < 440)
+				begin
+				oDVAL   <= iDVAL;
+				oDATA_R <= 9'b0;
+				oDATA_G <= 9'b0;
+				oDATA_B <= 9'b0;
+				end
+				
+				else
+				
+				begin 
+				oDVAL   <= iDVAL;
+				grayscale <= ((iRed[9:0] * 30) /100) + ((iGreen[9:0] * 59)/100) + ((iBlue[9:0] * 11)/100);
+				oDATA_R   <= grayscale[9:0];
+				oDATA_G   <= grayscale[9:0];
+				oDATA_B   <= grayscale[9:0];
+				end
+				
+		end
+				
 end
 endmodule
