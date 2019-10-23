@@ -539,9 +539,9 @@ I2C_CCD_Config 		u10	(	//	Host Side
 							.I2C_SDAT(GPIO_1[23])
 						);
 
-wire [9:0] wVGA_R  = Read_DATA2[9:0];
-wire [9:0] wVGA_G  = {Read_DATA1[14:10],Read_DATA2[14:10]};
-wire [9:0] wVGA_B  = Read_DATA1[9:0];			
+//wire [9:0] wVGA_R  = Read_DATA2[9:0];
+//wire [9:0] wVGA_G  = {Read_DATA1[14:10],Read_DATA2[14:10]};
+//wire [9:0] wVGA_B  = Read_DATA1[9:0];			
 RGB2GRAY         u5 (
                      .iCLK(CCD_PIXCLK),
                      .iRST(DLY_RST_1),
@@ -553,7 +553,7 @@ RGB2GRAY         u5 (
                      .oDVAL(gCCD_DVAL),
                      );
 							
-RGBSELECT         u11 (
+TESTMODULE         u11 (
                      .iCLK(CCD_PIXCLK),
                      .iRST(DLY_RST_1),
                      .iDVAL(Read),
