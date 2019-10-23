@@ -53,14 +53,13 @@ assign oMEM_ADDR[15:0] = mem_address;
 
 always @(posedge iCLK) begin
 
-if (iFrame_count < 1 && iFrame_count < 15) 
+if (iFrame_count == 10) 
   begin
      state <= write;
-	  mem_address[15:0] <= iFrame_count[13:0]; 
+	  mem_address[15:0] <= 16'hFF; 
      mem_in <= iFrame_count[13:0];
   end
 else state <= idle;
-
 
 end
 
