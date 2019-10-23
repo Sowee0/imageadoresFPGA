@@ -47,6 +47,8 @@ begin
     end
   else
 	  begin
+	  
+		if(iH_Cont > 10'b0011111111 && iH_Cont < 10'b1010000000) begin
   
   
 			if(iH_Cont > 500 && iH_Cont < 540 && iV_Cont > 400 && iV_Cont < 440)
@@ -65,6 +67,16 @@ begin
 				oDATA_R   <= grayscale[9:0];
 				oDATA_G   <= grayscale[9:0];
 				oDATA_B   <= grayscale[9:0];
+				end
+				
+				end
+				
+				else begin
+				
+				oDVAL   <= iDVAL;
+				oDATA_R   <= 0;
+				oDATA_G   <= 0;
+				oDATA_B   <= 0;
 				end
 				
 		end
