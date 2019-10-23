@@ -566,6 +566,8 @@ RGBSELECT         u11 (
 							.oDATA_G(sDATA_G),
 							.oDATA_B(sDATA_B),
                      .oDVAL(seCCD_DVAL),
+							.iH_Cont(p_H_Cont),
+							.iV_Cont(p_V_Cont),
                      );
 							
 INVERTION         u12 (
