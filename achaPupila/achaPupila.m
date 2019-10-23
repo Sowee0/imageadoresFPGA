@@ -2,7 +2,7 @@ close all
 tic
 
 referenciaPupila    = imread('pesquisa_olho.png');
-frameBase           = imread('base_olhotst.png');
+frameBase           = imread('base_olho4.png');
 matrizNotas         = zeros(480,640);
 threshold = int32(50);
 nota = int32(0);
