@@ -133,26 +133,16 @@ always@(posedge iCLK or negedge iRST_N)
 				oVGA_H_SYNC <= 0;
 				oVGA_V_SYNC <= 0; 
 			end
+			
 		else
 			begin
 			
-			if(H_Cont > 500 && H_Cont < 540 && V_Cont > 400 && V_Cont < 440)begin
-				oVGA_R <= 9'b0;
-				oVGA_G <= 9'b0;
-				oVGA_B <= 9'b0;
-				end
-				
-				else
-				begin 
-				
 				oVGA_R <= mVGA_R;
 				oVGA_G <= mVGA_G;
             oVGA_B <= mVGA_B;
-				end
 				
 				oVGA_BLANK <= mVGA_BLANK;
 				oVGA_SYNC <= mVGA_SYNC;
-				
 				oVGA_H_SYNC <= mVGA_H_SYNC;
 				oVGA_V_SYNC <= mVGA_V_SYNC;				
 			end               
