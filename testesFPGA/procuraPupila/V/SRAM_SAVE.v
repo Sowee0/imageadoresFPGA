@@ -2,6 +2,7 @@ module SRAM_SAVE(
 		  oMEM_DATA,
 		  oMEM_ADDR,
 		  oMEM_WE_N,
+		  oMEM_READ,
 		  iFrame_count,
 		  iH_Cont,
 		  iV_Cont,
@@ -33,6 +34,7 @@ input		[9:0]		iBlue;
 inout  	[15:0] 	oMEM_DATA;
 output	[17:0] 	oMEM_ADDR;
 output				oMEM_WE_N;
+output	[15:0]	oMEM_READ;
 
 reg 		[15:0] 	mem_in;
 wire 		[15:0] 	mem_out;
@@ -50,18 +52,39 @@ assign oMEM_WE_N = (state != write);
 assign oMEM_DATA = (state==write? mem_in: 16'hzzzz);
 assign oMEM_ADDR[15:0] = mem_address;
 
+assign mem_out = oMEM_DATA;
+
 
 always @(posedge iCLK) begin
 
-if (iFrame_count == 10) 
-  begin
-     state <= write;
-	  mem_address[15:0] <= 16'hFF; 
-     mem_in <= iFrame_count[13:0];
-  end
-else state <= idle;
+if (iFrame_count == 3)
+	begin
+	mem_address[17:0] <= 16'hFF;
+	state <= idle;
+	end
 
-end
+if (iFrame_count == 5) 
+  begin
+     state <= write; 
+     mem_in <= 16'd300;
+  end
+
+
+if (iFrame_count == 8)
+	begin
+	mem_address[17:0] <= 16'h00;
+	state <= idle;
+	
+	end
+
+if (iFrame_count == 15)
+	begin
+	mem_address[17:0] <= 16'hFF;
+	state <= idle;
+	
+	end
+	
+	end
 
 always@(posedge iCLK or negedge iRST)
 begin
