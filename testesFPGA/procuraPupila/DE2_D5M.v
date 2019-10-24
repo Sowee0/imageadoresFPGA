@@ -562,6 +562,7 @@ TESTMODULE         u11 (
 							.iRed(wVGA_R),
 							.iGreen(wVGA_G),
 							.iBlue(wVGA_B),
+							.iPosition(SRAM_DQ),
                      .oDATA_R(sDATA_R),
 							.oDATA_G(sDATA_G),
 							.oDATA_B(sDATA_B),
