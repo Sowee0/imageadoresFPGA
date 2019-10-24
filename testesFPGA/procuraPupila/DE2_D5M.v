@@ -539,9 +539,9 @@ I2C_CCD_Config 		u10	(	//	Host Side
 							.I2C_SDAT(GPIO_1[23])
 						);
 
-//wire [9:0] wVGA_R  = Read_DATA2[9:0];
-//wire [9:0] wVGA_G  = {Read_DATA1[14:10],Read_DATA2[14:10]};
-//wire [9:0] wVGA_B  = Read_DATA1[9:0];			
+wire [9:0] wVGA_R  = Read_DATA2[9:0];
+wire [9:0] wVGA_G  = {Read_DATA1[14:10],Read_DATA2[14:10]};
+wire [9:0] wVGA_B  = Read_DATA1[9:0];			
 RGB2GRAY         u5 (
                      .iCLK(CCD_PIXCLK),
                      .iRST(DLY_RST_1),
@@ -594,26 +594,24 @@ INVERTION         u12 (
                      .oDVAL(bCCD_DVAL),
                     );
 						  
-wire [9:0] wDISP_R = 	
-						SW[6] ? ~wVGA_R :
-						SW[3] ? sDATA_R :
-						SW[2] ? gDATA :    // Gray  	010
-						SW[1] ? bDATA :    // Binary	001
-                              					 wVGA_R;    // Color		000
+wire [9:0] wDISP_R = sDATA_R;	
+//						SW[6] ? ~wVGA_R :
+//						SW[3] ? sDATA_R :
+//						SW[2] ? gDATA :    // Gray  	010
+//						SW[1] ? bDATA :    // Binary	001
+//																			wVGA_R;    // Color		000
 										 
-wire [9:0] wDISP_G = 
-						SW[6] ? ~wVGA_G :
-						SW[3] ? sDATA_G :
-						SW[2] ?	gDATA :    
-						SW[1] ?  bDATA :    
-                            					                wVGA_G; 
+wire [9:0] wDISP_G = sDATA_G;
+//						SW[6] ? ~wVGA_G :
+//						SW[3] ? sDATA_G :
+//						SW[2] ?	gDATA :    
+//						SW[1] ?  bDATA :								wVGA_G; 
 										 
-wire [9:0] wDISP_B = 
-						SW[6] ? ~wVGA_B :
-						SW[3] ? sDATA_B :
-						SW[2] ?	gDATA :    
-						SW[1] ?	bDATA:   
-                            					                wVGA_B;
+wire [9:0] wDISP_B = sDATA_B;
+//						SW[6] ? ~wVGA_B :
+//						SW[3] ? sDATA_B :
+//						SW[2] ?	gDATA :    
+//						SW[1] ?	bDATA:   							wVGA_B;
 																			
 
 assign SRAM_UB_N = 1'b0;        // SRAM High-byte Data Mask
