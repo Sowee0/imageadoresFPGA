@@ -13,6 +13,7 @@ module TESTMODULE(
         iCLK,
         iRST,
         iDVAL,
+		  iPosition
 		  
 		);
 input			iDVAL;
@@ -35,6 +36,7 @@ input		[9:0]	iGreen;
 input		[9:0]	iBlue;
 
 reg [9:0]grayscale;
+input 	[15:0] iPosition;
 
 
 always@(posedge iCLK or negedge iRST)
@@ -52,7 +54,7 @@ begin
 		//if(iH_Cont > 10'b0000001111 && iH_Cont < 10'b1010000000) begin
   
   
-			if(iH_Cont > 500 && iH_Cont < 540 && iV_Cont > 400 && iV_Cont < 440)
+			if(iH_Cont > iPosition && iH_Cont < iPosition + 16'd40 && iV_Cont > iPosition && iV_Cont < iPosition + 16'd40)
 				begin
 				oDVAL   <= iDVAL;
 				oDATA_R <= 9'b0;
