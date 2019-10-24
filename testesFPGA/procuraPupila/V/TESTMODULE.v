@@ -36,6 +36,7 @@ input		[9:0]	iBlue;
 
 reg [9:0]grayscale;
 
+
 always@(posedge iCLK or negedge iRST)
 begin
   if(!iRST)
@@ -48,7 +49,7 @@ begin
   else
 	  begin
 	  
-		if(iH_Cont > 10'b0011111111 && iH_Cont < 10'b1010000000) begin
+		//if(iH_Cont > 10'b0000001111 && iH_Cont < 10'b1010000000) begin
   
   
 			if(iH_Cont > 500 && iH_Cont < 540 && iV_Cont > 400 && iV_Cont < 440)
@@ -69,15 +70,15 @@ begin
 				oDATA_B   <= grayscale[9:0];
 				end
 				
-				end
+				//end
 				
-				else begin
-				
-				oDVAL   <= iDVAL;
-				oDATA_R   <= 0;
-				oDATA_G   <= 0;
-				oDATA_B   <= 0;
-				end
+//				else begin
+//				
+//				oDVAL   <= iDVAL;
+//				oDATA_R   <= 0;
+//				oDATA_G   <= 0;
+//				oDATA_B   <= 0;
+//				end
 				
 		end
 				
