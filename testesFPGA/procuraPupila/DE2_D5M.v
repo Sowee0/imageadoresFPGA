@@ -631,7 +631,7 @@ SRAM_SAVE sram0(
 							.iBlue(wVGA_B),
 							.iH_Cont(p_H_Cont),
 							.iV_Cont(p_V_Cont),
-							.iFrame_count(),
+							.iFrame_count(Frame_Cont),
 							.oMEM_DATA(SRAM_DQ),
 							.oMEM_ADDR(SRAM_ADDR),
 							.oMEM_WE_N(SRAM_WE_N)
