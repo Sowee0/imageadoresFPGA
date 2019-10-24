@@ -37,8 +37,8 @@ reg	[3:0]	mSetup_ST;
 input 		iEXPOSURE_ADJ;
 input		iEXPOSURE_DEC_p;	
 
-parameter   default_exposure       = 16'h0438;
-parameter 	exposure_change_value	 	= 16'd200;
+parameter   default_exposure       = 16'h0450;
+parameter 	exposure_change_value	 	= 16'd50;
 
 reg	[24:0]	combo_cnt;
 wire		combo_pulse;
