@@ -1,0 +1,27 @@
+clc
+close all
+
+contador = 0;
+
+
+imagemLida = imread('converter.bmp');
+saida = fopen("saida.txt",'w');
+
+imagemCinza = rgb2gray (imagemLida);
+
+alturaImagem    = size(imagemCinza,1);
+larguraImagem   = size(imagemCinza,2);
+
+for a = 1:alturaImagem;  
+    for l = 1:larguraImagem;
+        
+        contadorBinario = dec2bin(contador ,8);
+        valorPixel = imagemCinza(a, l);
+        
+        texto = '8b%d: oVAL <= %d\n';
+        fprintf(texto, contadorBinario, 
+        
+        
+        contador = contador + 1;
+    end
+end
