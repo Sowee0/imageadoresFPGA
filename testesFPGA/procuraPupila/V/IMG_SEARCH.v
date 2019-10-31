@@ -5,10 +5,12 @@ module IMG_SEARCH(
 	output	[10:0] 	oVAL
 	);
 	
-	parameter [3:0] halving = 4'd2; 
+	parameter [3:0] halving = 4'd3; 
 	
-	reg decX;
-	reg decY;
+	reg 			decX;
+	reg 			decY;
+	reg 	[7:0] memPos;
+	
 	always @ (iX or iY) begin
 	
 	decX <= iX >> halving;
