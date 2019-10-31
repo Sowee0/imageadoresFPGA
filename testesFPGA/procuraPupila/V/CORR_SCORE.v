@@ -1,11 +1,14 @@
 module CORR_SCORE(
 	input				iCLK,
-	input		[9:0] iPX_MEM,
-	input		[9:0] iPX_REF,
-	input		[9:0] iX,
-	input		[9:0] iY,
-	output	[9:0] oX,
-	output 	[9:0]	oY
+	input		[12:0] 	iXstart,
+	input		[12:0] 	iYstart,
+	input		[9:0] 	reading_sram,
+	input		[9:0] 	reading_search,
+	output	[12:0] 	oX_sram,
+	output	[12:0] 	oY_sram,
+	output	[12:0] 	oX_search,
+	output 	[12:0]	oY_search,
+	output    			finished
 );
 			
 
