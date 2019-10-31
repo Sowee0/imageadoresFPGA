@@ -1,8 +1,8 @@
 module IMG_SEARCH(
 
-	input	[9:0]	iX,
-	input [9:0] iY,
-	output[9:0] oVAL
+	input		[12:0]	iX,
+	input 	[12:0] 	iY,
+	output	[10:0] 	oVAL
 	);
 	
 	parameter [3:0] halving = 4'd2; 
