@@ -19,7 +19,7 @@ for a = 1:alturaImagem;
         contadorBinario = dec2bin(contador ,8);
         valorPixel = uint16((imagemCinza(a, l)))*4;
         
-        texto = '\t\t8d''%d:\toVAL <= 10d''%d;\n';
+        texto = '\t\t8''d%d:\toVAL <= 10''d%d;\n';
         fprintf(saida, texto, contador, valorPixel);
         
         
