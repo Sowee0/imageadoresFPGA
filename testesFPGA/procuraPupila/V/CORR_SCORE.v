@@ -1,5 +1,5 @@
 module CORR_SCORE(
-	input				iCLK,
+	input					iCLK,
 	input		[12:0] 	iXstart,
 	input		[12:0] 	iYstart,
 	input		[9:0] 	reading_sram,
