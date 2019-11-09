@@ -8,7 +8,7 @@ module CORR_SCORE(
 	output	[12:0] 	oY_sram,
 	output	[12:0] 	oX_search,
 	output 	[12:0]	oY_search,
-	output    			finished
+	output   reg 		finished
 );
 			
 
