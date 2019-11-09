@@ -66,7 +66,7 @@ begin
 				
 				begin 
 				oDVAL   <= iDVAL;
-				grayscale <= ((iRed[9:0] * 30) /100) + ((iGreen[9:0] * 59)/100) + ((iBlue[9:0] * 11)/100);
+				grayscale <= ((iRed[9:0] * 30) /100) + ((iGreen[9:1] * 59)/100) + ((iBlue[9:0] * 11)/100);
 				oDATA_R   <= grayscale[9:0];
 				oDATA_G   <= grayscale[9:0];
 				oDATA_B   <= grayscale[9:0];
