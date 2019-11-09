@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP2C35F672) Path("C:/Users/sowee/Documents/git/imageadoresFPGA/testesFPGA/procuraPupila/") File("DE2_D5M.sof") MfrSpec(OpMask(1));
+		Device PartName(EP2C35F672) Path("D:/Users/sowee/Documents/Code/imageadoresFPGA/testesFPGA/procuraPupila/") File("DE2_D5M.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
