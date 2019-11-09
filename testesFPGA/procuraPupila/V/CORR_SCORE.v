@@ -30,12 +30,12 @@ Xcoord 			<= 0;
 Ycoord 			<= 0;
 finished 		<= 0;
 currentScore 	<= 0;
-endsScore		<= 0;
+endScore		<= 0;
 
 end
 
 
-always @ (posedge iCLK and finished = 0) begin
+always @ (posedge finished) begin
 
 
 if(reading_sram > reading_search) begin
