@@ -4,7 +4,7 @@ module BinaryImage(
         iDVAL,
         iDATA,
         oDATA,
-        oDVAL,
+        oDVAL
         );
 
 parameter threshold = 10'd190;

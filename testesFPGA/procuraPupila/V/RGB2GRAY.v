@@ -6,7 +6,7 @@ module RGB2GRAY(
         iBlue,
         iCLK,
         iRST,
-        iDVAL,
+        iDVAL
 		);
 input			iDVAL;
 input			iCLK;

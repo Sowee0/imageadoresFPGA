@@ -94,7 +94,7 @@ module Sdram_Control_4Port(
         CAS_N,
         WE_N,
         DQ,
-        DQM,
+        DQM
         );
 
 

@@ -136,11 +136,9 @@ always@(posedge iCLK or negedge iRST_N)
 			
 		else
 			begin
-			
 				oVGA_R <= mVGA_R;
 				oVGA_G <= mVGA_G;
             oVGA_B <= mVGA_B;
-				
 				oVGA_BLANK <= mVGA_BLANK;
 				oVGA_SYNC <= mVGA_SYNC;
 				oVGA_H_SYNC <= mVGA_H_SYNC;

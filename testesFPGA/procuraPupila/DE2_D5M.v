@@ -550,7 +550,7 @@ RGB2GRAY         u5 (
 							.iGreen(wVGA_G),
 							.iBlue(wVGA_B),
                      .oDATA(gDATA),
-                     .oDVAL(gCCD_DVAL),
+                     .oDVAL(gCCD_DVAL)
                      );
 							
 TESTMODULE         u11 (
@@ -568,7 +568,7 @@ TESTMODULE         u11 (
 							.oDATA_B(sDATA_B),
                      .oDVAL(seCCD_DVAL),
 							.iH_Cont(p_H_Cont),
-							.iV_Cont(p_V_Cont),
+							.iV_Cont(p_V_Cont)
                      );
 							
 INVERTION         u12 (
@@ -583,7 +583,7 @@ INVERTION         u12 (
                      .oDATA_R(iDATA_R),
 							.oDATA_G(iDATA_G),
 							.oDATA_B(iDATA_B),
-                     .oDVAL(iCCD_DVAL),
+                     .oDVAL(iCCD_DVAL)
                      );
 
  BinaryImage         u6 (

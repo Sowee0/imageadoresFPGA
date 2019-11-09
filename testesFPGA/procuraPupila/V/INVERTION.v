@@ -10,7 +10,7 @@ module INVERTION(
         iBlue,
         iCLK,
         iRST,
-        iDVAL,
+        iDVAL
 		);
 		
 `include "SEM_Param.h"
