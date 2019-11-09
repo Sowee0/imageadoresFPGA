@@ -12,7 +12,7 @@ module RGBSELECT(
         iBlue,
         iCLK,
         iRST,
-        iDVAL,
+        iDVAL
 		  
 		);
 input			iDVAL;
