@@ -5,7 +5,7 @@ parameter	H_SYNC_ACT	=	640;
 parameter	H_SYNC_FRONT=	16;
 parameter	H_SYNC_TOTAL=	800;
 
-//	Virtical Parameter		( Line )
+//	Vertical Parameter		( Line )
 parameter	V_SYNC_CYC	=	2;
 parameter	V_SYNC_BACK	=	33;
 parameter	V_SYNC_ACT	=	480;	
