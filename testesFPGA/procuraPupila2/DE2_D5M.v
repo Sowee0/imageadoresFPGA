@@ -380,7 +380,6 @@ assign	CCD_PIXCLK	=	GPIO_1[0];
 assign	GPIO_1[19]	=	1'b1;  // tRIGGER
 assign	GPIO_1[17]	=	DLY_RST_1;
 
-assign	LEDR		=	SW;
 assign	LEDG		=	Y_Cont;
 
 assign	VGA_CTRL_CLK=	rClk[0];
@@ -559,7 +558,29 @@ wire [9:0] wDISP_R = gDATA;
 										 
 wire [9:0] wDISP_G = gDATA;    
 																 
-wire [9:0] wDISP_B = gDATA;    
+wire [9:0] wDISP_B = gDATA; 
 
+assign SRAM_UB_N = 1'b0;        // SRAM High-byte Data Mask
+assign SRAM_LB_N = 1'b0;        // SRAM Low-byte Data Mask 
+assign SRAM_CE_N = 1'b0;        // SRAM Chip Enable
+assign SRAM_OE_N = 1'b0;        // SRAM Output Enable
+
+   
+SAVE_FRAME(
+				.iRed(VGA_R),
+				.iGreen(VGA_G),
+				.iBlue(VGA_B),
+				.iSwitch(SW[17]),
+				.iX(p_H_Cont),
+				.iY(p_V_Cont),
+				.iCLK(VGA_CTRL_CLK),
+				.iSync(VGA_VS),
+				.oReady(),
+				.oStopCapture(),
+				.oMemAddr(),
+				.oMemData(),
+				.oMemWE(),
+				.oLed(LEDR[17])
+				);
 
 endmodule
