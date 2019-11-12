@@ -55,6 +55,15 @@ always @(posedge iCLK) begin
 		
 		end
 		
+		if(iX == 143 && iY == 34)
+			frameCounter <= frameCounter + 1;
+	
+	if(frameCounter > 20)
+	oLed <= 1'b1;
+	
+	else
+	oLed <= 1'b0;
+		
 
 		
 
@@ -62,17 +71,5 @@ always @(posedge iCLK) begin
 end
 
 
-always @(negedge iSync) begin
-	
-	if(iX == 143 && iY == 34)
-	frameCounter <= frameCounter + 1;
-	
-	if(frameCounter > 20)
-	oLed <= 1'b1;
-	
-	else
-	oLed <= 1'b0;
-
-end
 				
 endmodule

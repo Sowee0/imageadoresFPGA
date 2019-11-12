@@ -566,15 +566,15 @@ assign SRAM_CE_N = 1'b0;        // SRAM Chip Enable
 assign SRAM_OE_N = 1'b0;        // SRAM Output Enable
 
    
-SAVE_FRAME(
-				.iRed(VGA_R),
-				.iGreen(VGA_G),
-				.iBlue(VGA_B),
+SAVE_FRAME  s1(
+				.iRed(),
+				.iGreen(),
+				.iBlue(),
 				.iSwitch(SW[17]),
 				.iX(p_H_Cont),
 				.iY(p_V_Cont),
 				.iCLK(VGA_CTRL_CLK),
-				.iSync(VGA_VS),
+				.iSync(),
 				.oReady(),
 				.oStopCapture(),
 				.oMemAddr(),
