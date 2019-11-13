@@ -474,7 +474,7 @@ assign	D5M_TRIGGER	=	1'b1;  // tRIGGER
 assign	D5M_RESET_N	=	DLY_RST_1;
 assign  VGA_CTRL_CLK = ~VGA_CLK;
 
-assign	LEDR		=	SW;
+//assign	LEDR		=	SW;
 assign	LEDG		=	Y_Cont;
 assign	UART_TXD = UART_RXD;
 
@@ -646,12 +646,16 @@ I2C_CCD_Config 		u8	(	//	Host Side
 							.I2C_SCLK(D5M_SCLK),
 							.I2C_SDAT(D5M_SDATA)
 						);
+						
+wire [12:0] p_H_Cont;
+wire [12:0] p_V_Cont;
+
 //VGA DISPLAY
 VGA_Controller		u1	(	//	Host Side
 							.oRequest(Read),
-							.iRed(Read_DATA2[9:0]),
-							.iGreen({Read_DATA1[14:10],Read_DATA2[14:10]}),
-							.iBlue(Read_DATA1[9:0]),
+							.iRed(wDISP_R),
+							.iGreen(wDISP_G),
+							.iBlue(wDISP_B),
 							//	VGA Side
 							.oVGA_R(oVGA_R),
 							.oVGA_G(oVGA_G),
@@ -660,10 +664,52 @@ VGA_Controller		u1	(	//	Host Side
 							.oVGA_V_SYNC(VGA_VS),
 							.oVGA_SYNC(VGA_SYNC_N),
 							.oVGA_BLANK(VGA_BLANK_N),
+							.oH_count(p_H_Cont),
+							.oV_count(p_V_Cont),
 							//	Control Signal
 							.iCLK(VGA_CTRL_CLK),
 							.iRST_N(DLY_RST_2),
 							.iZOOM_MODE_SW(SW[16])
 						);
+						
+
+						
+
+SAVE_FRAME  s1(
+				.iRed(),
+				.iGreen(),
+				.iBlue(),
+				.iSwitch(SW[17]),
+				.iX(p_H_Cont),
+				.iY(p_V_Cont),
+				.iCLK(VGA_CTRL_CLK),
+				.iSync(),
+				.oReady(),
+				.oStopCapture(),
+				.oMemAddr(),
+				.oMemData(),
+				.oMemWE(),
+				.oLed(LEDR[17])
+				);
+				
+wire [9:0] wVGA_R  = Read_DATA2[9:0];
+wire [9:0] wVGA_G  = {Read_DATA1[14:10],Read_DATA2[14:10]};
+wire [9:0] wVGA_B  = Read_DATA1[9:0];
+
+wire [9:0] gDATA;
+wire [9:0] wDISP_R = gDATA;										 
+wire [9:0] wDISP_G = gDATA;    															 
+wire [9:0] wDISP_B = gDATA; 
+
+GRAYSCALE         u12 (
+                     .iRST(DLY_RST_1),
+							.iRed(wVGA_R),
+							.iGreen(wVGA_G),
+							.iBlue(wVGA_B),
+							.iCLK(D5M_PIXLCLK),
+                     .oDATA(gDATA),
+                     );
+
+
 
 endmodule
