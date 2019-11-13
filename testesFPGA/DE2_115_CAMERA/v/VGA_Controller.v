@@ -53,6 +53,9 @@ module	VGA_Controller(	//	Host Side
 						oVGA_V_SYNC,
 						oVGA_SYNC,
 						oVGA_BLANK,
+						oH_count,
+						oV_count,
+						
 
 						//	Control Signal
 						iCLK,
@@ -94,7 +97,7 @@ parameter	V_SYNC_TOTAL=	628;
 `endif
 //	Start Offset
 parameter	X_START		=	H_SYNC_CYC+H_SYNC_BACK;
-parameter	Y_START		=	V_SYNC_CYC+V_SYNC_BACK;
+parameter	Y_START		=	V_SYNC_CYC+V_SYNC_BACK;	
 //	Host Side
 input		[9:0]	iRed;
 input		[9:0]	iGreen;
@@ -108,6 +111,9 @@ output	reg			oVGA_H_SYNC;
 output	reg			oVGA_V_SYNC;
 output	reg			oVGA_SYNC;
 output	reg			oVGA_BLANK;
+
+output 	wire	[12:0]oH_count;
+output 	wire	[12:0]oV_count;
 
 wire		[9:0]	mVGA_R;
 wire		[9:0]	mVGA_G;
@@ -125,6 +131,9 @@ input 				iZOOM_MODE_SW;
 //	Internal Registers and Wires
 reg		[12:0]		H_Cont;
 reg		[12:0]		V_Cont;
+
+assign oH_count = H_Cont;
+assign oV_count = V_Cont;
 
 wire	[12:0]		v_mask;
 
