@@ -710,6 +710,11 @@ GRAYSCALE         u12 (
                      .oDATA(gDATA),
                      );
 
+assign SRAM_UB_N = 1'b0;        // SRAM High-byte Data Mask
+assign SRAM_LB_N = 1'b0;        // SRAM Low-byte Data Mask 
+assign SRAM_CE_N = 1'b0;        // SRAM Chip Enable
+assign SRAM_OE_N = 1'b0;        // SRAM Output Enable
+
 
 
 endmodule
