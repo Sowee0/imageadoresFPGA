@@ -19,7 +19,7 @@ module IMG_SEARCH(
 	decX <= iX >> halving;
 	decY <= iY >> halving;
 	
-	memPos =  decX + 12'd16 * decY;
+	memPos <=  decX + 12'd16 * decY;
 	
 	case (memPos)
 		8'd0:		oVAL <= 10'd255;
