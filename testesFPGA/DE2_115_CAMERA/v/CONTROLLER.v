@@ -37,14 +37,14 @@ assign oYresult = biggestY;
 
 assign oX =  Xcounter;
 assign oY =  Ycounter;
-
-`include "SAVE_params.h"
-
-//Reset 
 			
-		always @ (iFrameDone) begin
-			biggestX 	<= 0;
-			biggestY 	<= 0;
+//		always @ (iFrameDone) begin
+//			biggestX 	<= 12'b0;
+//			biggestY 	<= 12'b0;
+//			Xcounter 	<= 12'b0;
+//			Ycounter 	<= 12'b0;
+//			biggestCorr <= 15'b0;
+//		end
 			Xcounter 	<= 0;
 			Ycounter 	<= 0;
 			biggestCorr <= 0;
