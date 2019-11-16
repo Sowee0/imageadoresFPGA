@@ -672,25 +672,6 @@ VGA_Controller		u1	(	//	Host Side
 							.iZOOM_MODE_SW(SW[16])
 						);
 						
-
-						
-
-SAVE_FRAME  s1(
-				.iRed(),
-				.iGreen(),
-				.iBlue(),
-				.iSwitch(SW[17]),
-				.iX(p_H_Cont),
-				.iY(p_V_Cont),
-				.iCLK(VGA_CTRL_CLK),
-				.iSync(),
-				.oReady(),
-				.oStopCapture(),
-				.oMemAddr(),
-				.oMemData(),
-				.oMemWE(),
-				.oLed(LEDR[17])
-				);
 				
 wire [9:0] wVGA_R  = Read_DATA2[9:0];
 wire [9:0] wVGA_G  = {Read_DATA1[14:10],Read_DATA2[14:10]};
@@ -707,14 +688,107 @@ GRAYSCALE         u12 (
 							.iGreen(wVGA_G),
 							.iBlue(wVGA_B),
 							.iCLK(D5M_PIXLCLK),
-                     .oDATA(gDATA),
+                     .oDATA(gDATA)
                      );
+							
+wire frame_done;
+							
+SAVE_FRAME			save0(
+							.iRed(oVGA_R),			
+							.iGreen(oVGA_G),
+							.iBlue(oVGA_B),
+							.iSwitch(SW[17]),
+							.iX(p_H_Cont),
+							.iY(p_V_Cont),
+							.iCLK(VGA_CTRL_CLK),
+							.iSync(),
+							.oReady(frame_done),
+							.oStopCapture(),
+							.oMemAddr(sram_address),
+							.oMemData(sram_input_data),
+							.oMemWE(sram_control_state),
+							.oLed(LEDR[17])
+							);
 
+//SRAM definitons
+
+wire [17:0] sram_address;
+wire [15:0] sram_input_data;
+wire [15:0] sram_ouput_data;
+wire 			sram_control_state;
+				
 assign SRAM_UB_N = 1'b0;        // SRAM High-byte Data Mask
 assign SRAM_LB_N = 1'b0;        // SRAM Low-byte Data Mask 
 assign SRAM_CE_N = 1'b0;        // SRAM Chip Enable
 assign SRAM_OE_N = 1'b0;        // SRAM Output Enable
 
+SRAM_INTERFACE		interface0(
+							.oMEM_DATA(SRAM_DQ),
+							.oMEM_ADDR(SRAM_ADDR),
+							.oMEM_WE_N(SRAM_WE_N),
+							.oMEM_READ(),
+							.iControlState(sram_control_state),
+							.iMemoryWriteAddress(sram_address),
+							.iMemoryReadAddress(converted_address),
+							.iMemoryData(sram_input_data),
+							.oMemoryData(sram_ouput_data),
+							.iCLK(CLOCK_50),
+							.iRST(DLY_RST_1)
+							);
+		
+wire [12:0] corr_current_x;
+wire [12:0] corr_current_y;
+wire [12:0] corr_biggest_x;
+wire [12:0] corr_biggest_y;
 
+wire			corr_finished;
+wire [15:0] corr_score;		
+		
+CONTROLLER	controller0(
+							.iCLK(CLOCK_50),
+							.iRST(DLY_RST_1),
+							.iFrameDone(frame_done),
+							.iCorrFinished(corr_finished),
+							.iCurrentCorr(corr_score),
+							.oX(corr_current_x),
+							.oY(corr_current_y),
+							.oXresult(corr_biggest_x),
+							.oYresult(corr_biggest_y)
+							);
 
+wire [12:0] search_x;
+wire [12:0] search_y;
+wire [12:0] sram_x;
+wire [12:0] sram_y;
+
+wire [9:0] reading_search;
+wire [9:0] reading_sram;
+
+CORR_SCORE		score0(
+							.iCLK(CLOCK_50),
+							.iXstart(corr_current_x),
+							.iYstart(corr_current_y),
+							.reading_sram(sram_ouput_data),
+							.reading_search(reading_search),
+							.oX_sram(sram_x),
+							.oY_sram(sram_y),
+							.oX_search(search_x),
+							.oY_search(search_y),
+							.oFinished(corr_finished),
+							.oScore(corr_score)
+							);
+
+IMG_SEARCH		search0(
+							.iX(search_x),
+							.iY(search_y),
+							.oVAL(reading_search)
+							);
+
+wire [17:0] converted_address;
+
+COORD2ADDR		coord2addr0(
+							.iX(sram_x),
+							.iY(sram_y),
+							.oAddr(converted_address)
+							);
 endmodule
