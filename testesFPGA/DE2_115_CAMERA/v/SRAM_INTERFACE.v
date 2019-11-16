@@ -1,18 +1,16 @@
-module SRAM_SAVE(
+module SRAM_INTERFACE(
 
-		//SRAM control ports
-			oMEM_DATA,
-			oMEM_ADDR,
-			oMEM_WE_N,
-			oMEM_READ,	  
-		//Module control ports
-			iControlState,
-			iMemoryAddress,
-			iMemoryData,
-			oMemoryData,	
-		//Module syncrony ports
-			iCLK,
-			iRST, 
+			oMEM_DATA, 				//Memory control ouput, data
+			oMEM_ADDR,				//Memory control ouput, address
+			oMEM_WE_N,				//Memory control ouput, write_enable
+			oMEM_READ,	  		
+			iControlState,			//Module control, input state
+			iMemoryWriteAddress,	//Module control, address for writing
+			iMemoryReadAddress,	//Module control, address for reading
+			iMemoryData,			//Module control, input data for writing
+			oMemoryData,			//Module control, output data for reading
+			iCLK,						//50 Mhz clock (20ns access time)
+			iRST 					//Reset signal
 		);
 		
 
