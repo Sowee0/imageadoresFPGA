@@ -1,7 +1,7 @@
 module COORD2ADDR(
-		iX,
-		iY,
-		oAddr
+		iX, 		//Coordinate to be converted to SRAM address, X
+		iY, 		//Coordinate to be converted to SRAM address, y
+		oAddr		//SRAM address correpondent to the XY coordintes
 			);
 			
 input 		[12:0]	iX;

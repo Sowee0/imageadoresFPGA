@@ -1,18 +1,18 @@
 module SAVE_FRAME(
-				iRed,
-				iGreen,
-				iBlue,
-				iSwitch,
-				iX,
-				iY,
-				iCLK,
-				iSync,
-				oReady,
-				oStopCapture,
-				oMemAddr,
-				oMemData,
-				oMemWE,
-				oLed
+				iRed, 			//Pixel color input from VGA, red
+				iGreen,			//Pixel color input from VGA, green
+				iBlue,			//Pixel color input from VGA, blue
+				iSwitch,			//Control switch to start the capture
+				iX,				//X coordinate for the pixel data captured
+				iY,				//Y coordinate for the pixel data captured
+				iCLK,				//Input clock, same as the VGA controller
+				iSync,			//Sync signal
+				oReady,			//Output signal for capture completion
+				oStopCapture,	//Output signal to stop the capture and keep the same frame on screen
+				oMemAddr,		//Memory control ouput, address
+				oMemData,		//Memory control ouput, data
+				oMemWE,			//Memory control ouput, write enable
+				oLed				//Status LED
 				);
 				
 input [9:0] 	iRed;

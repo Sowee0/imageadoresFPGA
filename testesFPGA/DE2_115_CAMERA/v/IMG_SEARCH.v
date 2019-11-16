@@ -1,15 +1,14 @@
 module IMG_SEARCH(
-
-		iX,
-		iY,
-		oVAL
+		iX, 	//Image search input coordinate, X
+		iY, 	//Image search input coordinate, Y	
+		oVAL	//Pixel value on XY coordinates output
 	);
 	
 	input		[12:0]	iX;
 	input 	[12:0] 	iY;
-	output	reg[10:0] 	oVAL;
+	output	reg[9:0] 	oVAL;
 	
-	parameter [3:0] halving = 4'd3; 
+	parameter [3:0] halving = 4'd4; 
 	
 	reg 			decX;
 	reg 			decY;
