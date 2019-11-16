@@ -32,8 +32,6 @@ reg 		[15:0] 	mem_in;
 wire 		[15:0] 	mem_out;
 reg 		[17:0] 	mem_address;
 
-reg 		[9:0]		grayscale;
-reg 		[7:0] 	least_valid;
 
 //assignments
 
