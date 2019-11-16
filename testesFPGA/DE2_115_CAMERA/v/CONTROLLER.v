@@ -11,26 +11,30 @@ module CONTROLLER(
 			);
 
 //Port declaration			
-input 	iCLK;
-input 	iRST;
-input 	iFrameDone;
-input 	iCorrFinished;
-input 	iCurrentCorr;
-output	oX;
-output	oY;
+input 					iCLK;
+input 					iRST;
+input 					iFrameDone;
+input 					iCorrFinished;
+input		[15:0] 		iCurrentCorr;
+output	wire			oX;
+output	wire			oY;
 output	wire [12:0] oXresult;
 output	wire [12:0] oYresult;
 
+`include "SAVE_params.h"
+
 //Variable Declaration
-reg [12:0]	Xcounter;
-reg [12:0]	Ycounter;
+reg [12:0]	Xcounter = 13'd0;
+reg [12:0]	Ycounter = 13'd0;
 
 reg biggestCorr;
-reg currentCorr;
 reg biggestX;
 reg biggestY;
+wire [15:0] currentCorr;
 
 reg finished;
+
+assign currentCorr = iCurrentCorr;
 
 assign oXresult = biggestX;
 assign oYresult = biggestY;
@@ -45,28 +49,24 @@ assign oY =  Ycounter;
 //			Ycounter 	<= 12'b0;
 //			biggestCorr <= 15'b0;
 //		end
-			Xcounter 	<= 0;
-			Ycounter 	<= 0;
-			biggestCorr <= 0;
-		end
 			
 			
 		always @ (iCLK) begin 
 		
-		if(iFrameDone && iCorrFinished && !finished) begin
-			
-			if(Xcounter < H_RES && Ycounter < V_RES)
-				Xcounter <= Xcounter + 1;
-	
-			else if(Xcounter == H_RES && Ycounter < V_RES) begin
-				Xcounter <= 0;
-				Ycounter <= Ycounter + 1;
+			if(iFrameDone && iCorrFinished && !finished) begin
+				
+				if(Xcounter < H_RES && Ycounter < V_RES)
+					Xcounter <= Xcounter + 1;
+		
+				else if(Xcounter == H_RES && Ycounter < V_RES) begin
+					Xcounter <= 0;
+					Ycounter <= Ycounter + 1;
+				end
+		
+				else if(Xcounter == H_RES && Ycounter == V_RES) begin
+					finished <= 1;
+				end
 			end
-	
-			else if(Xcounter == H_RES && Ycounter == V_RES) begin
-				finished <= 1;
-			end
-		end
 		end
 		
 		always @ (iCorrFinished) begin 
