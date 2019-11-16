@@ -1,13 +1,13 @@
 module CONTROLLER(
-		iCLK,
-		iRST,
-		iFrameDone,
-		iCorrFinished,
-		iCurrentCorr,
-		oX,
-		oY,
-		oXresult,
-		oYresult
+		iCLK,				//Control clock (50Mhz)
+		iRST,				//Reset signal
+		iFrameDone,		//high when whole frame saved and ready to start the correlation process
+		iCorrFinished,	//Receives the end of the correlation process signal for the current XY coordinates
+		iCurrentCorr,	//Value of the correlation for the current XY coordinates
+		oX,				//Correlation process starting coordinates, X
+		oY,				//Correlation process starting coordinates, Y
+		oXresult,		//Returns the coordinate for which the correlation is maximum, X
+		oYresult			//Returns the coordinate for which the correlation is maximum, Y
 			);
 
 //Port declaration			
