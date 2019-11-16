@@ -43,7 +43,7 @@ parameter idle = 1'b0, write = 1'b1;
 
 assign oMEM_WE_N = (state != write);
 assign oMEM_DATA = (state==write? mem_in: 16'hzzzz);
-assign oMEM_ADDR[17:0] = iMemoryAddress;
+assign oMEM_ADDR[17:0] = (state==write? iMemoryWriteAddress:iMemoryReadAddress);
 
 assign mem_out = oMEM_DATA;
 
