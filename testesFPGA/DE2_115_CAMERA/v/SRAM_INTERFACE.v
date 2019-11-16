@@ -18,11 +18,10 @@ input					iCLK;
 input					iRST;
 
 input 				iControlState;
-input 	[17:0] 	iMemoryAddress;
+input 	[17:0] 	iMemoryWriteAddress;
+input 	[17:0] 	iMemoryReadAddress;
 input 	[15:0] 	iMemoryData;
 output reg[15:0]	oMemoryData;
-
-//inicializações da SRAM
 
 inout  	[15:0] 	oMEM_DATA;
 output	[17:0] 	oMEM_ADDR;
