@@ -50,17 +50,14 @@ always @(posedge iCLK) begin
 			memoryAddress <= (iX - H_START) + (V_RES * (iY - V_START));
 			memoryData <= iRed;
 			oMemWE <= 1'b1;
-			
 			end	
-		
-		
 		
 		end
 		else
 		oMemWE <= 1'b0;
 		
 		
-
+		//Choosing a recurring frame position as to count frames
 		if(iX == 143 && iY == 34)
 		frameCounter <= frameCounter + 1;
 	
