@@ -40,6 +40,9 @@ assign oFinished =  finished;
 reg [12:0] Xcoord;
 reg [12:0] Ycoord;
 
+reg [12:0] currentXcoord;
+reg [12:0] currentYcoord;
+
 //Displacing the X and Y coordinates accordingly to their start position
 assign oX_sram = iXstart + Xcoord;
 assign oY_sram = iYstart + Ycoord;
@@ -49,19 +52,22 @@ assign oX_search = Xcoord;
 assign oY_search = Ycoord;
 
 
-//Starting the correlation  process setting everything back to zero.
-always @ (iXstart or iYstart) begin
-
-Xcoord 			<= 0;
-Ycoord 			<= 0;
-finished 		<= 0;
-currentScore 	<= 0;
-endScore			<= 0;
-
-end
 
 
 always @ (iCLK) begin
+
+	//Starting the correlation  process setting everything back to zero.
+	if(currentXcoord != iXstart && currentYcoord != iYstart) begin
+		Xcoord 			<= 0;
+		Ycoord 			<= 0;
+		finished 		<= 0;
+		currentScore 	<= 0;
+		endScore			<= 0;
+		currentXcoord 	<= iXstart;
+		currentYcoord	<= iYstart;
+	end
+	
+	
 
 	if(!finished) begin
 	
@@ -76,7 +82,7 @@ always @ (iCLK) begin
 		if(reading_sram == reading_search)
 		currentScore <= 1023;
 		
-		endScore = endScore + currentScore; //esse blocking tá correto?
+		endScore <= endScore + currentScore; //esse blocking tá correto?
 		
 	end
 	
