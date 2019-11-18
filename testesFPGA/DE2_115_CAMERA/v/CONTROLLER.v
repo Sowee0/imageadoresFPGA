@@ -24,8 +24,8 @@ output	wire [12:0] oYresult;
 `include "SAVE_params.h"
 
 //Variable Declaration
-reg [12:0]	Xcounter = 13'd0;
-reg [12:0]	Ycounter = 13'd0;
+reg [12:0]	Xcounter;
+reg [12:0]	Ycounter;
 
 reg biggestCorr;
 reg biggestX;
@@ -41,44 +41,40 @@ assign oYresult = biggestY;
 
 assign oX =  Xcounter;
 assign oY =  Ycounter;
-			
-//		always @ (iFrameDone) begin
-//			biggestX 	<= 12'b0;
-//			biggestY 	<= 12'b0;
-//			Xcounter 	<= 12'b0;
-//			Ycounter 	<= 12'b0;
-//			biggestCorr <= 15'b0;
-//		end
-			
-			
-		always @ (iCLK) begin 
-		
-			if(iFrameDone && iCorrFinished && !finished) begin
-				
-				if(Xcounter < H_RES && Ycounter < V_RES)
-					Xcounter <= Xcounter + 1;
-		
-				else if(Xcounter == H_RES && Ycounter < V_RES) begin
-					Xcounter <= 0;
-					Ycounter <= Ycounter + 1;
-				end
-		
-				else if(Xcounter == H_RES && Ycounter == V_RES) begin
-					finished <= 1;
-				end
-			end
+
+always @ (iCLK) begin
+
+	if(iFrameDone) begin
+		biggestX 	<= 12'b0;
+		biggestY 	<= 12'b0;
+		Xcounter 	<= 12'b0;
+		Ycounter 	<= 12'b0;
+		biggestCorr <= 15'b0;
+	end
+	
+	if(iCorrFinished) begin
+		if(currentCorr > biggestCorr) begin
+			biggestCorr <= currentCorr;
+			biggestX <= Xcounter;
+			biggestY <= Ycounter;		
 		end
-		
-		always @ (iCorrFinished) begin 
-		
-			if (currentCorr > biggestCorr) begin
-				biggestCorr <= currentCorr;
-				biggestX <= Xcounter;
-				biggestY <= Ycounter;
+	end
+	
+	if(iFrameDone && iCorrFinished && !finished) begin
 				
-			end
+		if(Xcounter < H_RES && Ycounter < V_RES)
+			Xcounter <= Xcounter + 1;
+
+		else if(Xcounter == H_RES && Ycounter < V_RES) begin
+			Xcounter <= 0;
+			Ycounter <= Ycounter + 1;
 		end
-			
-			
+
+		else if(Xcounter == H_RES && Ycounter == V_RES) begin
+			finished <= 1;
+		end
+	end
+	
+end
 			
 endmodule
