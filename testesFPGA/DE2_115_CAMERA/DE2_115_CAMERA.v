@@ -779,6 +779,7 @@ CORR_SCORE		score0(
 							);
 
 IMG_SEARCH		search0(
+							.iCLK(CLOCK_50),
 							.iX(search_x),
 							.iY(search_y),
 							.oVAL(reading_search)
@@ -787,6 +788,7 @@ IMG_SEARCH		search0(
 wire [17:0] converted_address;
 
 COORD2ADDR		coord2addr0(
+							.iCLK(CLOCK_50),
 							.iX(sram_x),
 							.iY(sram_y),
 							.oAddr(converted_address)

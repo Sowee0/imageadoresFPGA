@@ -1,12 +1,14 @@
 module IMG_SEARCH(
+		iCLK,
 		iX, 	//Image search input coordinate, X
 		iY, 	//Image search input coordinate, Y	
 		oVAL	//Pixel value on XY coordinates output
 	);
 	
-	input		[12:0]	iX;
-	input 	[12:0] 	iY;
-	output	reg[9:0] 	oVAL;
+	input							iCLK;
+	input				[12:0]	iX;
+	input 			[12:0] 	iY;
+	output	reg	[9:0] 	oVAL;
 	
 	parameter [3:0] halving = 4'd4; 
 	
@@ -14,7 +16,7 @@ module IMG_SEARCH(
 	reg 			decY;
 	reg 	[7:0] memPos;
 	
-	always @ (*) begin
+	always @ (posedge iCLK) begin
 	
 	decX <= iX >> halving;
 	decY <= iY >> halving;
