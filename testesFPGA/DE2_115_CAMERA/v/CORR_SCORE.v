@@ -22,7 +22,7 @@ output	[12:0] 	oY_sram;
 output	[12:0] 	oX_search;
 output 	[12:0]	oY_search;
 output   wire 		oFinished;
-output	reg [15:0] 	oScore;
+output	reg [31:0] 	oScore;
 
 
 //Including the file with various parameters
@@ -30,18 +30,18 @@ output	reg [15:0] 	oScore;
 			
 
 //Variables used to determine the score at the end of the process
-reg [15:0] endScore;
-reg [15:0] currentScore;
-reg finished;
+reg [15:0] endScore = 16'b0;
+reg [15:0] currentScore = 16'b0;
+reg finished = 0;
 
 assign oFinished =  finished;
 
 //Variables used for the internal coordinate counter
-reg [12:0] Xcoord;
-reg [12:0] Ycoord;
+reg [12:0] Xcoord = 13'b0;
+reg [12:0] Ycoord = 13'b0;
 
-reg [12:0] currentXcoord;
-reg [12:0] currentYcoord;
+reg [12:0] currentXcoord = 13'b0;
+reg [12:0] currentYcoord = 13'b0;
 
 //Displacing the X and Y coordinates accordingly to their start position
 assign oX_sram = iXstart + Xcoord;
@@ -54,7 +54,7 @@ assign oY_search = Ycoord;
 
 
 
-always @ (iCLK) begin
+always @ (posedge iCLK) begin
 
 	//Starting the correlation  process setting everything back to zero.
 	if(currentXcoord != iXstart && currentYcoord != iYstart) begin
