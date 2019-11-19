@@ -46,14 +46,25 @@ assign oYresult = biggestY;
 assign oX =  Xcounter;
 assign oY =  Ycounter;
 
-always @ (iCLK) begin
+always @ (posedge iCLK) begin
+	
+	if(!finished)begin
+		statusCounter = statusCounter + 26'b1;
+		if(statusCounter > 26'h1FFFFFF)
+			oStatusLed = 1'b1;
+		else
+			oStatusLed = 1'b0;
+	end 
+	else
+		oStatusLed = 1'b1;
+	
 
 	if(iFrameDone) begin
 		biggestX 	<= 12'b0;
 		biggestY 	<= 12'b0;
 		Xcounter 	<= 12'b0;
 		Ycounter 	<= 12'b0;
-		biggestCorr <= 15'b0;
+		biggestCorr <= 32'b0;
 	end
 	
 	if(iCorrFinished) begin
