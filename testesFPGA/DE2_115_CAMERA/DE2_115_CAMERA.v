@@ -754,7 +754,8 @@ CONTROLLER	controller0(
 							.oX(corr_current_x),
 							.oY(corr_current_y),
 							.oXresult(corr_biggest_x),
-							.oYresult(corr_biggest_y)
+							.oYresult(corr_biggest_y),
+							.oStatusLed(LEDR[16])
 							);
 
 wire [12:0] search_x;
