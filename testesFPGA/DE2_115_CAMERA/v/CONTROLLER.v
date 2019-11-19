@@ -7,7 +7,8 @@ module CONTROLLER(
 		oX,				//Correlation process starting coordinates, X
 		oY,				//Correlation process starting coordinates, Y
 		oXresult,		//Returns the coordinate for which the correlation is maximum, X
-		oYresult			//Returns the coordinate for which the correlation is maximum, Y
+		oYresult,		//Returns the coordinate for which the correlation is maximum, Y
+		oStatusLed		//Heartbeat as to show correlation activity happening
 			);
 
 //Port declaration			
