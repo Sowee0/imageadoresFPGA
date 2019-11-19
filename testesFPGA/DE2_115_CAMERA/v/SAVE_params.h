@@ -1,7 +1,7 @@
-parameter H_START  	= 144;
-parameter V_START  	= 35;
-parameter H_RES		= 512;
-parameter V_RES		= 384;
+parameter H_START  	= 12'd144;
+parameter V_START  	= 12'd35;
+parameter H_RES		= 12'd512;
+parameter V_RES		= 12'd384;
 
-parameter SEARCH_H_RES = 255;
-parameter SEARCH_V_RES = 255;
+parameter SEARCH_H_RES = 12'd255;
+parameter SEARCH_V_RES = 12'd255;
