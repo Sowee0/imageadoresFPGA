@@ -727,7 +727,6 @@ SRAM_INTERFACE		interface0(
 							.oMEM_DATA(SRAM_DQ),
 							.oMEM_ADDR(SRAM_ADDR),
 							.oMEM_WE_N(SRAM_WE_N),
-							.oMEM_READ(),
 							.iControlState(sram_control_state),
 							.iMemoryWriteAddress(sram_address),
 							.iMemoryReadAddress(converted_address),
