@@ -503,6 +503,7 @@ Reset_Delay			u2	(	.iCLK(CLOCK2_50),
 							.oRST_4(DLY_RST_4)
 						);
 //D5M image capture
+wire stopWire;
 CCD_Capture			u3	(	.oDATA(mCCD_DATA),
 							.oDVAL(mCCD_DVAL),
 							.oX_Cont(X_Cont),
@@ -512,7 +513,7 @@ CCD_Capture			u3	(	.oDATA(mCCD_DATA),
 							.iFVAL(rCCD_FVAL),
 							.iLVAL(rCCD_LVAL),
 							.iSTART(!KEY[3]|auto_start),
-							.iEND(!KEY[2]),
+							.iEND(stopWire),
 							.iCLK(~D5M_PIXLCLK),
 							.iRST(DLY_RST_2)
 						);
@@ -701,9 +702,9 @@ SAVE_FRAME			save0(
 							.iX(p_H_Cont),
 							.iY(p_V_Cont),
 							.iCLK(VGA_CTRL_CLK),
-							.iSync(),
+
 							.oReady(frame_done),
-							.oStopCapture(),
+							.oStopCapture(stopWire),
 							.oMemAddr(sram_address),
 							.oMemData(sram_input_data),
 							.oMemWE(sram_control_state),
