@@ -12,9 +12,9 @@ module IMG_SEARCH(
 	
 	parameter [3:0] halving = 4'd4; 
 	
-	reg 			decX;
-	reg 			decY;
-	reg 	[7:0] memPos;
+	reg 	[12:0]	decX;
+	reg 	[12:0]	decY;
+	reg 	[7:0] 	memPos;
 	
 	always @ (posedge iCLK) begin
 	
