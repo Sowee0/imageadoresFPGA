@@ -67,15 +67,15 @@ always @ (iCLK) begin
 	if(iFrameDone && iCorrFinished && !finished) begin
 				
 		if(Xcounter < H_RES && Ycounter < V_RES)
-			Xcounter <= Xcounter + 1;
+			Xcounter <= Xcounter + 12'b1;
 
 		else if(Xcounter == H_RES && Ycounter < V_RES) begin
-			Xcounter <= 0;
-			Ycounter <= Ycounter + 1;
+			Xcounter <= 12'b0;
+			Ycounter <= Ycounter + 12'b1;
 		end
 
 		else if(Xcounter == H_RES && Ycounter == V_RES) begin
-			finished <= 1;
+			finished <= 1'b1;
 		end
 	end
 	
