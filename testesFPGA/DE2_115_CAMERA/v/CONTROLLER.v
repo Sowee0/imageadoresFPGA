@@ -15,11 +15,12 @@ input 					iCLK;
 input 					iRST;
 input 					iFrameDone;
 input 					iCorrFinished;
-input		[15:0] 		iCurrentCorr;
-output	wire			oX;
-output	wire			oY;
+input			  [31:0] iCurrentCorr;
+output	wire [12:0]	oX;
+output	wire [12:0]	oY;
 output	wire [12:0] oXresult;
 output	wire [12:0] oYresult;
+output   reg 			oStatusLed = 1'b0;
 
 `include "SAVE_params.h"
 
@@ -27,12 +28,14 @@ output	wire [12:0] oYresult;
 reg [12:0]	Xcounter;
 reg [12:0]	Ycounter;
 
-reg biggestCorr;
-reg biggestX;
-reg biggestY;
-wire [15:0] currentCorr;
 
-reg finished;
+reg [12:0] biggestX;
+reg [12:0] biggestY;
+reg [31:0] biggestCorr;
+wire[31:0] currentCorr;
+
+reg [25:0] statusCounter = 26'b0; 
+reg finished = 1'b0;
 
 assign currentCorr = iCurrentCorr;
 
