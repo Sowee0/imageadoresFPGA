@@ -12,15 +12,16 @@ module IMG_SEARCH(
 	
 	parameter [3:0] halving = 4'd4; 
 	
-	reg 	[12:0]	decX;
-	reg 	[12:0]	decY;
-	reg 	[7:0] 	memPos;
+	reg 	[12:0]	decX = 0;
+	reg 	[12:0]	decY = 0;
+	reg 	[7:0] 	memPos = 0;
 	
-	always @ (posedge iCLK) begin
-	
+	always @ (iCLK) begin
+
 	decX <= iX >> halving;
 	decY <= iY >> halving;
 	
+
 	memPos <=  decX + 12'd16 * decY;
 	
 	case (memPos)
