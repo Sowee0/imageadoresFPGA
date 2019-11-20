@@ -1,4 +1,4 @@
-module CONTROLLER(
+	module CONTROLLER(
 		iCLK,				//Control clock (50Mhz)
 		iRST,				//Reset signal
 		iFrameDone,		//high when whole frame saved and ready to start the correlation process
@@ -48,15 +48,15 @@ assign oY =  Ycounter;
 
 always @ (posedge iCLK) begin
 	
-	if(!finished)begin
+	if(!finished && iFrameDone)begin
 		statusCounter = statusCounter + 26'b1;
 		if(statusCounter > 26'h1FFFFFF)
 			oStatusLed = 1'b1;
 		else
 			oStatusLed = 1'b0;
 	end 
-	else
-		oStatusLed = 1'b1;
+	else if(finished)
+			oStatusLed = 1'b1;
 	
 
 	if(iFrameDone) begin

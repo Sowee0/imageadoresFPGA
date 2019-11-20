@@ -5,7 +5,7 @@ contador = 0;
 valorPixel = 0;
 
 
-imagemLida = imread('converter.bmp');
+imagemLida = imread('pupila.bmp');
 saida = fopen("saida.txt",'w');
 
 imagemCinza = rgb2gray (imagemLida);
