@@ -72,15 +72,15 @@ always @ (posedge iCLK) begin
 	if(!finished) begin
 	
 		if(reading_sram > reading_search)
-		currentScore <= 1023 - (reading_sram - reading_search);
+		currentScore <= 16'd1023 - (reading_sram - reading_search);
 	
 		
 		if(reading_sram > reading_search)
-		currentScore <= 1023 - (reading_search - reading_sram);
+		currentScore <= 16'd1023 - (reading_search - reading_sram);
 		
 		
 		if(reading_sram == reading_search)
-		currentScore <= 1023;
+		currentScore <= 16'd1023;
 		
 		endScore <= endScore + currentScore; //esse blocking tá correto?
 		
@@ -91,11 +91,11 @@ always @ (posedge iCLK) begin
 	end
 	
 	if(Xcoord < SEARCH_H_RES && Ycoord < SEARCH_V_RES)
-		Xcoord <= Xcoord + 1;
+		Xcoord <= Xcoord + 13'd1;
 	
 	else if(Xcoord == SEARCH_H_RES && Ycoord < SEARCH_V_RES) begin
-		Xcoord <= 0;
-		Ycoord <= Ycoord + 1;
+		Xcoord <= 13'd0;
+		Ycoord <= Ycoord + 13'd1;
 		end
 	
 	else if(Xcoord == SEARCH_H_RES && Ycoord == SEARCH_V_RES)

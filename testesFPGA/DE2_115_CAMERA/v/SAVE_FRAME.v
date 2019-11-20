@@ -75,7 +75,7 @@ always @(posedge iCLK) begin
 		
 		//Choosing a recurring frame position as to count frames
 		if(iX == 143 && iY == 34)
-		frameCounter <= frameCounter + 1;
+		frameCounter <= frameCounter + 1'b1;
 
 end
 
