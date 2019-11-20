@@ -8,7 +8,7 @@ module COORD2ADDR(
 input						iCLK;			
 input 		[12:0]	iX;
 input 		[12:0]	iY;
-output reg 	[17:0]	 oAddr;
+output reg 	[19:0]	 oAddr = 0;
 
 `include "SAVE_params.h"
 		
