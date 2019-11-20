@@ -547,10 +547,11 @@ RAW2RGB				u4	(	.iCLK(D5M_PIXLCLK),
 //Frame count display
 SEG7_LUT_8 			u5	(	.oSEG0(HEX0),.oSEG1(HEX1),
 							.oSEG2(HEX2),.oSEG3(HEX3),
-							.oSEG4(HEX4),.oSEG5(HEX5),
-							.oSEG6(HEX6),.oSEG7(HEX7),
+							.oSEG4(),.oSEG5(),
+							.oSEG6(),.oSEG7(),
 							.iDIG(Frame_Cont[31:0])
 						);
+						
 
 sdram_pll 			u6	(
 							.inclk0(CLOCK2_50),
@@ -794,4 +795,24 @@ COORD2ADDR		coord2addr0(
 							.iY(sram_y),
 							.oAddr(converted_address)
 							);
+							
+//position display
+
+SEG7_LUT_8 			counter1	(	
+							.oSEG0(),.oSEG1(HEX6),
+							.oSEG2(HEX7),.oSEG3(),
+							.oSEG4(),.oSEG5(),
+							.oSEG6(),.oSEG7(),
+							.iDIG(corr_current_x[12:0])
+						);
+
+SEG7_LUT_8 			counter2	(	
+							.oSEG0(),.oSEG1(HEX4),
+							.oSEG2(HEX5),.oSEG3(),
+							.oSEG4(),.oSEG5(),
+							.oSEG6(),.oSEG7(),
+							.iDIG(corr_current_y[12:0])
+						);
+
+
 endmodule
