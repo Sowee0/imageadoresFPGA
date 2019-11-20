@@ -55,3 +55,5 @@ testbench/
 *.mif
 *.hex
 
+
+testesFPGA/DE2_115_CAMERA/DE2_115_CAMERA.cdf
