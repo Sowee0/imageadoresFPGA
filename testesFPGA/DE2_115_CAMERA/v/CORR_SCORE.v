@@ -67,22 +67,24 @@ always @ (posedge iCLK) begin
 		currentYcoord	<= iYstart;
 	end
 	
+	else begin
+	
 	
 
 	if(!finished) begin
 	
 		if(reading_sram > reading_search)
 		currentScore <= 16'd1023 - (reading_sram - reading_search);
-	
 		
+		else
 		if(reading_sram > reading_search)
 		currentScore <= 16'd1023 - (reading_search - reading_sram);
 		
-		
+		else
 		if(reading_sram == reading_search)
 		currentScore <= 16'd1023;
 		
-		endScore <= endScore + currentScore; //esse blocking tá correto?
+		endScore <= endScore + currentScore; 
 		
 	end
 	
@@ -90,18 +92,17 @@ always @ (posedge iCLK) begin
 		oScore <= endScore;	
 	end
 	
-	if(Xcoord < SEARCH_H_RES && Ycoord < SEARCH_V_RES)
-		Xcoord <= Xcoord + 13'd1;
 	
-	else if(Xcoord == SEARCH_H_RES && Ycoord < SEARCH_V_RES) begin
-		Xcoord <= 13'd0;
-		Ycoord <= Ycoord + 13'd1;
-		end
+	if(Xcoord < SEARCH_H_RES)
+		Xcoord <= Xcoord + 1'b1;
+	else if(Ycoord < SEARCH_V_RES) begin
+		Ycoord <= Ycoord + 1'b1;
+		Xcoord <= 0;
+	end 
+	else
+		finished <= 1'b1;
 	
-	else if(Xcoord == SEARCH_H_RES && Ycoord == SEARCH_V_RES)
-		finished <= 1;
-	
-
+	end
 end
 
 endmodule
