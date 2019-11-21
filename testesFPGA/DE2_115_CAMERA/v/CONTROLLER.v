@@ -22,6 +22,7 @@ output	wire [12:0]	oY;
 output	wire [12:0] oXresult;
 output	wire [12:0] oYresult;
 output   reg 			oStatusLed = 1'b0;
+output	wire			oFinished;
 
 `include "SAVE_params.h"
 
@@ -45,9 +46,11 @@ assign oYresult = biggestY;
 
 assign oX =  Xcounter;
 assign oY =  Ycounter;
+assign oFinished = finished;
 
 always @ (posedge iCLK) begin
 	
+	//Heartbeat LED
 	if(!finished && iFrameDone)begin
 		statusCounter = statusCounter + 26'b1;
 		if(statusCounter > 26'h1FFFFFF)
