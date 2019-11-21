@@ -1,23 +1,19 @@
-<session jtag_chain="USB-Blaster [USB-0]" jtag_device="@1: EP3C120/EP4CE115 (0x020F70DD)" sof_file="">
+<session jtag_chain="USB-Blaster [USB-0]" jtag_device="@1: 10CL120(Y|Z)/EP3C120/.. (0x020F70DD)" sof_file="DE2_115_CAMERA.sof">
   <display_tree gui_logging_enabled="0">
     <display_branch instance="auto_signaltap_0" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
   </display_tree>
-  <global_info>
-    <single attribute="active instance" value="0"/>
-    <multi attribute="frame size" size="2" value="1920,1001"/>
-    <single attribute="jtag widget visible" value="1"/>
-    <multi attribute="jtag widget size" size="2" value="370,139"/>
-    <single attribute="instance widget visible" value="1"/>
-    <single attribute="config widget visible" value="1"/>
-    <single attribute="hierarchy widget visible" value="1"/>
-    <single attribute="data log widget visible" value="1"/>
-  </global_info>
-  <instance entity_name="sld_signaltap" is_auto_node="yes" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+  <instance entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
     <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
     <position_info>
       <single attribute="active tab" value="1"/>
+      <single attribute="data vertical scroll position" value="0"/>
+      <single attribute="data horizontal scroll position" value="759"/>
+      <single attribute="zoom level numerator" value="128"/>
+      <single attribute="zoom level denominator" value="1"/>
+      <single attribute="zoom offset numerator" value="1008"/>
+      <single attribute="zoom offset denominator" value="1"/>
     </position_info>
-    <signal_set global_temp="1" name="signal_set: 2019/11/20 19:10:28  #0">
+    <signal_set global_temp="1" name="signal_set: 2019/11/21 01:26:45  #0">
       <clock name="CLOCK_50" polarity="posedge" tap_mode="classic"/>
       <config is_hps_trigger_out_selected="false" ram_type="M4K" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="2048" trigger_in_enable="yes" trigger_in_node="CONTROLLER:controller0|iFrameDone" trigger_in_tap_mode="classic" trigger_out_enable="no"/>
       <top_entity/>
@@ -51,6 +47,121 @@
           <wire name="CONTROLLER:controller0|Ycounter[9]" tap_mode="classic"/>
           <wire name="CONTROLLER:controller0|iCorrFinished" tap_mode="classic"/>
           <wire name="CONTROLLER:controller0|iFrameDone" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[0]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[10]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[11]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[12]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[1]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[2]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[3]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[4]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[5]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[6]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[7]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[8]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[9]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[0]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[10]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[11]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[12]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[1]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[2]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[3]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[4]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[5]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[6]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[7]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[8]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[9]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[0]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[10]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[11]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[12]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[1]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[2]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[3]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[4]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[5]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[6]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[7]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[8]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[9]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[0]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[10]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[11]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[12]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[1]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[2]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[3]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[4]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[5]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[6]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[7]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[8]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[9]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[0]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[10]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[11]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[12]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[13]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[14]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[15]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[1]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[2]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[3]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[4]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[5]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[6]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[7]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[8]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[9]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[0]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[10]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[11]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[12]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[1]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[2]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[3]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[4]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[5]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[6]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[7]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[8]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[9]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[0]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[10]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[11]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[12]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[1]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[2]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[3]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[4]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[5]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[6]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[7]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[8]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[9]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|oFinished" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[0]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[1]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[2]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[3]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[4]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[5]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[6]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[7]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[8]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[9]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[0]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[1]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[2]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[3]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[4]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[5]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[6]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[7]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[8]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[9]" tap_mode="classic"/>
         </trigger_input_vec>
         <data_input_vec>
           <wire name="CONTROLLER:controller0|Xcounter[0]" tap_mode="classic"/>
@@ -81,6 +192,121 @@
           <wire name="CONTROLLER:controller0|Ycounter[9]" tap_mode="classic"/>
           <wire name="CONTROLLER:controller0|iCorrFinished" tap_mode="classic"/>
           <wire name="CONTROLLER:controller0|iFrameDone" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[0]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[10]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[11]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[12]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[1]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[2]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[3]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[4]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[5]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[6]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[7]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[8]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[9]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[0]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[10]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[11]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[12]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[1]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[2]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[3]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[4]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[5]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[6]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[7]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[8]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[9]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[0]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[10]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[11]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[12]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[1]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[2]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[3]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[4]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[5]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[6]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[7]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[8]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[9]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[0]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[10]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[11]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[12]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[1]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[2]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[3]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[4]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[5]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[6]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[7]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[8]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[9]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[0]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[10]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[11]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[12]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[13]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[14]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[15]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[1]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[2]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[3]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[4]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[5]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[6]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[7]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[8]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[9]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[0]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[10]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[11]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[12]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[1]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[2]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[3]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[4]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[5]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[6]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[7]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[8]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[9]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[0]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[10]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[11]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[12]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[1]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[2]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[3]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[4]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[5]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[6]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[7]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[8]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[9]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|oFinished" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[0]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[1]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[2]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[3]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[4]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[5]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[6]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[7]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[8]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[9]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[0]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[1]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[2]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[3]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[4]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[5]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[6]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[7]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[8]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[9]" tap_mode="classic"/>
         </data_input_vec>
         <storage_qualifier_input_vec>
           <wire name="CONTROLLER:controller0|Xcounter[0]" tap_mode="classic"/>
@@ -111,115 +337,629 @@
           <wire name="CONTROLLER:controller0|Ycounter[9]" tap_mode="classic"/>
           <wire name="CONTROLLER:controller0|iCorrFinished" tap_mode="classic"/>
           <wire name="CONTROLLER:controller0|iFrameDone" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[0]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[10]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[11]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[12]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[1]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[2]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[3]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[4]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[5]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[6]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[7]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[8]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Xcoord[9]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[0]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[10]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[11]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[12]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[1]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[2]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[3]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[4]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[5]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[6]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[7]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[8]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|Ycoord[9]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[0]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[10]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[11]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[12]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[1]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[2]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[3]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[4]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[5]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[6]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[7]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[8]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentXcoord[9]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[0]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[10]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[11]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[12]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[1]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[2]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[3]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[4]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[5]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[6]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[7]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[8]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|currentYcoord[9]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[0]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[10]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[11]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[12]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[13]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[14]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[15]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[1]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[2]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[3]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[4]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[5]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[6]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[7]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[8]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|endScore[9]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[0]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[10]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[11]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[12]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[1]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[2]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[3]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[4]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[5]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[6]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[7]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[8]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iXstart[9]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[0]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[10]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[11]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[12]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[1]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[2]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[3]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[4]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[5]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[6]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[7]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[8]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|iYstart[9]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|oFinished" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[0]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[1]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[2]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[3]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[4]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[5]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[6]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[7]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[8]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_search[9]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[0]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[1]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[2]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[3]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[4]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[5]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[6]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[7]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[8]" tap_mode="classic"/>
+          <wire name="CORR_SCORE:score0|reading_sram[9]" tap_mode="classic"/>
         </storage_qualifier_input_vec>
       </signal_vec>
       <presentation>
         <unified_setup_data_view>
           <node name="CONTROLLER:controller0|Xcounter" order="msb_to_lsb" type="register">
-            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[12]" tap_mode="classic" type="register"/>
-            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[11]" tap_mode="classic" type="register"/>
-            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[10]" tap_mode="classic" type="register"/>
-            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[9]" tap_mode="classic" type="register"/>
-            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[8]" tap_mode="classic" type="register"/>
-            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[7]" tap_mode="classic" type="register"/>
-            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[6]" tap_mode="classic" type="register"/>
-            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[5]" tap_mode="classic" type="register"/>
-            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[4]" tap_mode="classic" type="register"/>
-            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[3]" tap_mode="classic" type="register"/>
-            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[2]" tap_mode="classic" type="register"/>
-            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[1]" tap_mode="classic" type="register"/>
-            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[0]" tap_mode="classic" type="register"/>
+            <node data_index="3" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[12]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="3" tap_mode="classic" trigger_index="3" type="register"/>
+            <node data_index="2" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[11]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="2" tap_mode="classic" trigger_index="2" type="register"/>
+            <node data_index="1" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[10]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="1" tap_mode="classic" trigger_index="1" type="register"/>
+            <node data_index="12" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[9]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="12" tap_mode="classic" trigger_index="12" type="register"/>
+            <node data_index="11" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[8]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="11" tap_mode="classic" trigger_index="11" type="register"/>
+            <node data_index="10" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[7]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="10" tap_mode="classic" trigger_index="10" type="register"/>
+            <node data_index="9" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[6]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="9" tap_mode="classic" trigger_index="9" type="register"/>
+            <node data_index="8" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[5]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="8" tap_mode="classic" trigger_index="8" type="register"/>
+            <node data_index="7" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[4]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="7" tap_mode="classic" trigger_index="7" type="register"/>
+            <node data_index="6" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[3]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="6" tap_mode="classic" trigger_index="6" type="register"/>
+            <node data_index="5" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[2]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="5" tap_mode="classic" trigger_index="5" type="register"/>
+            <node data_index="4" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[1]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="4" tap_mode="classic" trigger_index="4" type="register"/>
+            <node data_index="0" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[0]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="0" tap_mode="classic" trigger_index="0" type="register"/>
           </node>
           <node name="CONTROLLER:controller0|Ycounter" order="msb_to_lsb" type="register">
-            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[12]" tap_mode="classic" type="register"/>
-            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[11]" tap_mode="classic" type="register"/>
-            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[10]" tap_mode="classic" type="register"/>
-            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[9]" tap_mode="classic" type="register"/>
-            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[8]" tap_mode="classic" type="register"/>
-            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[7]" tap_mode="classic" type="register"/>
-            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[6]" tap_mode="classic" type="register"/>
-            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[5]" tap_mode="classic" type="register"/>
-            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[4]" tap_mode="classic" type="register"/>
-            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[3]" tap_mode="classic" type="register"/>
-            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[2]" tap_mode="classic" type="register"/>
-            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[1]" tap_mode="classic" type="register"/>
-            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[0]" tap_mode="classic" type="register"/>
+            <node data_index="16" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[12]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="16" tap_mode="classic" trigger_index="16" type="register"/>
+            <node data_index="15" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[11]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="15" tap_mode="classic" trigger_index="15" type="register"/>
+            <node data_index="14" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[10]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="14" tap_mode="classic" trigger_index="14" type="register"/>
+            <node data_index="25" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[9]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="25" tap_mode="classic" trigger_index="25" type="register"/>
+            <node data_index="24" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[8]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="24" tap_mode="classic" trigger_index="24" type="register"/>
+            <node data_index="23" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[7]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="23" tap_mode="classic" trigger_index="23" type="register"/>
+            <node data_index="22" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[6]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="22" tap_mode="classic" trigger_index="22" type="register"/>
+            <node data_index="21" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[5]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="21" tap_mode="classic" trigger_index="21" type="register"/>
+            <node data_index="20" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[4]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="20" tap_mode="classic" trigger_index="20" type="register"/>
+            <node data_index="19" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[3]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="19" tap_mode="classic" trigger_index="19" type="register"/>
+            <node data_index="18" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[2]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="18" tap_mode="classic" trigger_index="18" type="register"/>
+            <node data_index="17" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[1]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="17" tap_mode="classic" trigger_index="17" type="register"/>
+            <node data_index="13" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[0]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="13" tap_mode="classic" trigger_index="13" type="register"/>
           </node>
-          <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|iCorrFinished" tap_mode="classic" type="combinatorial"/>
-          <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|iFrameDone" tap_mode="classic" type="combinatorial"/>
+          <node data_index="26" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|iCorrFinished" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="26" tap_mode="classic" trigger_index="26" type="combinatorial"/>
+          <node data_index="27" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|iFrameDone" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="27" tap_mode="classic" trigger_index="27" type="combinatorial"/>
+          <node name="CORR_SCORE:score0|Xcoord" order="msb_to_lsb" state="collapse" type="register">
+            <node data_index="31" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[12]" storage_index="31" tap_mode="classic" trigger_index="31" type="register"/>
+            <node data_index="30" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[11]" storage_index="30" tap_mode="classic" trigger_index="30" type="register"/>
+            <node data_index="29" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[10]" storage_index="29" tap_mode="classic" trigger_index="29" type="register"/>
+            <node data_index="40" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[9]" storage_index="40" tap_mode="classic" trigger_index="40" type="register"/>
+            <node data_index="39" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[8]" storage_index="39" tap_mode="classic" trigger_index="39" type="register"/>
+            <node data_index="38" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[7]" storage_index="38" tap_mode="classic" trigger_index="38" type="register"/>
+            <node data_index="37" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[6]" storage_index="37" tap_mode="classic" trigger_index="37" type="register"/>
+            <node data_index="36" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[5]" storage_index="36" tap_mode="classic" trigger_index="36" type="register"/>
+            <node data_index="35" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[4]" storage_index="35" tap_mode="classic" trigger_index="35" type="register"/>
+            <node data_index="34" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[3]" storage_index="34" tap_mode="classic" trigger_index="34" type="register"/>
+            <node data_index="33" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[2]" storage_index="33" tap_mode="classic" trigger_index="33" type="register"/>
+            <node data_index="32" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[1]" storage_index="32" tap_mode="classic" trigger_index="32" type="register"/>
+            <node data_index="28" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[0]" storage_index="28" tap_mode="classic" trigger_index="28" type="register"/>
+          </node>
+          <node name="CORR_SCORE:score0|Ycoord" order="msb_to_lsb" type="register">
+            <node data_index="44" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[12]" storage_index="44" tap_mode="classic" trigger_index="44" type="register"/>
+            <node data_index="43" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[11]" storage_index="43" tap_mode="classic" trigger_index="43" type="register"/>
+            <node data_index="42" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[10]" storage_index="42" tap_mode="classic" trigger_index="42" type="register"/>
+            <node data_index="53" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[9]" storage_index="53" tap_mode="classic" trigger_index="53" type="register"/>
+            <node data_index="52" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[8]" storage_index="52" tap_mode="classic" trigger_index="52" type="register"/>
+            <node data_index="51" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[7]" storage_index="51" tap_mode="classic" trigger_index="51" type="register"/>
+            <node data_index="50" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[6]" storage_index="50" tap_mode="classic" trigger_index="50" type="register"/>
+            <node data_index="49" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[5]" storage_index="49" tap_mode="classic" trigger_index="49" type="register"/>
+            <node data_index="48" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[4]" storage_index="48" tap_mode="classic" trigger_index="48" type="register"/>
+            <node data_index="47" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[3]" storage_index="47" tap_mode="classic" trigger_index="47" type="register"/>
+            <node data_index="46" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[2]" storage_index="46" tap_mode="classic" trigger_index="46" type="register"/>
+            <node data_index="45" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[1]" storage_index="45" tap_mode="classic" trigger_index="45" type="register"/>
+            <node data_index="41" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[0]" storage_index="41" tap_mode="classic" trigger_index="41" type="register"/>
+          </node>
+          <node name="CORR_SCORE:score0|endScore" order="msb_to_lsb" type="register">
+            <node data_index="60" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[15]" storage_index="60" tap_mode="classic" trigger_index="60" type="register"/>
+            <node data_index="59" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[14]" storage_index="59" tap_mode="classic" trigger_index="59" type="register"/>
+            <node data_index="58" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[13]" storage_index="58" tap_mode="classic" trigger_index="58" type="register"/>
+            <node data_index="57" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[12]" storage_index="57" tap_mode="classic" trigger_index="57" type="register"/>
+            <node data_index="56" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[11]" storage_index="56" tap_mode="classic" trigger_index="56" type="register"/>
+            <node data_index="55" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[10]" storage_index="55" tap_mode="classic" trigger_index="55" type="register"/>
+            <node data_index="69" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[9]" storage_index="69" tap_mode="classic" trigger_index="69" type="register"/>
+            <node data_index="68" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[8]" storage_index="68" tap_mode="classic" trigger_index="68" type="register"/>
+            <node data_index="67" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[7]" storage_index="67" tap_mode="classic" trigger_index="67" type="register"/>
+            <node data_index="66" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[6]" storage_index="66" tap_mode="classic" trigger_index="66" type="register"/>
+            <node data_index="65" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[5]" storage_index="65" tap_mode="classic" trigger_index="65" type="register"/>
+            <node data_index="64" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[4]" storage_index="64" tap_mode="classic" trigger_index="64" type="register"/>
+            <node data_index="63" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[3]" storage_index="63" tap_mode="classic" trigger_index="63" type="register"/>
+            <node data_index="62" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[2]" storage_index="62" tap_mode="classic" trigger_index="62" type="register"/>
+            <node data_index="61" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[1]" storage_index="61" tap_mode="classic" trigger_index="61" type="register"/>
+            <node data_index="54" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[0]" storage_index="54" tap_mode="classic" trigger_index="54" type="register"/>
+          </node>
+          <node name="CORR_SCORE:score0|reading_search" order="msb_to_lsb" type="combinatorial">
+            <node data_index="80" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[9]" storage_index="80" tap_mode="classic" trigger_index="80" type="combinatorial"/>
+            <node data_index="79" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[8]" storage_index="79" tap_mode="classic" trigger_index="79" type="combinatorial"/>
+            <node data_index="78" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[7]" storage_index="78" tap_mode="classic" trigger_index="78" type="combinatorial"/>
+            <node data_index="77" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[6]" storage_index="77" tap_mode="classic" trigger_index="77" type="combinatorial"/>
+            <node data_index="76" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[5]" storage_index="76" tap_mode="classic" trigger_index="76" type="combinatorial"/>
+            <node data_index="75" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[4]" storage_index="75" tap_mode="classic" trigger_index="75" type="combinatorial"/>
+            <node data_index="74" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[3]" storage_index="74" tap_mode="classic" trigger_index="74" type="combinatorial"/>
+            <node data_index="73" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[2]" storage_index="73" tap_mode="classic" trigger_index="73" type="combinatorial"/>
+            <node data_index="72" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[1]" storage_index="72" tap_mode="classic" trigger_index="72" type="combinatorial"/>
+            <node data_index="71" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[0]" storage_index="71" tap_mode="classic" trigger_index="71" type="combinatorial"/>
+          </node>
+          <node name="CORR_SCORE:score0|reading_sram" order="msb_to_lsb" type="combinatorial">
+            <node data_index="90" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[9]" storage_index="90" tap_mode="classic" trigger_index="90" type="combinatorial"/>
+            <node data_index="89" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[8]" storage_index="89" tap_mode="classic" trigger_index="89" type="combinatorial"/>
+            <node data_index="88" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[7]" storage_index="88" tap_mode="classic" trigger_index="88" type="combinatorial"/>
+            <node data_index="87" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[6]" storage_index="87" tap_mode="classic" trigger_index="87" type="combinatorial"/>
+            <node data_index="86" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[5]" storage_index="86" tap_mode="classic" trigger_index="86" type="combinatorial"/>
+            <node data_index="85" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[4]" storage_index="85" tap_mode="classic" trigger_index="85" type="combinatorial"/>
+            <node data_index="84" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[3]" storage_index="84" tap_mode="classic" trigger_index="84" type="combinatorial"/>
+            <node data_index="83" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[2]" storage_index="83" tap_mode="classic" trigger_index="83" type="combinatorial"/>
+            <node data_index="82" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[1]" storage_index="82" tap_mode="classic" trigger_index="82" type="combinatorial"/>
+            <node data_index="81" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[0]" storage_index="81" tap_mode="classic" trigger_index="81" type="combinatorial"/>
+          </node>
+          <node name="CORR_SCORE:score0|currentXcoord" order="msb_to_lsb" type="register">
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[12]" tap_mode="classic" type="register"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[11]" tap_mode="classic" type="register"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[10]" tap_mode="classic" type="register"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[9]" tap_mode="classic" type="register"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[8]" tap_mode="classic" type="register"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[7]" tap_mode="classic" type="register"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[6]" tap_mode="classic" type="register"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[5]" tap_mode="classic" type="register"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[4]" tap_mode="classic" type="register"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[3]" tap_mode="classic" type="register"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[2]" tap_mode="classic" type="register"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[1]" tap_mode="classic" type="register"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[0]" tap_mode="classic" type="register"/>
+          </node>
+          <node name="CORR_SCORE:score0|currentYcoord" order="msb_to_lsb" type="register">
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[12]" tap_mode="classic" type="register"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[11]" tap_mode="classic" type="register"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[10]" tap_mode="classic" type="register"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[9]" tap_mode="classic" type="register"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[8]" tap_mode="classic" type="register"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[7]" tap_mode="classic" type="register"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[6]" tap_mode="classic" type="register"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[5]" tap_mode="classic" type="register"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[4]" tap_mode="classic" type="register"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[3]" tap_mode="classic" type="register"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[2]" tap_mode="classic" type="register"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[1]" tap_mode="classic" type="register"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[0]" tap_mode="classic" type="register"/>
+          </node>
+          <node name="CORR_SCORE:score0|iYstart" order="msb_to_lsb" type="combinatorial">
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[12]" tap_mode="classic" type="combinatorial"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[11]" tap_mode="classic" type="combinatorial"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[10]" tap_mode="classic" type="combinatorial"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[9]" tap_mode="classic" type="combinatorial"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[8]" tap_mode="classic" type="combinatorial"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[7]" tap_mode="classic" type="combinatorial"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[6]" tap_mode="classic" type="combinatorial"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[5]" tap_mode="classic" type="combinatorial"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[4]" tap_mode="classic" type="combinatorial"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[3]" tap_mode="classic" type="combinatorial"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[2]" tap_mode="classic" type="combinatorial"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[1]" tap_mode="classic" type="combinatorial"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[0]" tap_mode="classic" type="combinatorial"/>
+          </node>
+          <node name="CORR_SCORE:score0|iXstart" order="msb_to_lsb" type="combinatorial">
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[12]" tap_mode="classic" type="combinatorial"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[11]" tap_mode="classic" type="combinatorial"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[10]" tap_mode="classic" type="combinatorial"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[9]" tap_mode="classic" type="combinatorial"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[8]" tap_mode="classic" type="combinatorial"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[7]" tap_mode="classic" type="combinatorial"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[6]" tap_mode="classic" type="combinatorial"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[5]" tap_mode="classic" type="combinatorial"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[4]" tap_mode="classic" type="combinatorial"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[3]" tap_mode="classic" type="combinatorial"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[2]" tap_mode="classic" type="combinatorial"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[1]" tap_mode="classic" type="combinatorial"/>
+            <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[0]" tap_mode="classic" type="combinatorial"/>
+          </node>
+          <node is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|oFinished" tap_mode="classic" type="combinatorial"/>
         </unified_setup_data_view>
         <data_view>
           <bus name="CONTROLLER:controller0|Xcounter" order="msb_to_lsb" type="register">
-            <net data_index="3" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[12]" storage_index="3" tap_mode="classic" trigger_index="3" type="register"/>
-            <net data_index="2" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[11]" storage_index="2" tap_mode="classic" trigger_index="2" type="register"/>
-            <net data_index="1" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[10]" storage_index="1" tap_mode="classic" trigger_index="1" type="register"/>
-            <net data_index="12" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[9]" storage_index="12" tap_mode="classic" trigger_index="12" type="register"/>
-            <net data_index="11" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[8]" storage_index="11" tap_mode="classic" trigger_index="11" type="register"/>
-            <net data_index="10" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[7]" storage_index="10" tap_mode="classic" trigger_index="10" type="register"/>
-            <net data_index="9" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[6]" storage_index="9" tap_mode="classic" trigger_index="9" type="register"/>
-            <net data_index="8" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[5]" storage_index="8" tap_mode="classic" trigger_index="8" type="register"/>
-            <net data_index="7" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[4]" storage_index="7" tap_mode="classic" trigger_index="7" type="register"/>
-            <net data_index="6" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[3]" storage_index="6" tap_mode="classic" trigger_index="6" type="register"/>
-            <net data_index="5" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[2]" storage_index="5" tap_mode="classic" trigger_index="5" type="register"/>
-            <net data_index="4" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[1]" storage_index="4" tap_mode="classic" trigger_index="4" type="register"/>
-            <net data_index="0" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[0]" storage_index="0" tap_mode="classic" trigger_index="0" type="register"/>
+            <net data_index="3" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[12]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="3" tap_mode="classic" trigger_index="3" type="register"/>
+            <net data_index="2" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[11]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="2" tap_mode="classic" trigger_index="2" type="register"/>
+            <net data_index="1" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[10]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="1" tap_mode="classic" trigger_index="1" type="register"/>
+            <net data_index="12" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[9]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="12" tap_mode="classic" trigger_index="12" type="register"/>
+            <net data_index="11" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[8]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="11" tap_mode="classic" trigger_index="11" type="register"/>
+            <net data_index="10" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[7]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="10" tap_mode="classic" trigger_index="10" type="register"/>
+            <net data_index="9" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[6]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="9" tap_mode="classic" trigger_index="9" type="register"/>
+            <net data_index="8" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[5]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="8" tap_mode="classic" trigger_index="8" type="register"/>
+            <net data_index="7" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[4]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="7" tap_mode="classic" trigger_index="7" type="register"/>
+            <net data_index="6" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[3]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="6" tap_mode="classic" trigger_index="6" type="register"/>
+            <net data_index="5" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[2]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="5" tap_mode="classic" trigger_index="5" type="register"/>
+            <net data_index="4" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[1]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="4" tap_mode="classic" trigger_index="4" type="register"/>
+            <net data_index="0" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[0]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="0" tap_mode="classic" trigger_index="0" type="register"/>
           </bus>
           <bus name="CONTROLLER:controller0|Ycounter" order="msb_to_lsb" type="register">
-            <net data_index="16" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[12]" storage_index="16" tap_mode="classic" trigger_index="16" type="register"/>
-            <net data_index="15" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[11]" storage_index="15" tap_mode="classic" trigger_index="15" type="register"/>
-            <net data_index="14" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[10]" storage_index="14" tap_mode="classic" trigger_index="14" type="register"/>
-            <net data_index="25" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[9]" storage_index="25" tap_mode="classic" trigger_index="25" type="register"/>
-            <net data_index="24" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[8]" storage_index="24" tap_mode="classic" trigger_index="24" type="register"/>
-            <net data_index="23" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[7]" storage_index="23" tap_mode="classic" trigger_index="23" type="register"/>
-            <net data_index="22" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[6]" storage_index="22" tap_mode="classic" trigger_index="22" type="register"/>
-            <net data_index="21" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[5]" storage_index="21" tap_mode="classic" trigger_index="21" type="register"/>
-            <net data_index="20" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[4]" storage_index="20" tap_mode="classic" trigger_index="20" type="register"/>
-            <net data_index="19" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[3]" storage_index="19" tap_mode="classic" trigger_index="19" type="register"/>
-            <net data_index="18" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[2]" storage_index="18" tap_mode="classic" trigger_index="18" type="register"/>
-            <net data_index="17" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[1]" storage_index="17" tap_mode="classic" trigger_index="17" type="register"/>
-            <net data_index="13" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[0]" storage_index="13" tap_mode="classic" trigger_index="13" type="register"/>
+            <net data_index="16" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[12]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="16" tap_mode="classic" trigger_index="16" type="register"/>
+            <net data_index="15" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[11]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="15" tap_mode="classic" trigger_index="15" type="register"/>
+            <net data_index="14" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[10]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="14" tap_mode="classic" trigger_index="14" type="register"/>
+            <net data_index="25" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[9]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="25" tap_mode="classic" trigger_index="25" type="register"/>
+            <net data_index="24" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[8]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="24" tap_mode="classic" trigger_index="24" type="register"/>
+            <net data_index="23" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[7]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="23" tap_mode="classic" trigger_index="23" type="register"/>
+            <net data_index="22" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[6]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="22" tap_mode="classic" trigger_index="22" type="register"/>
+            <net data_index="21" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[5]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="21" tap_mode="classic" trigger_index="21" type="register"/>
+            <net data_index="20" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[4]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="20" tap_mode="classic" trigger_index="20" type="register"/>
+            <net data_index="19" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[3]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="19" tap_mode="classic" trigger_index="19" type="register"/>
+            <net data_index="18" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[2]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="18" tap_mode="classic" trigger_index="18" type="register"/>
+            <net data_index="17" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[1]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="17" tap_mode="classic" trigger_index="17" type="register"/>
+            <net data_index="13" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[0]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="13" tap_mode="classic" trigger_index="13" type="register"/>
           </bus>
-          <net data_index="26" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|iCorrFinished" storage_index="26" tap_mode="classic" trigger_index="26" type="combinatorial"/>
-          <net data_index="27" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|iFrameDone" storage_index="27" tap_mode="classic" trigger_index="27" type="combinatorial"/>
+          <net data_index="26" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|iCorrFinished" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="26" tap_mode="classic" trigger_index="26" type="combinatorial"/>
+          <net data_index="27" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|iFrameDone" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="27" tap_mode="classic" trigger_index="27" type="combinatorial"/>
+          <bus name="CORR_SCORE:score0|Xcoord" order="msb_to_lsb" state="collapse" type="register">
+            <net data_index="31" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[12]" storage_index="31" tap_mode="classic" trigger_index="31" type="register"/>
+            <net data_index="30" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[11]" storage_index="30" tap_mode="classic" trigger_index="30" type="register"/>
+            <net data_index="29" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[10]" storage_index="29" tap_mode="classic" trigger_index="29" type="register"/>
+            <net data_index="40" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[9]" storage_index="40" tap_mode="classic" trigger_index="40" type="register"/>
+            <net data_index="39" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[8]" storage_index="39" tap_mode="classic" trigger_index="39" type="register"/>
+            <net data_index="38" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[7]" storage_index="38" tap_mode="classic" trigger_index="38" type="register"/>
+            <net data_index="37" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[6]" storage_index="37" tap_mode="classic" trigger_index="37" type="register"/>
+            <net data_index="36" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[5]" storage_index="36" tap_mode="classic" trigger_index="36" type="register"/>
+            <net data_index="35" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[4]" storage_index="35" tap_mode="classic" trigger_index="35" type="register"/>
+            <net data_index="34" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[3]" storage_index="34" tap_mode="classic" trigger_index="34" type="register"/>
+            <net data_index="33" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[2]" storage_index="33" tap_mode="classic" trigger_index="33" type="register"/>
+            <net data_index="32" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[1]" storage_index="32" tap_mode="classic" trigger_index="32" type="register"/>
+            <net data_index="28" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[0]" storage_index="28" tap_mode="classic" trigger_index="28" type="register"/>
+          </bus>
+          <bus name="CORR_SCORE:score0|Ycoord" order="msb_to_lsb" type="register">
+            <net data_index="44" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[12]" storage_index="44" tap_mode="classic" trigger_index="44" type="register"/>
+            <net data_index="43" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[11]" storage_index="43" tap_mode="classic" trigger_index="43" type="register"/>
+            <net data_index="42" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[10]" storage_index="42" tap_mode="classic" trigger_index="42" type="register"/>
+            <net data_index="53" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[9]" storage_index="53" tap_mode="classic" trigger_index="53" type="register"/>
+            <net data_index="52" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[8]" storage_index="52" tap_mode="classic" trigger_index="52" type="register"/>
+            <net data_index="51" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[7]" storage_index="51" tap_mode="classic" trigger_index="51" type="register"/>
+            <net data_index="50" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[6]" storage_index="50" tap_mode="classic" trigger_index="50" type="register"/>
+            <net data_index="49" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[5]" storage_index="49" tap_mode="classic" trigger_index="49" type="register"/>
+            <net data_index="48" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[4]" storage_index="48" tap_mode="classic" trigger_index="48" type="register"/>
+            <net data_index="47" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[3]" storage_index="47" tap_mode="classic" trigger_index="47" type="register"/>
+            <net data_index="46" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[2]" storage_index="46" tap_mode="classic" trigger_index="46" type="register"/>
+            <net data_index="45" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[1]" storage_index="45" tap_mode="classic" trigger_index="45" type="register"/>
+            <net data_index="41" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[0]" storage_index="41" tap_mode="classic" trigger_index="41" type="register"/>
+          </bus>
+          <bus name="CORR_SCORE:score0|endScore" order="msb_to_lsb" type="register">
+            <net data_index="86" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[15]" storage_index="86" tap_mode="classic" trigger_index="86" type="register"/>
+            <net data_index="85" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[14]" storage_index="85" tap_mode="classic" trigger_index="85" type="register"/>
+            <net data_index="84" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[13]" storage_index="84" tap_mode="classic" trigger_index="84" type="register"/>
+            <net data_index="83" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[12]" storage_index="83" tap_mode="classic" trigger_index="83" type="register"/>
+            <net data_index="82" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[11]" storage_index="82" tap_mode="classic" trigger_index="82" type="register"/>
+            <net data_index="81" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[10]" storage_index="81" tap_mode="classic" trigger_index="81" type="register"/>
+            <net data_index="95" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[9]" storage_index="95" tap_mode="classic" trigger_index="95" type="register"/>
+            <net data_index="94" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[8]" storage_index="94" tap_mode="classic" trigger_index="94" type="register"/>
+            <net data_index="93" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[7]" storage_index="93" tap_mode="classic" trigger_index="93" type="register"/>
+            <net data_index="92" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[6]" storage_index="92" tap_mode="classic" trigger_index="92" type="register"/>
+            <net data_index="91" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[5]" storage_index="91" tap_mode="classic" trigger_index="91" type="register"/>
+            <net data_index="90" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[4]" storage_index="90" tap_mode="classic" trigger_index="90" type="register"/>
+            <net data_index="89" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[3]" storage_index="89" tap_mode="classic" trigger_index="89" type="register"/>
+            <net data_index="88" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[2]" storage_index="88" tap_mode="classic" trigger_index="88" type="register"/>
+            <net data_index="87" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[1]" storage_index="87" tap_mode="classic" trigger_index="87" type="register"/>
+            <net data_index="80" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[0]" storage_index="80" tap_mode="classic" trigger_index="80" type="register"/>
+          </bus>
+          <bus name="CORR_SCORE:score0|reading_search" order="msb_to_lsb" type="combinatorial">
+            <net data_index="132" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[9]" storage_index="132" tap_mode="classic" trigger_index="132" type="combinatorial"/>
+            <net data_index="131" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[8]" storage_index="131" tap_mode="classic" trigger_index="131" type="combinatorial"/>
+            <net data_index="130" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[7]" storage_index="130" tap_mode="classic" trigger_index="130" type="combinatorial"/>
+            <net data_index="129" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[6]" storage_index="129" tap_mode="classic" trigger_index="129" type="combinatorial"/>
+            <net data_index="128" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[5]" storage_index="128" tap_mode="classic" trigger_index="128" type="combinatorial"/>
+            <net data_index="127" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[4]" storage_index="127" tap_mode="classic" trigger_index="127" type="combinatorial"/>
+            <net data_index="126" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[3]" storage_index="126" tap_mode="classic" trigger_index="126" type="combinatorial"/>
+            <net data_index="125" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[2]" storage_index="125" tap_mode="classic" trigger_index="125" type="combinatorial"/>
+            <net data_index="124" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[1]" storage_index="124" tap_mode="classic" trigger_index="124" type="combinatorial"/>
+            <net data_index="123" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[0]" storage_index="123" tap_mode="classic" trigger_index="123" type="combinatorial"/>
+          </bus>
+          <bus name="CORR_SCORE:score0|reading_sram" order="msb_to_lsb" type="combinatorial">
+            <net data_index="142" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[9]" storage_index="142" tap_mode="classic" trigger_index="142" type="combinatorial"/>
+            <net data_index="141" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[8]" storage_index="141" tap_mode="classic" trigger_index="141" type="combinatorial"/>
+            <net data_index="140" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[7]" storage_index="140" tap_mode="classic" trigger_index="140" type="combinatorial"/>
+            <net data_index="139" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[6]" storage_index="139" tap_mode="classic" trigger_index="139" type="combinatorial"/>
+            <net data_index="138" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[5]" storage_index="138" tap_mode="classic" trigger_index="138" type="combinatorial"/>
+            <net data_index="137" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[4]" storage_index="137" tap_mode="classic" trigger_index="137" type="combinatorial"/>
+            <net data_index="136" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[3]" storage_index="136" tap_mode="classic" trigger_index="136" type="combinatorial"/>
+            <net data_index="135" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[2]" storage_index="135" tap_mode="classic" trigger_index="135" type="combinatorial"/>
+            <net data_index="134" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[1]" storage_index="134" tap_mode="classic" trigger_index="134" type="combinatorial"/>
+            <net data_index="133" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[0]" storage_index="133" tap_mode="classic" trigger_index="133" type="combinatorial"/>
+          </bus>
+          <bus name="CORR_SCORE:score0|currentXcoord" order="msb_to_lsb" type="register">
+            <net data_index="57" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[12]" storage_index="57" tap_mode="classic" trigger_index="57" type="register"/>
+            <net data_index="56" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[11]" storage_index="56" tap_mode="classic" trigger_index="56" type="register"/>
+            <net data_index="55" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[10]" storage_index="55" tap_mode="classic" trigger_index="55" type="register"/>
+            <net data_index="66" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[9]" storage_index="66" tap_mode="classic" trigger_index="66" type="register"/>
+            <net data_index="65" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[8]" storage_index="65" tap_mode="classic" trigger_index="65" type="register"/>
+            <net data_index="64" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[7]" storage_index="64" tap_mode="classic" trigger_index="64" type="register"/>
+            <net data_index="63" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[6]" storage_index="63" tap_mode="classic" trigger_index="63" type="register"/>
+            <net data_index="62" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[5]" storage_index="62" tap_mode="classic" trigger_index="62" type="register"/>
+            <net data_index="61" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[4]" storage_index="61" tap_mode="classic" trigger_index="61" type="register"/>
+            <net data_index="60" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[3]" storage_index="60" tap_mode="classic" trigger_index="60" type="register"/>
+            <net data_index="59" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[2]" storage_index="59" tap_mode="classic" trigger_index="59" type="register"/>
+            <net data_index="58" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[1]" storage_index="58" tap_mode="classic" trigger_index="58" type="register"/>
+            <net data_index="54" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[0]" storage_index="54" tap_mode="classic" trigger_index="54" type="register"/>
+          </bus>
+          <bus name="CORR_SCORE:score0|currentYcoord" order="msb_to_lsb" type="register">
+            <net data_index="70" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[12]" storage_index="70" tap_mode="classic" trigger_index="70" type="register"/>
+            <net data_index="69" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[11]" storage_index="69" tap_mode="classic" trigger_index="69" type="register"/>
+            <net data_index="68" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[10]" storage_index="68" tap_mode="classic" trigger_index="68" type="register"/>
+            <net data_index="79" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[9]" storage_index="79" tap_mode="classic" trigger_index="79" type="register"/>
+            <net data_index="78" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[8]" storage_index="78" tap_mode="classic" trigger_index="78" type="register"/>
+            <net data_index="77" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[7]" storage_index="77" tap_mode="classic" trigger_index="77" type="register"/>
+            <net data_index="76" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[6]" storage_index="76" tap_mode="classic" trigger_index="76" type="register"/>
+            <net data_index="75" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[5]" storage_index="75" tap_mode="classic" trigger_index="75" type="register"/>
+            <net data_index="74" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[4]" storage_index="74" tap_mode="classic" trigger_index="74" type="register"/>
+            <net data_index="73" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[3]" storage_index="73" tap_mode="classic" trigger_index="73" type="register"/>
+            <net data_index="72" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[2]" storage_index="72" tap_mode="classic" trigger_index="72" type="register"/>
+            <net data_index="71" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[1]" storage_index="71" tap_mode="classic" trigger_index="71" type="register"/>
+            <net data_index="67" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[0]" storage_index="67" tap_mode="classic" trigger_index="67" type="register"/>
+          </bus>
+          <bus name="CORR_SCORE:score0|iYstart" order="msb_to_lsb" type="combinatorial">
+            <net data_index="112" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[12]" storage_index="112" tap_mode="classic" trigger_index="112" type="combinatorial"/>
+            <net data_index="111" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[11]" storage_index="111" tap_mode="classic" trigger_index="111" type="combinatorial"/>
+            <net data_index="110" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[10]" storage_index="110" tap_mode="classic" trigger_index="110" type="combinatorial"/>
+            <net data_index="121" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[9]" storage_index="121" tap_mode="classic" trigger_index="121" type="combinatorial"/>
+            <net data_index="120" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[8]" storage_index="120" tap_mode="classic" trigger_index="120" type="combinatorial"/>
+            <net data_index="119" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[7]" storage_index="119" tap_mode="classic" trigger_index="119" type="combinatorial"/>
+            <net data_index="118" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[6]" storage_index="118" tap_mode="classic" trigger_index="118" type="combinatorial"/>
+            <net data_index="117" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[5]" storage_index="117" tap_mode="classic" trigger_index="117" type="combinatorial"/>
+            <net data_index="116" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[4]" storage_index="116" tap_mode="classic" trigger_index="116" type="combinatorial"/>
+            <net data_index="115" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[3]" storage_index="115" tap_mode="classic" trigger_index="115" type="combinatorial"/>
+            <net data_index="114" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[2]" storage_index="114" tap_mode="classic" trigger_index="114" type="combinatorial"/>
+            <net data_index="113" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[1]" storage_index="113" tap_mode="classic" trigger_index="113" type="combinatorial"/>
+            <net data_index="109" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[0]" storage_index="109" tap_mode="classic" trigger_index="109" type="combinatorial"/>
+          </bus>
+          <bus name="CORR_SCORE:score0|iXstart" order="msb_to_lsb" type="combinatorial">
+            <net data_index="99" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[12]" storage_index="99" tap_mode="classic" trigger_index="99" type="combinatorial"/>
+            <net data_index="98" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[11]" storage_index="98" tap_mode="classic" trigger_index="98" type="combinatorial"/>
+            <net data_index="97" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[10]" storage_index="97" tap_mode="classic" trigger_index="97" type="combinatorial"/>
+            <net data_index="108" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[9]" storage_index="108" tap_mode="classic" trigger_index="108" type="combinatorial"/>
+            <net data_index="107" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[8]" storage_index="107" tap_mode="classic" trigger_index="107" type="combinatorial"/>
+            <net data_index="106" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[7]" storage_index="106" tap_mode="classic" trigger_index="106" type="combinatorial"/>
+            <net data_index="105" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[6]" storage_index="105" tap_mode="classic" trigger_index="105" type="combinatorial"/>
+            <net data_index="104" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[5]" storage_index="104" tap_mode="classic" trigger_index="104" type="combinatorial"/>
+            <net data_index="103" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[4]" storage_index="103" tap_mode="classic" trigger_index="103" type="combinatorial"/>
+            <net data_index="102" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[3]" storage_index="102" tap_mode="classic" trigger_index="102" type="combinatorial"/>
+            <net data_index="101" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[2]" storage_index="101" tap_mode="classic" trigger_index="101" type="combinatorial"/>
+            <net data_index="100" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[1]" storage_index="100" tap_mode="classic" trigger_index="100" type="combinatorial"/>
+            <net data_index="96" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[0]" storage_index="96" tap_mode="classic" trigger_index="96" type="combinatorial"/>
+          </bus>
+          <net data_index="122" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|oFinished" storage_index="122" tap_mode="classic" trigger_index="122" type="combinatorial"/>
         </data_view>
         <setup_view>
           <bus name="CONTROLLER:controller0|Xcounter" order="msb_to_lsb" type="register">
-            <net data_index="3" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[12]" storage_index="3" tap_mode="classic" trigger_index="3" type="register"/>
-            <net data_index="2" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[11]" storage_index="2" tap_mode="classic" trigger_index="2" type="register"/>
-            <net data_index="1" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[10]" storage_index="1" tap_mode="classic" trigger_index="1" type="register"/>
-            <net data_index="12" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[9]" storage_index="12" tap_mode="classic" trigger_index="12" type="register"/>
-            <net data_index="11" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[8]" storage_index="11" tap_mode="classic" trigger_index="11" type="register"/>
-            <net data_index="10" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[7]" storage_index="10" tap_mode="classic" trigger_index="10" type="register"/>
-            <net data_index="9" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[6]" storage_index="9" tap_mode="classic" trigger_index="9" type="register"/>
-            <net data_index="8" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[5]" storage_index="8" tap_mode="classic" trigger_index="8" type="register"/>
-            <net data_index="7" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[4]" storage_index="7" tap_mode="classic" trigger_index="7" type="register"/>
-            <net data_index="6" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[3]" storage_index="6" tap_mode="classic" trigger_index="6" type="register"/>
-            <net data_index="5" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[2]" storage_index="5" tap_mode="classic" trigger_index="5" type="register"/>
-            <net data_index="4" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[1]" storage_index="4" tap_mode="classic" trigger_index="4" type="register"/>
-            <net data_index="0" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Xcounter[0]" storage_index="0" tap_mode="classic" trigger_index="0" type="register"/>
+            <net data_index="3" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[12]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="3" tap_mode="classic" trigger_index="3" type="register"/>
+            <net data_index="2" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[11]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="2" tap_mode="classic" trigger_index="2" type="register"/>
+            <net data_index="1" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[10]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="1" tap_mode="classic" trigger_index="1" type="register"/>
+            <net data_index="12" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[9]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="12" tap_mode="classic" trigger_index="12" type="register"/>
+            <net data_index="11" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[8]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="11" tap_mode="classic" trigger_index="11" type="register"/>
+            <net data_index="10" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[7]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="10" tap_mode="classic" trigger_index="10" type="register"/>
+            <net data_index="9" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[6]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="9" tap_mode="classic" trigger_index="9" type="register"/>
+            <net data_index="8" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[5]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="8" tap_mode="classic" trigger_index="8" type="register"/>
+            <net data_index="7" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[4]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="7" tap_mode="classic" trigger_index="7" type="register"/>
+            <net data_index="6" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[3]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="6" tap_mode="classic" trigger_index="6" type="register"/>
+            <net data_index="5" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[2]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="5" tap_mode="classic" trigger_index="5" type="register"/>
+            <net data_index="4" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[1]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="4" tap_mode="classic" trigger_index="4" type="register"/>
+            <net data_index="0" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Xcounter[0]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="0" tap_mode="classic" trigger_index="0" type="register"/>
           </bus>
           <bus name="CONTROLLER:controller0|Ycounter" order="msb_to_lsb" type="register">
-            <net data_index="16" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[12]" storage_index="16" tap_mode="classic" trigger_index="16" type="register"/>
-            <net data_index="15" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[11]" storage_index="15" tap_mode="classic" trigger_index="15" type="register"/>
-            <net data_index="14" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[10]" storage_index="14" tap_mode="classic" trigger_index="14" type="register"/>
-            <net data_index="25" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[9]" storage_index="25" tap_mode="classic" trigger_index="25" type="register"/>
-            <net data_index="24" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[8]" storage_index="24" tap_mode="classic" trigger_index="24" type="register"/>
-            <net data_index="23" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[7]" storage_index="23" tap_mode="classic" trigger_index="23" type="register"/>
-            <net data_index="22" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[6]" storage_index="22" tap_mode="classic" trigger_index="22" type="register"/>
-            <net data_index="21" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[5]" storage_index="21" tap_mode="classic" trigger_index="21" type="register"/>
-            <net data_index="20" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[4]" storage_index="20" tap_mode="classic" trigger_index="20" type="register"/>
-            <net data_index="19" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[3]" storage_index="19" tap_mode="classic" trigger_index="19" type="register"/>
-            <net data_index="18" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[2]" storage_index="18" tap_mode="classic" trigger_index="18" type="register"/>
-            <net data_index="17" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[1]" storage_index="17" tap_mode="classic" trigger_index="17" type="register"/>
-            <net data_index="13" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|Ycounter[0]" storage_index="13" tap_mode="classic" trigger_index="13" type="register"/>
+            <net data_index="16" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[12]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="16" tap_mode="classic" trigger_index="16" type="register"/>
+            <net data_index="15" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[11]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="15" tap_mode="classic" trigger_index="15" type="register"/>
+            <net data_index="14" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[10]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="14" tap_mode="classic" trigger_index="14" type="register"/>
+            <net data_index="25" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[9]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="25" tap_mode="classic" trigger_index="25" type="register"/>
+            <net data_index="24" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[8]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="24" tap_mode="classic" trigger_index="24" type="register"/>
+            <net data_index="23" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[7]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="23" tap_mode="classic" trigger_index="23" type="register"/>
+            <net data_index="22" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[6]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="22" tap_mode="classic" trigger_index="22" type="register"/>
+            <net data_index="21" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[5]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="21" tap_mode="classic" trigger_index="21" type="register"/>
+            <net data_index="20" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[4]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="20" tap_mode="classic" trigger_index="20" type="register"/>
+            <net data_index="19" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[3]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="19" tap_mode="classic" trigger_index="19" type="register"/>
+            <net data_index="18" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[2]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="18" tap_mode="classic" trigger_index="18" type="register"/>
+            <net data_index="17" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[1]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="17" tap_mode="classic" trigger_index="17" type="register"/>
+            <net data_index="13" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|Ycounter[0]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="13" tap_mode="classic" trigger_index="13" type="register"/>
           </bus>
-          <net data_index="26" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|iCorrFinished" storage_index="26" tap_mode="classic" trigger_index="26" type="combinatorial"/>
-          <net data_index="27" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CONTROLLER:controller0|iFrameDone" storage_index="27" tap_mode="classic" trigger_index="27" type="combinatorial"/>
+          <net data_index="26" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|iCorrFinished" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="26" tap_mode="classic" trigger_index="26" type="combinatorial"/>
+          <net data_index="27" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="CONTROLLER:controller0|iFrameDone" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="27" tap_mode="classic" trigger_index="27" type="combinatorial"/>
+          <bus name="CORR_SCORE:score0|Xcoord" order="msb_to_lsb" state="collapse" type="register">
+            <net data_index="31" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[12]" storage_index="31" tap_mode="classic" trigger_index="31" type="register"/>
+            <net data_index="30" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[11]" storage_index="30" tap_mode="classic" trigger_index="30" type="register"/>
+            <net data_index="29" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[10]" storage_index="29" tap_mode="classic" trigger_index="29" type="register"/>
+            <net data_index="40" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[9]" storage_index="40" tap_mode="classic" trigger_index="40" type="register"/>
+            <net data_index="39" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[8]" storage_index="39" tap_mode="classic" trigger_index="39" type="register"/>
+            <net data_index="38" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[7]" storage_index="38" tap_mode="classic" trigger_index="38" type="register"/>
+            <net data_index="37" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[6]" storage_index="37" tap_mode="classic" trigger_index="37" type="register"/>
+            <net data_index="36" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[5]" storage_index="36" tap_mode="classic" trigger_index="36" type="register"/>
+            <net data_index="35" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[4]" storage_index="35" tap_mode="classic" trigger_index="35" type="register"/>
+            <net data_index="34" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[3]" storage_index="34" tap_mode="classic" trigger_index="34" type="register"/>
+            <net data_index="33" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[2]" storage_index="33" tap_mode="classic" trigger_index="33" type="register"/>
+            <net data_index="32" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[1]" storage_index="32" tap_mode="classic" trigger_index="32" type="register"/>
+            <net data_index="28" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Xcoord[0]" storage_index="28" tap_mode="classic" trigger_index="28" type="register"/>
+          </bus>
+          <bus name="CORR_SCORE:score0|Ycoord" order="msb_to_lsb" type="register">
+            <net data_index="44" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[12]" storage_index="44" tap_mode="classic" trigger_index="44" type="register"/>
+            <net data_index="43" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[11]" storage_index="43" tap_mode="classic" trigger_index="43" type="register"/>
+            <net data_index="42" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[10]" storage_index="42" tap_mode="classic" trigger_index="42" type="register"/>
+            <net data_index="53" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[9]" storage_index="53" tap_mode="classic" trigger_index="53" type="register"/>
+            <net data_index="52" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[8]" storage_index="52" tap_mode="classic" trigger_index="52" type="register"/>
+            <net data_index="51" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[7]" storage_index="51" tap_mode="classic" trigger_index="51" type="register"/>
+            <net data_index="50" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[6]" storage_index="50" tap_mode="classic" trigger_index="50" type="register"/>
+            <net data_index="49" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[5]" storage_index="49" tap_mode="classic" trigger_index="49" type="register"/>
+            <net data_index="48" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[4]" storage_index="48" tap_mode="classic" trigger_index="48" type="register"/>
+            <net data_index="47" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[3]" storage_index="47" tap_mode="classic" trigger_index="47" type="register"/>
+            <net data_index="46" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[2]" storage_index="46" tap_mode="classic" trigger_index="46" type="register"/>
+            <net data_index="45" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[1]" storage_index="45" tap_mode="classic" trigger_index="45" type="register"/>
+            <net data_index="41" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|Ycoord[0]" storage_index="41" tap_mode="classic" trigger_index="41" type="register"/>
+          </bus>
+          <bus name="CORR_SCORE:score0|endScore" order="msb_to_lsb" type="register">
+            <net data_index="86" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[15]" storage_index="86" tap_mode="classic" trigger_index="86" type="register"/>
+            <net data_index="85" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[14]" storage_index="85" tap_mode="classic" trigger_index="85" type="register"/>
+            <net data_index="84" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[13]" storage_index="84" tap_mode="classic" trigger_index="84" type="register"/>
+            <net data_index="83" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[12]" storage_index="83" tap_mode="classic" trigger_index="83" type="register"/>
+            <net data_index="82" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[11]" storage_index="82" tap_mode="classic" trigger_index="82" type="register"/>
+            <net data_index="81" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[10]" storage_index="81" tap_mode="classic" trigger_index="81" type="register"/>
+            <net data_index="95" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[9]" storage_index="95" tap_mode="classic" trigger_index="95" type="register"/>
+            <net data_index="94" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[8]" storage_index="94" tap_mode="classic" trigger_index="94" type="register"/>
+            <net data_index="93" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[7]" storage_index="93" tap_mode="classic" trigger_index="93" type="register"/>
+            <net data_index="92" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[6]" storage_index="92" tap_mode="classic" trigger_index="92" type="register"/>
+            <net data_index="91" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[5]" storage_index="91" tap_mode="classic" trigger_index="91" type="register"/>
+            <net data_index="90" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[4]" storage_index="90" tap_mode="classic" trigger_index="90" type="register"/>
+            <net data_index="89" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[3]" storage_index="89" tap_mode="classic" trigger_index="89" type="register"/>
+            <net data_index="88" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[2]" storage_index="88" tap_mode="classic" trigger_index="88" type="register"/>
+            <net data_index="87" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[1]" storage_index="87" tap_mode="classic" trigger_index="87" type="register"/>
+            <net data_index="80" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|endScore[0]" storage_index="80" tap_mode="classic" trigger_index="80" type="register"/>
+          </bus>
+          <bus name="CORR_SCORE:score0|reading_search" order="msb_to_lsb" type="combinatorial">
+            <net data_index="132" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[9]" storage_index="132" tap_mode="classic" trigger_index="132" type="combinatorial"/>
+            <net data_index="131" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[8]" storage_index="131" tap_mode="classic" trigger_index="131" type="combinatorial"/>
+            <net data_index="130" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[7]" storage_index="130" tap_mode="classic" trigger_index="130" type="combinatorial"/>
+            <net data_index="129" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[6]" storage_index="129" tap_mode="classic" trigger_index="129" type="combinatorial"/>
+            <net data_index="128" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[5]" storage_index="128" tap_mode="classic" trigger_index="128" type="combinatorial"/>
+            <net data_index="127" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[4]" storage_index="127" tap_mode="classic" trigger_index="127" type="combinatorial"/>
+            <net data_index="126" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[3]" storage_index="126" tap_mode="classic" trigger_index="126" type="combinatorial"/>
+            <net data_index="125" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[2]" storage_index="125" tap_mode="classic" trigger_index="125" type="combinatorial"/>
+            <net data_index="124" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[1]" storage_index="124" tap_mode="classic" trigger_index="124" type="combinatorial"/>
+            <net data_index="123" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_search[0]" storage_index="123" tap_mode="classic" trigger_index="123" type="combinatorial"/>
+          </bus>
+          <bus name="CORR_SCORE:score0|reading_sram" order="msb_to_lsb" type="combinatorial">
+            <net data_index="142" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[9]" storage_index="142" tap_mode="classic" trigger_index="142" type="combinatorial"/>
+            <net data_index="141" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[8]" storage_index="141" tap_mode="classic" trigger_index="141" type="combinatorial"/>
+            <net data_index="140" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[7]" storage_index="140" tap_mode="classic" trigger_index="140" type="combinatorial"/>
+            <net data_index="139" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[6]" storage_index="139" tap_mode="classic" trigger_index="139" type="combinatorial"/>
+            <net data_index="138" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[5]" storage_index="138" tap_mode="classic" trigger_index="138" type="combinatorial"/>
+            <net data_index="137" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[4]" storage_index="137" tap_mode="classic" trigger_index="137" type="combinatorial"/>
+            <net data_index="136" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[3]" storage_index="136" tap_mode="classic" trigger_index="136" type="combinatorial"/>
+            <net data_index="135" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[2]" storage_index="135" tap_mode="classic" trigger_index="135" type="combinatorial"/>
+            <net data_index="134" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[1]" storage_index="134" tap_mode="classic" trigger_index="134" type="combinatorial"/>
+            <net data_index="133" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|reading_sram[0]" storage_index="133" tap_mode="classic" trigger_index="133" type="combinatorial"/>
+          </bus>
+          <bus name="CORR_SCORE:score0|currentXcoord" order="msb_to_lsb" type="register">
+            <net data_index="57" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[12]" storage_index="57" tap_mode="classic" trigger_index="57" type="register"/>
+            <net data_index="56" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[11]" storage_index="56" tap_mode="classic" trigger_index="56" type="register"/>
+            <net data_index="55" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[10]" storage_index="55" tap_mode="classic" trigger_index="55" type="register"/>
+            <net data_index="66" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[9]" storage_index="66" tap_mode="classic" trigger_index="66" type="register"/>
+            <net data_index="65" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[8]" storage_index="65" tap_mode="classic" trigger_index="65" type="register"/>
+            <net data_index="64" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[7]" storage_index="64" tap_mode="classic" trigger_index="64" type="register"/>
+            <net data_index="63" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[6]" storage_index="63" tap_mode="classic" trigger_index="63" type="register"/>
+            <net data_index="62" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[5]" storage_index="62" tap_mode="classic" trigger_index="62" type="register"/>
+            <net data_index="61" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[4]" storage_index="61" tap_mode="classic" trigger_index="61" type="register"/>
+            <net data_index="60" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[3]" storage_index="60" tap_mode="classic" trigger_index="60" type="register"/>
+            <net data_index="59" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[2]" storage_index="59" tap_mode="classic" trigger_index="59" type="register"/>
+            <net data_index="58" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[1]" storage_index="58" tap_mode="classic" trigger_index="58" type="register"/>
+            <net data_index="54" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentXcoord[0]" storage_index="54" tap_mode="classic" trigger_index="54" type="register"/>
+          </bus>
+          <bus name="CORR_SCORE:score0|currentYcoord" order="msb_to_lsb" type="register">
+            <net data_index="70" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[12]" storage_index="70" tap_mode="classic" trigger_index="70" type="register"/>
+            <net data_index="69" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[11]" storage_index="69" tap_mode="classic" trigger_index="69" type="register"/>
+            <net data_index="68" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[10]" storage_index="68" tap_mode="classic" trigger_index="68" type="register"/>
+            <net data_index="79" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[9]" storage_index="79" tap_mode="classic" trigger_index="79" type="register"/>
+            <net data_index="78" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[8]" storage_index="78" tap_mode="classic" trigger_index="78" type="register"/>
+            <net data_index="77" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[7]" storage_index="77" tap_mode="classic" trigger_index="77" type="register"/>
+            <net data_index="76" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[6]" storage_index="76" tap_mode="classic" trigger_index="76" type="register"/>
+            <net data_index="75" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[5]" storage_index="75" tap_mode="classic" trigger_index="75" type="register"/>
+            <net data_index="74" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[4]" storage_index="74" tap_mode="classic" trigger_index="74" type="register"/>
+            <net data_index="73" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[3]" storage_index="73" tap_mode="classic" trigger_index="73" type="register"/>
+            <net data_index="72" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[2]" storage_index="72" tap_mode="classic" trigger_index="72" type="register"/>
+            <net data_index="71" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[1]" storage_index="71" tap_mode="classic" trigger_index="71" type="register"/>
+            <net data_index="67" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|currentYcoord[0]" storage_index="67" tap_mode="classic" trigger_index="67" type="register"/>
+          </bus>
+          <bus name="CORR_SCORE:score0|iYstart" order="msb_to_lsb" type="combinatorial">
+            <net data_index="112" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[12]" storage_index="112" tap_mode="classic" trigger_index="112" type="combinatorial"/>
+            <net data_index="111" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[11]" storage_index="111" tap_mode="classic" trigger_index="111" type="combinatorial"/>
+            <net data_index="110" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[10]" storage_index="110" tap_mode="classic" trigger_index="110" type="combinatorial"/>
+            <net data_index="121" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[9]" storage_index="121" tap_mode="classic" trigger_index="121" type="combinatorial"/>
+            <net data_index="120" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[8]" storage_index="120" tap_mode="classic" trigger_index="120" type="combinatorial"/>
+            <net data_index="119" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[7]" storage_index="119" tap_mode="classic" trigger_index="119" type="combinatorial"/>
+            <net data_index="118" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[6]" storage_index="118" tap_mode="classic" trigger_index="118" type="combinatorial"/>
+            <net data_index="117" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[5]" storage_index="117" tap_mode="classic" trigger_index="117" type="combinatorial"/>
+            <net data_index="116" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[4]" storage_index="116" tap_mode="classic" trigger_index="116" type="combinatorial"/>
+            <net data_index="115" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[3]" storage_index="115" tap_mode="classic" trigger_index="115" type="combinatorial"/>
+            <net data_index="114" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[2]" storage_index="114" tap_mode="classic" trigger_index="114" type="combinatorial"/>
+            <net data_index="113" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[1]" storage_index="113" tap_mode="classic" trigger_index="113" type="combinatorial"/>
+            <net data_index="109" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iYstart[0]" storage_index="109" tap_mode="classic" trigger_index="109" type="combinatorial"/>
+          </bus>
+          <bus name="CORR_SCORE:score0|iXstart" order="msb_to_lsb" type="combinatorial">
+            <net data_index="99" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[12]" storage_index="99" tap_mode="classic" trigger_index="99" type="combinatorial"/>
+            <net data_index="98" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[11]" storage_index="98" tap_mode="classic" trigger_index="98" type="combinatorial"/>
+            <net data_index="97" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[10]" storage_index="97" tap_mode="classic" trigger_index="97" type="combinatorial"/>
+            <net data_index="108" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[9]" storage_index="108" tap_mode="classic" trigger_index="108" type="combinatorial"/>
+            <net data_index="107" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[8]" storage_index="107" tap_mode="classic" trigger_index="107" type="combinatorial"/>
+            <net data_index="106" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[7]" storage_index="106" tap_mode="classic" trigger_index="106" type="combinatorial"/>
+            <net data_index="105" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[6]" storage_index="105" tap_mode="classic" trigger_index="105" type="combinatorial"/>
+            <net data_index="104" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[5]" storage_index="104" tap_mode="classic" trigger_index="104" type="combinatorial"/>
+            <net data_index="103" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[4]" storage_index="103" tap_mode="classic" trigger_index="103" type="combinatorial"/>
+            <net data_index="102" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[3]" storage_index="102" tap_mode="classic" trigger_index="102" type="combinatorial"/>
+            <net data_index="101" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[2]" storage_index="101" tap_mode="classic" trigger_index="101" type="combinatorial"/>
+            <net data_index="100" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[1]" storage_index="100" tap_mode="classic" trigger_index="100" type="combinatorial"/>
+            <net data_index="96" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|iXstart[0]" storage_index="96" tap_mode="classic" trigger_index="96" type="combinatorial"/>
+          </bus>
+          <net data_index="122" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="CORR_SCORE:score0|oFinished" storage_index="122" tap_mode="classic" trigger_index="122" type="combinatorial"/>
         </setup_view>
         <trigger_in_editor bit_condition="rising edge" is_enabled="true" node_name="CONTROLLER:controller0|iFrameDone"/>
         <trigger_out_editor/>
       </presentation>
-      <trigger attribute_mem_mode="false" gap_record="true" global_temp="1" name="trigger: 2019/11/20 19:10:28  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="64" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="true" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="rising edge" trigger_type="circular">
+      <trigger attribute_mem_mode="false" gap_record="true" global_temp="1" name="trigger: 2019/11/21 01:26:45  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="64" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="false" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="rising edge" trigger_type="circular">
         <power_up_trigger position="pre" storage_qualifier_disabled="no" trigger_in="dont_care"/>
         <events use_custom_flow_control="no">
           <level enabled="yes" name="condition1" type="basic">
@@ -229,8 +969,8 @@
           </level>
         </events>
         <storage_qualifier_events>
-          <transitional>1111111111111111111111111111
-            <pwr_up_transitional>1111111111111111111111111111</pwr_up_transitional>
+          <transitional>11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+            <pwr_up_transitional>11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</pwr_up_transitional>
           </transitional>
           <storage_qualifier_level type="basic">
             <power_up>
@@ -252,4 +992,16 @@
     </signal_set>
   </instance>
   <mnemonics/>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <single attribute="config widget visible" value="1"/>
+    <single attribute="data log widget visible" value="1"/>
+    <single attribute="hierarchy widget visible" value="1"/>
+    <single attribute="instance widget visible" value="1"/>
+    <single attribute="jtag widget visible" value="1"/>
+    <multi attribute="frame size" size="2" value="1920,1017"/>
+    <multi attribute="jtag widget size" size="2" value="370,139"/>
+    <multi attribute="column width" size="23" value="34,34,289,74,68,70,88,88,98,98,88,88,110,101,101,101,101,101,101,101,101,107,114"/>
+  </global_info>
+  <static_plugin_mnemonics/>
 </session>
