@@ -8,7 +8,8 @@
 		oY,				//Correlation process starting coordinates, Y
 		oXresult,		//Returns the coordinate for which the correlation is maximum, X
 		oYresult,		//Returns the coordinate for which the correlation is maximum, Y
-		oStatusLed		//Heartbeat as to show correlation activity happening
+		oStatusLed,		//Heartbeat as to show correlation activity happening
+		oFinished
 			);
 
 //Port declaration			
@@ -61,38 +62,25 @@ always @ (posedge iCLK) begin
 	else if(finished)
 			oStatusLed = 1'b1;
 	
-
-//	if(iFrameDone) begin
-//		biggestX 	<= 12'b0;
-//		biggestY 	<= 12'b0;
-//		Xcounter 	<= 12'b0;
-//		Ycounter 	<= 12'b0;
-//		biggestCorr <= 32'b0;
-//	end
+	//Coordinate Search
+	if(iFrameDone && !iCorrFinished && !finished) begin
+		if(Xcounter < H_RES)
+			Xcounter <= Xcounter + 1'b1;
+		else if(Ycounter < V_RES) begin
+			Ycounter <= Ycounter + 1'b1;
+			Xcounter <= 0;
+		end 
+		else
+			finished <= 1'b1;
+	end
 	
+	//At correlation's end
 	if(iCorrFinished) begin
 		if(currentCorr > biggestCorr) begin
 			biggestCorr <= currentCorr;
 			biggestX <= Xcounter;
 			biggestY <= Ycounter;		
 		end
-	end
-	
-	if(iFrameDone && !iCorrFinished && !finished) begin
-		
-		if(Xcounter == H_RES2 && Ycounter == V_RES2)begin
-			finished = 1'b1;
-		end
-		else if(Xcounter < H_RES2 && Ycounter < V_RES2)begin
-			Xcounter <= Xcounter + 12'b1;
-		end
-
-		else if(Xcounter == H_RES2 && Ycounter < V_RES2) begin
-			Ycounter <= Ycounter + 12'b1;
-			if(Ycounter != V_RES2)
-				Xcounter <= 12'b0;
-		end 
-		
 	end
 	
 end
