@@ -8,3 +8,6 @@ parameter SEARCH_V_RES = 12'd255;
 
 parameter H_RES2		= 12'd20;
 parameter V_RES2		= 12'd20;
+
+parameter SEARCH_H_RES2 = 12'd20;
+parameter SEARCH_V_RES2 = 12'd20;
