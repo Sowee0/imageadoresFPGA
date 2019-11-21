@@ -47,6 +47,7 @@ assign oYresult = biggestY;
 
 assign oX =  Xcounter;
 assign oY =  Ycounter;
+
 assign oFinished = finished;
 
 always @ (posedge iCLK) begin
@@ -61,9 +62,11 @@ always @ (posedge iCLK) begin
 	end 
 	else if(finished)
 			oStatusLed = 1'b1;
+			
+			
 	
 	//Coordinate Search
-	if(iFrameDone && !iCorrFinished && !finished) begin
+	if(iFrameDone && iCorrFinished && !finished) begin
 		if(Xcounter < H_RES)
 			Xcounter <= Xcounter + 1'b1;
 		else if(Ycounter < V_RES) begin
@@ -73,6 +76,8 @@ always @ (posedge iCLK) begin
 		else
 			finished <= 1'b1;
 	end
+	
+	
 	
 	//At correlation's end
 	if(iCorrFinished) begin
