@@ -62,11 +62,12 @@ always @ (posedge iCLK) begin
 	end 
 	else if(finished)
 			oStatusLed = 1'b1;
-			
-			
 	
-	//Coordinate Search
-	if(iFrameDone && iCorrFinished && !finished) begin
+end
+
+always @(posedge iCorrFinished) begin
+
+	if(iFrameDone && !finished) begin
 		if(Xcounter < H_RES)
 			Xcounter <= Xcounter + 1'b1;
 		else if(Ycounter < V_RES) begin
@@ -77,17 +78,12 @@ always @ (posedge iCLK) begin
 			finished <= 1'b1;
 	end
 	
-	
-	
-	//At correlation's end
-	if(iCorrFinished) begin
-		if(currentCorr > biggestCorr) begin
+	if(currentCorr > biggestCorr) begin
 			biggestCorr <= currentCorr;
 			biggestX <= Xcounter;
 			biggestY <= Ycounter;		
-		end
 	end
-	
+
 end
 			
 endmodule
