@@ -40,8 +40,6 @@ wire[31:0] currentCorr;
 reg [25:0] statusCounter = 26'b0; 
 reg finished = 1'b0;
 
-assign currentCorr = iCurrentCorr;
-
 assign oXresult = biggestX;
 assign oYresult = biggestY;
 
@@ -62,15 +60,21 @@ always @ (posedge iCLK) begin
 	end 
 	else if(finished)
 			oStatusLed = 1'b1;
+			
+	if(iCurrentCorr > biggestCorr) begin
+			biggestCorr <= iCurrentCorr;
+			biggestX <= Xcounter;
+			biggestY <= Ycounter;		
+	end
 	
 end
 
 always @(posedge iCorrFinished) begin
 
 	if(iFrameDone && !finished) begin
-		if(Xcounter < H_RES)
+		if(Xcounter < H_RES2)
 			Xcounter <= Xcounter + 1'b1;
-		else if(Ycounter < V_RES) begin
+		else if(Ycounter < V_RES2) begin
 			Ycounter <= Ycounter + 1'b1;
 			Xcounter <= 0;
 		end 
@@ -78,11 +82,7 @@ always @(posedge iCorrFinished) begin
 			finished <= 1'b1;
 	end
 	
-	if(currentCorr > biggestCorr) begin
-			biggestCorr <= currentCorr;
-			biggestX <= Xcounter;
-			biggestY <= Ycounter;		
-	end
+	
 
 end
 			
