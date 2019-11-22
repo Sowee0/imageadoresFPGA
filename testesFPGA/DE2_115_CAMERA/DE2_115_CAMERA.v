@@ -679,19 +679,33 @@ wire [9:0] wVGA_R  = Read_DATA2[9:0];
 wire [9:0] wVGA_G  = {Read_DATA1[14:10],Read_DATA2[14:10]};
 wire [9:0] wVGA_B  = Read_DATA1[9:0];
 
-wire [9:0] gDATA;
-wire [9:0] wDISP_R = gDATA;										 
-wire [9:0] wDISP_G = gDATA;    															 
-wire [9:0] wDISP_B = gDATA; 
 
-GRAYSCALE         u12 (
-                     .iRST(DLY_RST_1),
+wire [9:0] wDISP_R;										 
+wire [9:0] wDISP_G;    															 
+wire [9:0] wDISP_B;
+
+wire [12:0] corr_biggest_x;
+wire [12:0] corr_biggest_y;
+
+wire 			analysis_finished;
+							
+GRAYSCALE			u12(
+							.oRed(wDISP_R),
+							.oGreen(wDISP_G),
+							.oBlue(wDISP_B),
 							.iRed(wVGA_R),
 							.iGreen(wVGA_G),
 							.iBlue(wVGA_B),
-							.iCLK(D5M_PIXLCLK),
-                     .oDATA(gDATA)
-                     );
+							.iRST(DLY_RST_1),
+							.iXresult(corr_biggest_x),
+							.iYresult(corr_biggest_y),
+							.iFinished(analysis_finished),
+							.iXposition(p_H_Cont),
+							.iYposition(p_V_Cont),
+							.iCLK(D5M_PIXLCLK)
+							);
+
+
 							
 wire frame_done;
 							
@@ -739,11 +753,12 @@ SRAM_INTERFACE		interface0(
 		
 wire [12:0] corr_current_x;
 wire [12:0] corr_current_y;
-wire [12:0] corr_biggest_x;
-wire [12:0] corr_biggest_y;
+
 
 wire			corr_finished;
-wire [15:0] corr_score;		
+wire [15:0] corr_score;	
+
+	
 		
 CONTROLLER	controller0(
 							.iCLK(CLOCK_50),
@@ -755,7 +770,8 @@ CONTROLLER	controller0(
 							.oY(corr_current_y),
 							.oXresult(corr_biggest_x),
 							.oYresult(corr_biggest_y),
-							.oStatusLed(LEDR[16])
+							.oStatusLed(LEDR[16]),
+							.oFinished(analysis_finished)
 							);
 
 wire [12:0] search_x;
