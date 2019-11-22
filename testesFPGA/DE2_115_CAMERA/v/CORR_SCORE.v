@@ -88,9 +88,9 @@ always @ (posedge iCLK) begin
 		endScore <= endScore + currentScore; 
 	
 	
-		if(Xcoord < SEARCH_H_RES)
+		if(Xcoord < SEARCH_H_RES2)
 			Xcoord <= Xcoord + 1'b1;
-		else if(Ycoord < SEARCH_V_RES) begin
+		else if(Ycoord < SEARCH_V_RES2) begin
 			Ycoord <= Ycoord + 1'b1;
 			Xcoord <= 0;	
 		end 
