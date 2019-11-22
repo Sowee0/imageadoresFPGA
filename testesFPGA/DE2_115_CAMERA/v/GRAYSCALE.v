@@ -30,13 +30,14 @@ input			[12:0] iXresult;
 input			[12:0] iYresult;
 input 				 iFinished;
 
+parameter square_size = 5;
 
 input 				iCLK;
 
 always@(iCLK)
 begin
 		
-		if(iXposition < iXresult && iXposition < iXresult + 20 && iYposition < iYresult && iYposition < iYresult + 20 && iFinished)begin
+		if(iXposition < iXresult && iXposition < iXresult + square_size && iYposition < iYresult && iYposition < iYresult + square_size && iFinished)begin
 			oRed 		<= 10'd1023;
 			oGreen 	<= 10'd0;
 			oBlue 	<= 10'd0;
