@@ -56,11 +56,11 @@ assign oY_search = Ycoord;
 
 always @ (posedge iCLK) begin
 
-	//
+	
 	if(finished) begin
 		oScore <= endScore;
 		
-		if((iXstart != currentXcoord) && (iYstart != currentYcoord)) begin
+		//if((iXstart != currentXcoord) || (iYstart != currentYcoord)) begin
 			Xcoord 			<= 0;
 			Ycoord 			<= 0;
 			finished 		<= 0;
@@ -68,7 +68,7 @@ always @ (posedge iCLK) begin
 			endScore			<= 0;
 			currentXcoord 	<= iXstart;
 			currentYcoord	<= iYstart;
-		end
+		//end
 	end
 	
 	else begin
@@ -88,9 +88,9 @@ always @ (posedge iCLK) begin
 		endScore <= endScore + currentScore; 
 	
 	
-		if(Xcoord < SEARCH_H_RES2)
+		if(Xcoord < SEARCH_H_RES)
 			Xcoord <= Xcoord + 1'b1;
-		else if(Ycoord < SEARCH_V_RES2) begin
+		else if(Ycoord < SEARCH_V_RES) begin
 			Ycoord <= Ycoord + 1'b1;
 			Xcoord <= 0;	
 		end 

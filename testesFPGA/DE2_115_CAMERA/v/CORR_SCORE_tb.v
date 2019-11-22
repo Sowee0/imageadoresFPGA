@@ -23,8 +23,7 @@ end
 always 
 #1 clk <= !clk;
 
-always @(posedge clk)begin 
-	if(corr_finished)
+always @(posedge corr_finished)begin 
 	Xstart <= Xstart + 1'b1;
 end
 
