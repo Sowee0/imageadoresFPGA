@@ -1,5 +1,6 @@
 module CORR_SCORE(
 		iCLK, 				//50 Mhz clock
+		iControllerReady, //Sync Signal as to signal the  
 		iXstart,				//X coordinate of the correlation
 		iYstart,				//Y coordinate of the correlation
 		reading_sram,		//The reading from the SRAM in the desired coordinate
@@ -13,6 +14,7 @@ module CORR_SCORE(
 );
 
 input					iCLK;
+input					iControllerReady;
 input		[12:0] 	iXstart;
 input		[12:0] 	iYstart;
 input		[9:0] 	reading_sram;
@@ -55,49 +57,51 @@ assign oY_search = Ycoord;
 
 
 always @ (posedge iCLK) begin
-
 	
-	if(finished) begin
-		oScore <= endScore;
+	if(iControllerReady) begin
 		
-		//if((iXstart != currentXcoord) || (iYstart != currentYcoord)) begin
-			Xcoord 			<= 0;
-			Ycoord 			<= 0;
-			finished 		<= 0;
-			currentScore 	<= 0;
-			endScore			<= 0;
-			currentXcoord 	<= iXstart;
-			currentYcoord	<= iYstart;
-		//end
-	end
-	
-	else begin
-	
-		if(reading_sram > reading_search)begin
-			currentScore <= 16'd1023 - (reading_sram - reading_search);
-			end
-		
-		else if(reading_search > reading_sram)begin
-			currentScore <= 16'd1023 - (reading_search - reading_sram);
-			end
-		
-		else if(reading_sram == reading_search)begin
-			currentScore <= 16'd1023;
-			end
-		
-		endScore <= endScore + currentScore; 
-	
-	
-		if(Xcoord < SEARCH_H_RES)
-			Xcoord <= Xcoord + 1'b1;
-		else if(Ycoord < SEARCH_V_RES) begin
-			Ycoord <= Ycoord + 1'b1;
-			Xcoord <= 0;	
-		end 
-		else
-			finished <= 1'b1;
-		end
+		if(finished) begin
+			oScore <= endScore;
 			
+			//if((iXstart != currentXcoord) || (iYstart != currentYcoord)) begin
+				Xcoord 			<= 0;
+				Ycoord 			<= 0;
+				finished 		<= 0;
+				currentScore 	<= 0;
+				endScore			<= 0;
+				currentXcoord 	<= iXstart;
+				currentYcoord	<= iYstart;
+			//end
+		end
+		
+		else begin
+		
+			if(reading_sram > reading_search)begin
+				currentScore <= 16'd1023 - (reading_sram - reading_search);
+				end
+			
+			else if(reading_search > reading_sram)begin
+				currentScore <= 16'd1023 - (reading_search - reading_sram);
+				end
+			
+			else if(reading_sram == reading_search)begin
+				currentScore <= 16'd1023;
+				end
+			
+			endScore <= endScore + currentScore; 
+		
+		
+			if(Xcoord < SEARCH_H_RES2)
+				Xcoord <= Xcoord + 1'b1;
+			else if(Ycoord < SEARCH_V_RES2) begin
+				Ycoord <= Ycoord + 1'b1;
+				Xcoord <= 0;	
+			end 
+			else
+				finished <= 1'b1;
+			end
+		end
+				
 end
 
 endmodule

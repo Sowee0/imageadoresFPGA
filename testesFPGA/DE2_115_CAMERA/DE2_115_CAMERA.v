@@ -758,7 +758,7 @@ wire [12:0] corr_current_y;
 wire			corr_finished;
 wire [15:0] corr_score;	
 
-	
+wire controller_ready;	
 		
 CONTROLLER	controller0(
 							.iCLK(CLOCK_50),
@@ -771,7 +771,8 @@ CONTROLLER	controller0(
 							.oXresult(corr_biggest_x),
 							.oYresult(corr_biggest_y),
 							.oStatusLed(LEDR[16]),
-							.oFinished(analysis_finished)
+							.oFinished(analysis_finished),
+							.oControllerReady(controller_ready)
 							);
 
 wire [12:0] search_x;
@@ -782,12 +783,14 @@ wire [12:0] sram_y;
 wire [9:0] reading_search;
 wire [9:0] reading_sram;
 
+
 CORR_SCORE		score0(
 							.iCLK(CLOCK_50),
 							.iXstart(corr_current_x),
 							.iYstart(corr_current_y),
 							.reading_sram(sram_ouput_data),
 							.reading_search(reading_search),
+							.iControllerReady(controller_ready),
 							.oX_sram(sram_x),
 							.oY_sram(sram_y),
 							.oX_search(search_x),
