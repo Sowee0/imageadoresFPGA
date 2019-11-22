@@ -28,6 +28,14 @@ end
 always
 	#1 clk = !clk;
 	
+always begin
+	#10
+	icorrfin = !icorrfin;
+	
+	end
+	
+	
+	
 
 
 endmodule
