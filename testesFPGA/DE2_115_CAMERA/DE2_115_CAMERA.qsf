@@ -1364,5 +1364,5 @@ set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LE
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_LOWORD=20716" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_HIWORD=43239" -section_id auto_signaltap_0
 set_global_assignment -name VERILOG_FILE v/CORR_SCORE_tb.v
-set_global_assignment -name SLD_FILE "C:/Users/sowee/Documents/git/imageadoresFPGA/testesFPGA/DE2_115_CAMERA/stp13stp_auto_stripped.stp"
+set_global_assignment -name SLD_FILE "D:/Users/sowee/Documents/Code/imageadoresFPGA/testesFPGA/DE2_115_CAMERA/stp13stp_auto_stripped.stp"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
