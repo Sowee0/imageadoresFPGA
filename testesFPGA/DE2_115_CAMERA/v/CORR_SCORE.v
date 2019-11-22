@@ -9,7 +9,7 @@ module CORR_SCORE(
 		oX_search,			//The desired X coordinate from the search module
 		oY_search,			//The desired Y coordinate from the seach module
 		oFinished,			//A signal that ;means; the end of the correlation calculation 
-		oScore,				//The final  score of the correlation calculation
+		oScore				//The final  score of the correlation calculation
 );
 
 input					iCLK;
@@ -22,7 +22,7 @@ output	[12:0] 	oY_sram;
 output	[12:0] 	oX_search;
 output 	[12:0]	oY_search;
 output   wire 		oFinished;
-output	reg [31:0] 	oScore =0;
+output	reg [31:0] 	oScore = 32'b0;
 
 
 //Including the file with various parameters
@@ -30,9 +30,9 @@ output	reg [31:0] 	oScore =0;
 			
 
 //Variables used to determine the score at the end of the process
-reg [15:0] endScore = 16'b0;
-reg [15:0] currentScore = 16'b0;
-reg finished = 0;
+reg [31:0] endScore = 32'b0;
+reg [31:0] currentScore = 32'b0;
+reg finished = 1'b0;
 
 assign oFinished =  finished;
 
@@ -60,7 +60,7 @@ always @ (posedge iCLK) begin
 	if(finished) begin
 		oScore <= endScore;
 		
-		if((iXstart != currentXcoord) && (iYstart != currentYcoord) ) begin
+		if((iXstart != currentXcoord) && (iYstart != currentYcoord)) begin
 			Xcoord 			<= 0;
 			Ycoord 			<= 0;
 			finished 		<= 0;
