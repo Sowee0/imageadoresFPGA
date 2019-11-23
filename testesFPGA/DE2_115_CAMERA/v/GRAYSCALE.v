@@ -32,12 +32,21 @@ input 				 iFinished;
 
 parameter square_size = 5;
 
+
+wire [12:0] posX;
+wire [12:0] posY;
+
+assign posX = iXresult + H_START + 13'b127;
+assign posY = iYresult + V_START + 13'b127;
+
+`include "SAVE_params.h"
+
 input 				iCLK;
 
 always@(iCLK)
 begin
 		
-		if(iXposition < iXresult && iXposition < iXresult + square_size && iYposition < iYresult && iYposition < iYresult + square_size && iFinished)begin
+		if(iXposition > posX && iXposition < (posX + square_size) && iYposition > posY && iYposition <(posY + square_size) && iFinished)begin
 			oRed 		<= 10'd1023;
 			oGreen 	<= 10'd0;
 			oBlue 	<= 10'd0;
