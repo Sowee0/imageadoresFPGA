@@ -72,9 +72,9 @@ always @ (posedge iCLK) begin
 	
 	//Coordinate Search
 	if(iFrameDone && iCorrFinished && !finished) begin
-		if(Xcounter < H_RES2)
+		if(Xcounter < H_RES)
 			Xcounter <= Xcounter + 1'b1;
-		else if(Ycounter < V_RES2) begin
+		else if(Ycounter < V_RES) begin
 			Ycounter <= Ycounter + 1'b1;
 			Xcounter <= 0;
 		end 
