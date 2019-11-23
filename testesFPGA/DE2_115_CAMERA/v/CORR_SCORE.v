@@ -1,4 +1,4 @@
-module CORR_SCORE(
+	module CORR_SCORE(
 		iCLK, 				//50 Mhz clock
 		iControllerReady, //Sync Signal as to signal the  
 		iXstart,				//X coordinate of the correlation
