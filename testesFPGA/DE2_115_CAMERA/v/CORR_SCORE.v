@@ -75,18 +75,23 @@ always @ (posedge iCLK) begin
 		end
 		
 		else begin
-		
-			if(reading_sram > reading_search)begin
-				currentScore <= 16'd1023 - (reading_sram - reading_search);
-				end
 			
-			else if(reading_search > reading_sram)begin
-				currentScore <= 16'd1023 - (reading_search - reading_sram);
-				end
-			
-			else if(reading_sram == reading_search)begin
-				currentScore <= 16'd1023;
-				end
+			if(oX_sram > H_RES || oY_sram > V_RES)
+				currentScore <= 32'd0;
+				
+			else begin
+				if(reading_sram > reading_search)begin
+					currentScore <= 32'd1023 - (reading_sram - reading_search);
+					end
+				
+				else if(reading_search > reading_sram)begin
+					currentScore <= 32'd1023 - (reading_search - reading_sram);
+					end
+				
+				else if(reading_sram == reading_search)begin
+					currentScore <= 32'd1023;
+					end
+			end
 			
 			endScore <= endScore + currentScore; 
 		
