@@ -36,8 +36,8 @@ parameter square_size = 5;
 wire [12:0] posX;
 wire [12:0] posY;
 
-assign posX = iXresult + H_START + 13'b127;
-assign posY = iYresult + V_START + 13'b127;
+assign posX = iXresult + H_START + 13'd127;
+assign posY = iYresult + V_START + 13'd127;
 
 `include "SAVE_params.h"
 
