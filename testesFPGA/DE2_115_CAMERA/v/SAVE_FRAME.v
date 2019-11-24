@@ -50,9 +50,9 @@ always @(posedge iCLK) begin
 		
 			oStopCapture <= 1;
 		
-			if(iX >= H_START && iX <= H_START + H_RES && iY >= V_START && iY <= V_START + V_RES) begin
+			if(iX >= H_START && iX < H_START + H_RES && iY >= V_START && iY < V_START + V_RES) begin
 			
-			memoryAddress <= (iX - H_START) + (V_RES * (iY - V_START));
+			memoryAddress <= (iX - H_START) + (H_RES * (iY - V_START));
 			memoryData <= iRed;
 			oMemWE <= 1'b1;
 			
