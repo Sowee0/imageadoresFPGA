@@ -756,7 +756,7 @@ wire [12:0] corr_current_y;
 
 
 wire			corr_finished;
-wire [15:0] corr_score;	
+wire [31:0] corr_score;	
 
 wire controller_ready;	
 		
