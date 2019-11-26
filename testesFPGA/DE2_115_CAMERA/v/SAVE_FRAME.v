@@ -44,9 +44,16 @@ assign oMemAddr = memoryAddress;
 always @(posedge iCLK) begin
 
 		oStopCapture <= 0;
+		
+		if(iSwitch)begin
+			//Choosing a recurring frame position as to count frames
+			if(iX == 100 && iY == 10)
+			frameCounter <= frameCounter + 1'b1;
+			
+		
+		end
 
-
-		if(iSwitch && (frameCounter == 300)) begin
+		if(iSwitch && (frameCounter == 50)) begin
 		
 			oStopCapture <= 1;
 		
@@ -73,9 +80,7 @@ always @(posedge iCLK) begin
 		end
 		
 		
-		//Choosing a recurring frame position as to count frames
-		if(iX == 100 && iY == 10)
-		frameCounter <= frameCounter + 1'b1;
+		
 
 end
 
