@@ -546,7 +546,7 @@ RAW2RGB				u4	(	.iCLK(D5M_PIXLCLK),
 `endif
 //Frame count display
 SEG7_LUT_8 			u5	(	.oSEG0(HEX0),.oSEG1(HEX1),
-							.oSEG2(HEX2),.oSEG3(HEX3),
+							.oSEG2(),.oSEG3(),
 							.oSEG4(),.oSEG5(),
 							.oSEG6(),.oSEG7(),
 							.iDIG(Frame_Cont[31:0])
@@ -638,6 +638,9 @@ Sdram_Control	u7	(	//	HOST Side
 							.DQM(DRAM_DQM)
 						);
 //D5M I2C control
+
+wire [15:0] exposure_wire;
+
 I2C_CCD_Config 		u8	(	//	Host Side
 							.iCLK(CLOCK2_50),
 							.iRST_N(DLY_RST_2),
@@ -646,7 +649,8 @@ I2C_CCD_Config 		u8	(	//	Host Side
 							.iZOOM_MODE_SW(SW[16]),
 							//	I2C Side
 							.I2C_SCLK(D5M_SCLK),
-							.I2C_SDAT(D5M_SDATA)
+							.I2C_SDAT(D5M_SDATA),
+							.SENSOR_EXPOSURE(exposure_wire)
 						);
 						
 wire [12:0] p_H_Cont;
@@ -831,6 +835,14 @@ SEG7_LUT_8 			counter2	(
 							.oSEG4(),.oSEG5(),
 							.oSEG6(),.oSEG7(),
 							.iDIG(corr_current_y[12:0])
+						);
+
+//Exposure display 
+SEG7_LUT_8 			exposure1	(	.oSEG0(),.oSEG1(HEX2),
+							.oSEG2(HEX3),.oSEG3(),
+							.oSEG4(),.oSEG5(),
+							.oSEG6(),.oSEG7(),
+							.iDIG(exposure_wire)
 						);
 
 

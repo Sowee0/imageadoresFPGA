@@ -48,7 +48,8 @@ module I2C_CCD_Config (	//	Host Side
 						iEXPOSURE_DEC_p,
 						//	I2C Side
 						I2C_SCLK,
-						I2C_SDAT
+						I2C_SDAT,
+						SENSOR_EXPOSURE
 						);
 						
 //	Host Side
@@ -59,6 +60,9 @@ input 			iZOOM_MODE_SW;
 //	I2C Side
 output		I2C_SCLK;
 inout		I2C_SDAT;
+
+//	External project side
+output wire [15:0] SENSOR_EXPOSURE;
 
 //	Internal Registers/Wires
 reg	[15:0]	mI2C_CLK_DIV;
@@ -78,7 +82,7 @@ input 		iEXPOSURE_ADJ;
 input		iEXPOSURE_DEC_p;	
 
 parameter 	default_exposure 			= 16'h07c0;
-parameter 	exposure_change_value	 	= 16'd200;
+parameter 	exposure_change_value	 	= 16'h00d0;
 
 reg	[24:0]	combo_cnt;
 wire		combo_pulse;
@@ -90,6 +94,8 @@ wire		exposure_adj_set;
 wire		exposure_adj_reset;
 reg	[15:0]	senosr_exposure;
 wire	[17:0]	senosr_exposure_temp;
+
+assign SENSOR_EXPOSURE = senosr_exposure;
 
 wire [23:0] sensor_start_row;
 wire [23:0] sensor_start_column;

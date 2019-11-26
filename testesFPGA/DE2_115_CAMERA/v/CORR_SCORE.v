@@ -63,7 +63,7 @@ always @ (posedge iCLK) begin
 		if(finished) begin
 			oScore <= endScore;
 			
-			//if((iXstart != currentXcoord) || (iYstart != currentYcoord)) begin
+			if((iXstart != currentXcoord) || (iYstart != currentYcoord)) begin
 				Xcoord 			<= 0;
 				Ycoord 			<= 0;
 				finished 		<= 0;
@@ -71,7 +71,7 @@ always @ (posedge iCLK) begin
 				endScore			<= 0;
 				currentXcoord 	<= iXstart;
 				currentYcoord	<= iYstart;
-			//end
+			end
 		end
 		
 		else begin
