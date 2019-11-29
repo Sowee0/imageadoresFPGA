@@ -2,8 +2,8 @@ close all
 tic
 
 referenciaPupila    = imread('pupila.bmp');
-frameBase           = imread('olhando_centro.png');
-matrizNotas         = int32(zeros(480,640));
+frameBase           = imread('base_olho4.png');
+matrizNotas         = zeros(480,640);
 threshold = int32(50);
 nota = int32(0);
 valorFrame = int32(0);
@@ -26,32 +26,37 @@ figure
 subplot(1,2,2)
 imshow(frameCinza)
 
-for a = 1:altura - alturaReferencia
+for a = 1:altura - alturaReferencia;
    
-    for l = 1:largura - larguraReferencia
+    for l = 1:largura - larguraReferencia;
         
         for aR = 1:alturaReferencia
             
             for lR = 1:larguraReferencia
                 
-                valorFrame = int32(frameCinza(a + aR, l + lR));
-                valorPupila =  int32(referenciaCinza(aR, lR));
-                nota = 255 + nota + abs(valorFrame - valorPupila);
+                valorFrame = int32(abs(frameCinza(a + aR, l + lR) - referenciaCinza(aR, lR)));
+                if( valorFrame < threshold)
+                   
+                    nota = nota + threshold - valorFrame;
                     
-            end
+                end
                 
-         end
+            end
+            
+        end
          matrizNotas(a,l) = nota;
-          if(nota > maiorNota)
+         if(nota > maiorNota)
              
              maiorNota = nota;
              maiorX = a;
              maiorY = l;
              
-          end
-         
+         end
+             
          nota = 0;
+          
     end
+    
 end
 
 %[max_num, max_idx]=max(matrizNotas(:));
@@ -60,14 +65,14 @@ end
 %y2 = Y + 120;
 %x2 = X + 90;
 
-maiorXaj =  maiorY + 127;
-maiorYaj =  maiorX + 127;
+maiorXaj =  maiorX + 90;
+maiorYaj =  maiorY + 120;
 
 hold on
 
 %plot(y2, x2, 'ro');
 subplot(1,2,1)
-surfl(matrizNotas);
+surf(matrizNotas);
 
 subplot(1,2,2);
 hold on
