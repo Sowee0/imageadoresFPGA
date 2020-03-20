@@ -1,12 +1,14 @@
 close all
+clear all
 tic
 
 referenciaPupila    = imread('pupila.bmp');
 frameBase           = imread('olhando_centro.png');
 matrizNotas         = int32(zeros(480,640));
-threshold = int32(50);
+
 nota = int32(0);
 valorFrame = int32(0);
+valorPupila = int32(0);
 
 maiorNota = int32(0);
 maiorX = 0;
@@ -22,60 +24,60 @@ alturaReferencia    = size(referenciaCinza,1);
 larguraReferencia   = size(referenciaCinza,2);
 
 figure
-
-subplot(1,2,2)
 imshow(frameCinza)
+%plot(y2, x2, 'ro');
 
-for a = 1:altura - alturaReferencia
-   
-    for l = 1:largura - larguraReferencia
+hold on
+
+for L = 1:largura
+    for A = 1:altura
         
-        for aR = 1:alturaReferencia
-            
-            for lR = 1:larguraReferencia
+        for lR = 1:larguraReferencia
+            for aR = 1:alturaReferencia
                 
-                valorFrame = int32(frameCinza(a + aR, l + lR));
-                valorPupila =  int32(referenciaCinza(aR, lR));
-                nota = 255 + nota + abs(valorFrame - valorPupila);
+                if((aR + A < altura) && (lR + L < largura))
+                    valorFrame = int32(frameCinza(A + aR -1, L + lR -1));
+                    valorPupila = int32(referenciaCinza(aR, lR));
+                    nota = nota + (255 - abs(valorFrame - valorPupila));
                     
+                    
+                end
             end
-                
-         end
-         matrizNotas(a,l) = nota;
-          if(nota > maiorNota)
-             
-             maiorNota = nota;
-             maiorX = a;
-             maiorY = l;
-             
-          end
-         
-         nota = 0;
+        end
+        
+        
+       
+        
+        matrizNotas(A,L) = nota;
+        
+        if(nota > maiorNota)
+            maiorNota = nota;
+            maiorX = L;
+            maiorY = A;
+            maiorXaj =  maiorX + 127;
+            maiorYaj =  maiorY + 127;
+        end
+        
+        nota = 0;
+        
+        
     end
 end
 
-%[max_num, max_idx]=max(matrizNotas(:));
-%[X,Y]=ind2sub(size(matrizNotas),max_idx);
 
-%y2 = Y + 120;
-%x2 = X + 90;
-
-maiorXaj =  maiorY + 127;
-maiorYaj =  maiorX + 127;
-
-hold on
-
-%plot(y2, x2, 'ro');
-subplot(1,2,1)
-surfl(matrizNotas);
-
-subplot(1,2,2);
-hold on
 plot(maiorYaj, maiorXaj, 'go');
+
+figure
+
+h = surfl(matrizNotas);
+set(h,'LineStyle','none')
+xlabel('X')
+ylabel('Y')
+zlabel('Correlação')
 
 
 M = max(matrizNotas);
 
-
+    
 
 toc
