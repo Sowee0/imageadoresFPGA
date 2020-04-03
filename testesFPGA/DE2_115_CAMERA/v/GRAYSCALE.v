@@ -36,10 +36,13 @@ parameter square_size = 5;
 wire [12:0] posX;
 wire [12:0] posY;
 
-assign posX = iXresult + H_START + 13'd127;
-assign posY = iYresult + V_START + 13'd127;
-
 `include "SAVE_params.h"
+
+//Setting the middle position for the end result
+assign posX = iXresult + H_START + SEARCH_H_MIDDLE;
+assign posY = iYresult + V_START + SEARCH_V_MIDDLE;
+
+
 
 input 				iCLK;
 

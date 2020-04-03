@@ -24,6 +24,8 @@ parameter V_RES		= 12'd240;
 //Parameters for the search frame and its middle position 
 parameter SEARCH_H_RES = 12'd127;
 parameter SEARCH_V_RES = 12'd127;
+parameter SEARCH_H_MIDDLE	= 13'd63;
+parameter SEARCH_V_MIDDLE	= 13'd63;
 
 
 //Test parameters
