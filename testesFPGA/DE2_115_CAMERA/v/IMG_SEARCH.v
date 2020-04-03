@@ -10,7 +10,8 @@ module IMG_SEARCH(
 	input 			[12:0] 	iY;
 	output	reg	[9:0] 	oVAL;
 	
-	parameter [3:0] halving = 4'd4; 
+	//bit-shifting three times as to correlate a number on the range of 0-127 to 0-15
+	parameter [3:0] halving = 4'd3; 
 	
 	reg 	[12:0]	decX = 0;
 	reg 	[12:0]	decY = 0;
